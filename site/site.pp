@@ -14,9 +14,7 @@ $debug = false
 # Activate Puppi integration in modules
 $puppi = true
 
-node default {
-  class { 'openssh': }
-  class { 'puppi': }
-  class { 'puppet':
-  }
+case $server_role {
+  'puppetmaster': {class { 'role::puppetmaster': }}
 }
+
