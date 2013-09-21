@@ -17,5 +17,6 @@ $puppi = true
 node default {
   class { 'openssh': }
   class { 'puppi': }
-  class { 'puppet': }
+  class { 'puppet':
+  }
 }
