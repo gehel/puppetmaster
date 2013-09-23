@@ -20,3 +20,4 @@ case $server_role {
 
 node default {
 }
+
