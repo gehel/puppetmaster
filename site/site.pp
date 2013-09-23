@@ -15,6 +15,17 @@ $debug = false
 $puppi = true
 
 case $server_role {
-  'puppetmaster': {class { 'role::puppetmaster': }}
+  'puppetmaster': {
+    class { 'role::puppetmaster':
+      mode          => 'server',
+      server        => 'puppet.ledcom.ch',
+      dns_alt_names => 'puppet.ledcom.ch',
+      environment   => 'master',
+      module_path   => '/etc/puppet/environments/\$environment/modules:/etc/puppet/environments/\$environment/dist',
+    }
+    class { 'puppi': }
+  }
 }
 
+node default {
+}
