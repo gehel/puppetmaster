@@ -5,6 +5,7 @@ class role::puppetmaster {
     server        => 'puppet.ledcom.ch',
     dns_alt_names => [ 'puppet.ledcom.ch' ],
     environment   => 'master',
+    manifest_path => '\$confdir/environments/\$environment/site/site.pp',
     module_path   => '/etc/puppet/environments/\$environment/modules:/etc/puppet/environments/\$environment/dist',
     externalnodes => true,
   }
