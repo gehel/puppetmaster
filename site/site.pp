@@ -15,21 +15,7 @@ $debug = false
 $puppi = true
 
 case $server_role {
-  'puppetmaster': {
-    class { 'role::puppetmaster':
-      mode          => 'server',
-      server        => 'puppet.ledcom.ch',
-      dns_alt_names => 'puppet.ledcom.ch',
-      environment   => 'master',
-      module_path   => '/etc/puppet/environments/\$environment/modules:/etc/puppet/environments/\$environment/dist',
-    }
-    class { 'puppi': }
-    cron { 'r10k-deploy-env':
-      command => 'r10k deploy environment',
-      path    => '/bin:/usr/bin:/usr/local/bin',
-      minute  => '*/5',
-    }
-  }
+  'puppetmaster': { class { 'role::puppetmaster': } }
 }
 
 node default {

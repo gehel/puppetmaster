@@ -9,5 +9,13 @@ class role::puppetmaster {
     externalnodes => true,
   }
 
+  class { 'puppi': }
+
+  cron { 'r10k-deploy-env':
+    command => 'r10k deploy environment',
+    path    => '/bin:/usr/bin:/usr/local/bin',
+    minute  => '*/5',
+  }
+
 }
 
