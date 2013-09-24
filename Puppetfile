@@ -44,7 +44,7 @@ mod 'apt',
   :git => 'https://github.com/example42/puppet-apt.git'
 
 mod 'concat',
-  :git => 'https://github.com/example42/pupmod-concat.git'
+  :git => 'https://github.com/puppetlabs/puppetlabs-concat.git'
 
 mod 'java',
   :git => 'https://github.com/example42/puppet-java.git'
