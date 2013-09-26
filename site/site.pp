@@ -14,6 +14,26 @@ $debug = false
 # Activate Puppi integration in modules
 $puppi = true
 
+# Base packages, always installed
+package { [
+    'bzip2',
+    'curl',
+    'dsnutils',
+    'emacs',
+    'htop',
+    'iotop',
+    'iptraf',
+    'itop',
+    'less',
+    'lsof',
+    'screen',
+    'secure-delete',
+    'sysstat',
+    'telnet',
+  ]:
+  ensure => present,
+}
+
 case $server_role {
   'puppetmaster': { class { 'role::puppetmaster': } }
 }
