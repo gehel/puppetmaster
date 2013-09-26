@@ -1,3 +1,6 @@
+mod 'dns',
+  :git => 'https://github.com/masterzen/puppet-dns.git'
+
 mod 'puppi',
   :git => 'https://github.com/example42/puppi.git'
 
