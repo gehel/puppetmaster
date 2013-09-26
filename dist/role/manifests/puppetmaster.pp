@@ -7,7 +7,6 @@ class role::puppetmaster {
     environment   => 'production',
     manifest_path => '\$confdir/environments/\$environment/site/site.pp',
     module_path   => '/etc/puppet/environments/\$environment/modules:/etc/puppet/environments/\$environment/dist',
-    externalnodes => true,
   }
 
   class { 'puppi': }
