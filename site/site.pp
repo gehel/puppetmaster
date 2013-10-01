@@ -18,7 +18,7 @@ $puppi = true
 package { [
     'bzip2',
     'curl',
-    'dsnutils',
+    'dnsutils',
     'emacs',
     'htop',
     'iotop',
