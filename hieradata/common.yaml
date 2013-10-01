@@ -1,1 +1,16 @@
 ---
+puppetmaster_db_name: puppet
+puppetmaster_db_server: puppet.cj0lgxzektvs.eu-west-1.rds.amazonaws.com
+puppetmaster_db_port: 3306
+puppetmaster_db_user: puppet
+puppetmaster_db_password: >
+    ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQAw
+    DQYJKoZIhvcNAQEBBQAEggEAbVJO2M8dhjcT/J0L6/8T0r4seaCRlL6eqjMz
+    0IHUgBfmVvAmpr90Rvbnq9mk8u9lgvwN3aT9jK6eh718e5JysY4YQeO0M0Cl
+    ltg3+nQFTo83f+bZy8drDD47TRQ13rLK0MwWi0bqb9ViuTWAciU58zropoKK
+    +T+eYYmS13kKzxbmHbSeh9NhbEXjQSXRXLfScY7Hp6BJRkKALndOnoLNmUjL
+    WcfPRVY+t+zbjU0sgDzx5evvf5/uPZFbGxrxeoNagNK5wsSzV0MXG+ZXVcZh
+    ntaocnAWBdHeWRuNE0O5fmuy5rBYKiGoxzjEulo7LDNWigLoRh1ITR2ly0Zs
+    11EDUjBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBAf5db65LuA4wLJJh5m
+    dU8qgCDx0MUjlD4pYboPhEStCBOqh3WjmyXM1J4ZeVrl2ZtPJw==]
+

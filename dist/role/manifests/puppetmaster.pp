@@ -7,9 +7,23 @@ class role::puppetmaster {
     environment   => 'production',
     manifest_path => '$confdir/environments/$environment/site/site.pp',
     module_path   => '/etc/puppet/environments/$environment/modules:/etc/puppet/environments/$environment/dist',
+    db            => 'mysql',
+    db_name       => hiera('puppetmaster_db_name'),
+    db_server     => hiera('puppetmaster_db_server'),
+    db_port       => hiera('puppetmaster_db_port'),
+    db_user       => hiera('puppetmaster_db_user'),
+    db_password   => hiera('puppetmaster_db_password'),
   }
 
-  package { 'hiera-eyaml':
+  file { '/etc/puppet/public_key.pkcs7.pem':
+    owner => 'root',
+    group => 'root',
+    mode  => '644',
+  } -> file { '/etc/puppet/private_key.pkcs7.pem':
+    owner => 'root',
+    group => 'puppet',
+    mode  => '640',
+  } -> package { 'hiera-eyaml':
     ensure   => 'latest',
     provider => 'gem',
   } -> file { '/etc/puppet/hiera.yaml':
