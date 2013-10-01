@@ -31,6 +31,9 @@ mod 'nginx',
 mod 'munin',
   :git => 'https://github.com/example42/puppet-munin.git'
 
+mod 'mysql',
+  :git => 'https://github.com/example42/puppet-mysql.git'
+
 mod 'puppet',
   :git => 'https://github.com/example42/puppet-puppet.git'
 
