@@ -1,4 +1,9 @@
 ---
+monitor: true
+monitor_tool:
+    - nagios
+    - puppi
+puppi: true
 puppetmaster_db_name: puppet
 puppetmaster_db_server: puppet.cj0lgxzektvs.eu-west-1.rds.amazonaws.com
 puppetmaster_db_port: 3306
@@ -13,4 +18,5 @@ puppetmaster_db_password: >
     ntaocnAWBdHeWRuNE0O5fmuy5rBYKiGoxzjEulo7LDNWigLoRh1ITR2ly0Zs
     11EDUjBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBAf5db65LuA4wLJJh5m
     dU8qgCDx0MUjlD4pYboPhEStCBOqh3WjmyXM1J4ZeVrl2ZtPJw==]
+
 
