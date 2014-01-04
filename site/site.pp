@@ -41,6 +41,7 @@ case $server_role {
 }
 
 node 'galadriel.home.ledcom.ch' {
+  class { 'puppet': }
   class { 'role::dev_workstation': }
 }
 

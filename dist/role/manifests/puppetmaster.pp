@@ -2,9 +2,7 @@ class role::puppetmaster {
 
   class { 'puppet':
     mode          => 'server',
-    server        => 'puppet.aws.ledcom.ch',
     dns_alt_names => 'puppet.aws.ledcom.ch',
-    environment   => 'production',
     manifest_path => '$confdir/environments/$environment/site/site.pp',
     module_path   => '/etc/puppet/environments/$environment/modules:/etc/puppet/environments/$environment/dist',
     db            => 'mysql',
@@ -13,7 +11,6 @@ class role::puppetmaster {
     db_port       => $::puppetmaster_db_port,
     db_user       => $::puppetmaster_db_user,
     db_password   => $::puppetmaster_db_password,
-    runinterval   => '3600',
   }
 
   file { '/etc/puppet/public_key.pkcs7.pem':
