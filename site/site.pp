@@ -16,6 +16,7 @@ $puppi = true
 
 # Base packages, always installed
 package { [
+    'bash-completion',
     'bzip2',
     'curl',
     'dnsutils',
