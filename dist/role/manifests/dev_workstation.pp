@@ -20,6 +20,7 @@ class role::dev_workstation {
     'telnet',
     'unity-tweak-tool',
     'virtualbox',
+    'xclip',
     ]:
     ensure => 'present',
   }
