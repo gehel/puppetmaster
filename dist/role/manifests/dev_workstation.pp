@@ -1,23 +1,11 @@
-# sudo ln -s /home/gehel/dev/puppet/puppetmaster/hiera.yaml /etc/puppet/
-# sudo puppet apply \
-#      --modulepath='/home/gehel/dev/puppet/puppetmaster/dist:/home/gehel/dev/puppet/puppetmaster/modules' \
-#      -e "include role::dev_workstation"
 class role::dev_workstation {
-  $monitor = true
-  $monitor_tool = ['puppi']
-  $puppi = true
 
   package { [
     'chromium-browser',
     'cmus',
-    'dos2unix',
-    'emacs',
-    'htop',
     'maven2',
     'openjdk-7-jdk',
-    'secure-delete',
     'synergy',
-    'telnet',
     'unity-tweak-tool',
     'virtualbox',
     'xclip',

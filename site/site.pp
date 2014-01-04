@@ -20,6 +20,7 @@ package { [
     'bzip2',
     'curl',
     'dnsutils',
+    'dos2unix',
     'emacs',
     'htop',
     'iotop',
@@ -37,6 +38,10 @@ package { [
 
 case $server_role {
   'puppetmaster': { class { 'role::puppetmaster': } }
+}
+
+node 'galadriel.home.ledcom.ch' {
+  class { 'role::dev_workstation': }
 }
 
 node default {
