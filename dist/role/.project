@@ -3,6 +3,39 @@
 	<name>role</name>
 	<comment></comment>
 	<projects>
+		<project>apache</project>
+		<project>apt</project>
+		<project>cntlm</project>
+		<project>concat</project>
+		<project>ddclient</project>
+		<project>dnsmasq</project>
+		<project>firewall</project>
+		<project>git</project>
+		<project>icinga</project>
+		<project>iptables</project>
+		<project>java</project>
+		<project>logrotate</project>
+		<project>mcollective</project>
+		<project>monitor</project>
+		<project>munin</project>
+		<project>mysql</project>
+		<project>nagios</project>
+		<project>nginx</project>
+		<project>nrpe</project>
+		<project>ntp</project>
+		<project>openssh</project>
+		<project>profile</project>
+		<project>puppet</project>
+		<project>puppi</project>
+		<project>rsyslog</project>
+		<project>rvm</project>
+		<project>stdlib</project>
+		<project>sudo</project>
+		<project>svn</project>
+		<project>tomcat</project>
+		<project>vagrant</project>
+		<project>varnish</project>
+		<project>wget</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
