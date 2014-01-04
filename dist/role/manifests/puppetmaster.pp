@@ -2,8 +2,8 @@ class role::puppetmaster {
 
   class { 'puppet':
     mode          => 'server',
-    server        => 'puppet.ledcom.ch',
-    dns_alt_names => 'puppet.ledcom.ch',
+    server        => 'puppet.aws.ledcom.ch',
+    dns_alt_names => 'puppet.aws.ledcom.ch',
     environment   => 'production',
     manifest_path => '$confdir/environments/$environment/site/site.pp',
     module_path   => '/etc/puppet/environments/$environment/modules:/etc/puppet/environments/$environment/dist',
