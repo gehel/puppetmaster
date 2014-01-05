@@ -7,3 +7,5 @@ node 'galadriel.home.ledcom.ch' {
   class { 'role::dev_workstation': }
 }
 
+node default {
+}
