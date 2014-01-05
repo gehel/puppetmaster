@@ -10,7 +10,7 @@ monitor_tool:
     - 'puppi'
 
 puppi:          true
-puppi_version : 2
+puppi_version : 1
 
 puppet_allow:
   - '*.eu-west-1.compute.internal'

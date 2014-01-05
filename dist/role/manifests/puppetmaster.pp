@@ -2,7 +2,7 @@ class role::puppetmaster inherits role::default {
 
   class { 'puppet':
     mode          => 'server',
-    dns_alt_names => 'puppet.aws.ledcom.ch',
+    dns_alt_names => [ 'puppet.aws.ledcom.ch', 'puppet.int.aws.ledcom.ch', ],
     manifest_path => '$confdir/environments/$environment/site/site.pp',
     module_path   => '/etc/puppet/environments/$environment/modules:/etc/puppet/environments/$environment/dist',
     db            => 'mysql',
