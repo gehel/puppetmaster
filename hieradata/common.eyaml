@@ -4,6 +4,7 @@ monitor_tool:
     - nagios
     - puppi
 puppi: true
+puppet_allow:       '*'
 puppet_server:      'puppet.aws.ledcom.ch'
 puppet_environment: 'production'
 puppet_runinterval: 3600
