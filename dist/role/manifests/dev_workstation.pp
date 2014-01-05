@@ -1,4 +1,4 @@
-class role::dev_workstation {
+class role::dev_workstation inherits role::default {
 
   package { [
     'chromium-browser',

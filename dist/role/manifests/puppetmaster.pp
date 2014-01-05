@@ -1,4 +1,4 @@
-class role::puppetmaster {
+class role::puppetmaster inherits role::default {
 
   class { 'puppet':
     mode          => 'server',
@@ -31,8 +31,6 @@ class role::puppetmaster {
     group  => 'root',
     mode   => '0644',
   }
-
-  class { 'puppi': }
 
   package { 'r10k':
     ensure   => 'latest',
