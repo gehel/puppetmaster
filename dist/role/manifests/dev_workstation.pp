@@ -24,9 +24,6 @@ class role::dev_workstation inherits role::default {
   class { 'openssh':
   }
 
-  class { 'puppi':
-  }
-
   class { 'svn':
   }
 
