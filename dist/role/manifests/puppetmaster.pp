@@ -11,7 +11,7 @@ class role::puppetmaster inherits role::default {
     db_port       => $::puppetmaster_db_port,
     db_user       => $::puppetmaster_db_user,
     db_password   => $::puppetmaster_db_password,
-    server        => $fqdn,
+    server        => 'puppet.int.aws.ledcom.ch',
   }
 
   file { '/etc/puppet/public_key.pkcs7.pem':
