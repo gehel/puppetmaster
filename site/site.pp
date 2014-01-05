@@ -36,6 +36,8 @@ package { [
   ensure => present,
 }
 
+class { 'puppi': }
+
 case $server_role {
   'puppetmaster': { class { 'role::puppetmaster': } }
 }
