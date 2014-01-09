@@ -79,6 +79,9 @@ mod 'puppi',
 mod 'rsyslog',
   :git => 'https://github.com/example42/puppet-rsyslog.git'
 
+mod 'rundeck',
+  :git => 'https://github.com/gehel/puppet-rundeck.git'
+
 mod 'rvm',
   :git => 'https://github.com/example42/puppet-rvm.git'
 
