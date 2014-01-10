@@ -5,6 +5,7 @@ class role::dev_workstation inherits role::default {
     'cmus',
     'maven2',
     'openjdk-7-jdk',
+    'phantomjs',
     'synergy',
     'unity-tweak-tool',
     'virtualbox',
