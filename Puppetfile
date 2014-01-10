@@ -71,7 +71,7 @@ mod 'profile',
   :git => 'https://github.com/example42/puppet-profile.git'
 
 mod 'puppet',
-  :git => 'https://github.com/example42/puppet-puppet.git'
+  :git => 'https://github.com/gehel/puppet-puppet.git'
 
 mod 'puppi',
   :git => 'https://github.com/example42/puppi.git'
