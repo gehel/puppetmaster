@@ -22,9 +22,6 @@ class role::dev_workstation inherits role::default {
   class { 'git':
   }
 
-  class { 'openssh':
-  }
-
   class { 'svn':
   }
 
