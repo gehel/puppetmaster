@@ -1,4 +1,4 @@
-case $server_role {
+case $::server_role {
   'puppetmaster' : {
     class { 'role::puppetmaster': }
   }
@@ -11,5 +11,4 @@ node 'galadriel.home.ledcom.ch' {
 }
 
 node default {
-  class { 'openssh': }
 }

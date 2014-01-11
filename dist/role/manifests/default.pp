@@ -13,6 +13,7 @@ class role::default {
     'itop',
     'less',
     'lsof',
+    'puppet-el',
     'screen',
     'secure-delete',
     'sysstat',
@@ -22,6 +23,9 @@ class role::default {
   }
 
   class { 'puppi':
+  }
+  
+  class { 'openssh':
   }
 
 }
