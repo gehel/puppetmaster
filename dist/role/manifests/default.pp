@@ -28,4 +28,7 @@ class role::default {
   class { 'openssh':
   }
 
+  class { 'timezone':
+  }
+
 }

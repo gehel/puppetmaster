@@ -22,3 +22,5 @@ puppet_runinterval:        3600
 puppet_client_daemon_opts: '-d'
 puppet_passenger:          true
 
+timezone: 'Europe/Zurich'
+

@@ -22,6 +22,9 @@ mod 'dns',
 mod 'dnsmasq',
   :git => 'https://github.com/example42/puppet-dnsmasq.git'
 
+mod 'duplicity',
+  :git => 'https://github.com/Jimdo/puppet-duplicity.git'
+
 mod 'firewall',
   :git => 'https://github.com/example42/puppet-firewall.git'
 
@@ -73,6 +76,9 @@ mod 'profile',
 mod 'puppet',
   :git => 'https://github.com/example42/puppet-puppet.git'
 
+mod 'puppetdb',
+  :git => 'https://github.com/example42/puppet-puppetdb.git'
+
 mod 'puppi',
   :git => 'https://github.com/example42/puppi.git'
 
@@ -93,6 +99,9 @@ mod 'sudo',
 
 mod 'svn',
   :git => 'https://github.com/example42/puppet-svn.git'
+
+mod 'timezone',
+  :git => 'https://github.com/example42/puppet-timezone.git'
 
 mod 'tomcat',
   :git => 'https://github.com/example42/puppet-tomcat.git'
