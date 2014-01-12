@@ -9,6 +9,8 @@ monitor_tool:
     - 'nagios'
     - 'puppi'
 
+openssh_exchange_hostkeys: true
+
 puppi:          true
 puppi_version : 1
 
