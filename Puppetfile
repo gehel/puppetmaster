@@ -23,7 +23,7 @@ mod 'dnsmasq',
   :git => 'https://github.com/example42/puppet-dnsmasq.git'
 
 mod 'duplicity',
-  :git => 'https://github.com/Jimdo/puppet-duplicity.git'
+  :git => 'https://github.com/gehel/puppet-duplicity.git'
 
 mod 'firewall',
   :git => 'https://github.com/example42/puppet-firewall.git'
