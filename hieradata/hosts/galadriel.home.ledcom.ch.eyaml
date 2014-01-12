@@ -106,5 +106,5 @@ duplicity_backups:
         source_dir: '/home/gehel'
         target_url: 'scp://gehel@freenas.home.ledcom.ch//mnt/main_volume/backups/galadriel'
         excludes:
-            -'.m2/repository'
+            - '.m2/repository'
 
