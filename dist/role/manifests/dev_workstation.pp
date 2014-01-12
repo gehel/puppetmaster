@@ -19,6 +19,9 @@ class role::dev_workstation inherits role::default {
     provider => 'gem',
   }
 
+  class {'duplicity':
+  }
+
   class { 'git':
   }
 

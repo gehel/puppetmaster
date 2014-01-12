@@ -9,6 +9,7 @@
 		<project>concat</project>
 		<project>ddclient</project>
 		<project>dnsmasq</project>
+		<project>duplicity</project>
 		<project>firewall</project>
 		<project>git</project>
 		<project>icinga</project>
@@ -26,13 +27,16 @@
 		<project>openssh</project>
 		<project>profile</project>
 		<project>puppet</project>
+		<project>puppetdb</project>
 		<project>puppi</project>
 		<project>role</project>
 		<project>rsyslog</project>
+		<project>rundeck</project>
 		<project>rvm</project>
 		<project>stdlib</project>
 		<project>sudo</project>
 		<project>svn</project>
+		<project>timezone</project>
 		<project>tomcat</project>
 		<project>vagrant</project>
 		<project>varnish</project>

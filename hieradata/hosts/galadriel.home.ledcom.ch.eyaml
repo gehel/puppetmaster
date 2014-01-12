@@ -101,4 +101,10 @@ ntp_server:
       z74e5k+Y2wzRetlKfEzhq37zb7+dNEbo4sIKVktFAuxFTTTDvyXW8EOI44Zr
       SnAOSTA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBAZXC1Lm9Ec0qWwpzPG
       /m12gBDkMGX67dYNn1uDuOJKBVjN]
+duplicity_backups:
+    galadriel:
+        source_dir: '/home/gehel',
+        target_url: 'scp://gehel@freenas.home.ledcom.ch//mnt/main_volume/backups/galadriel',
+        excludes:
+            -'.m2/repository'
 
