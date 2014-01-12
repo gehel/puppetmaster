@@ -42,7 +42,7 @@ class role::puppetmaster inherits role::default {
 
   # export additional SSH server keys for hosts not managed by puppet
   @@sshkey { 'freenas.home.ledcom.ch':
-    host_aliases => '192.168.1.20',
+    host_aliases => [ 'freenas', 'freenas.home.ledcom.ch', '192.168.1.20' ],
     type         => 'ssh-rsa',
     key          => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCuRsCE6sS2k1RV1D+g337nbEUi9MDWCSicNwQiwIcxxcnJGam8jMXWgFyP7w5SSe0Ml7JpsFSbAtqOf+lGEUf135AS7BVjKzxqBk0Qzr1/fa3tLGjMbqIr3yw0slvHLKCgoKfxRmc37oRIkzcWhF/Q6zCkk641y320dBw4YR6nI2mt2KAcip3wh4FS8d4QoUaEzXP0AWkfY/toO8rOqCOIk0IT2x7aaa7HH36TaVJPCVKqBxAmppN0BYZhPxV+WP/vMblPp5RgZHZjCceSwkN/1DDYuRTSHzvUZzxa+0WjhBVX+pgiUceflBvKwPYCVfVkMvGllgfb5Nhkj0UDuhE/',
     tag          => ['openssh::hostkeys'];
