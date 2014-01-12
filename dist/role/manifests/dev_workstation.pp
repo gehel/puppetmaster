@@ -7,11 +7,18 @@ class role::dev_workstation inherits role::default {
     'openjdk-7-jdk',
     'phantomjs',
     'synergy',
-    'unity-tweak-tool',
     'virtualbox',
     'xclip',
     ]:
     ensure => 'present',
+  }
+
+  if $::lsbdistrelease == '13.04' {
+    package { [
+      'unity-tweak-tool',
+      ]:
+      ensure => 'present',
+    }
   }
 
   package { ['hiera-eyaml', 'r10k',]:
