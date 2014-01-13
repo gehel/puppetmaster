@@ -8,11 +8,6 @@ class role::puppetmaster inherits role::default {
     manifest_path => '$confdir/environments/$environment/site/site.pp',
     module_path   => '/etc/puppet/environments/$environment/modules:/etc/puppet/environments/$environment/dist',
     db            => 'puppetdb',
-    db_name       => $::puppetmaster_db_name,
-    db_server     => $::puppetmaster_db_server,
-    db_port       => $::puppetmaster_db_port,
-    db_user       => $::puppetmaster_db_user,
-    db_password   => $::puppetmaster_db_password,
     server        => 'puppet.int.aws.ledcom.ch',
   }
 
