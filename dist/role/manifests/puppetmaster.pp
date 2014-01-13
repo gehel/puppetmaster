@@ -1,4 +1,9 @@
 class role::puppetmaster inherits role::default {
+
+  class { 'puppetdb':
+    
+  }
+
   class { 'puppet':
     mode          => 'server',
     dns_alt_names => 'puppet.aws.ledcom.ch, puppet.int.aws.ledcom.ch',
