@@ -21,6 +21,7 @@ puppet_environment:        'production'
 puppet_runinterval:        3600
 puppet_client_daemon_opts: '-d'
 puppet_passenger:          true
+puppet_port:               443
 
 timezone: 'Europe/Zurich'
 
