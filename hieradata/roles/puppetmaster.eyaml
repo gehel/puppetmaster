@@ -1,0 +1,31 @@
+---
+mcollective_stomp_password:
+  - ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBADAFMAACAQAw
+    DQYJKoZIhvcNAQEBBQAEggEAHvWzUjIj6t8VDmqZ2RBw6K/3Kz1uHeEHgUrk
+    pid7cHO6L2zFbqIjjS/bzi3CxxUkRucfWjh2tLjOdXwfeDykPfLRXzBj8ceR
+    76doKebeYnRR8bK/nMDbNUMBEZNTsRemBokdLrZ5Ts+Sf3cOn0WF0XyfoCJi
+    rU5a0sGTrW9zJRyv4KbYj+cnvA4IZBc2xXwB36Dvj9S2QuQs+AlE8PpDy+up
+    ngSQCA9y4FtSDwkaJP0iimcCpTr6p9qMImZB2Gz26IMqMK0WN82udDTykr1P
+    fnohZoJmbdTNIthbtAhHmuBqyJgeC9GKqex9ROXN9+dOmTVVwfE5JFdrBX03
+    4Tr2LTBsBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBAIvRAHqvS/ep91p+9H
+    wnBOgEBbeuxTH91azWxxv3Cgcz+89o7IJAMmPiZN2SbkMfQgtuqddjD1+bZg
+mcollective_stomp_admin_password:
+  - ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBADAFMAACAQAw
+    DQYJKoZIhvcNAQEBBQAEggEAOZbvq55OfbKLu3zPgfzrI2/OPOEl2A0lESSa
+    1K2ntARLAqCZM3JXMaBv3GdQLjAriAqdkeXiHoTir0Fv5o9F50Nag35pIV5l
+    p2SOaaMDuO1AvEPR9uOBN9eA1o9Wh3yuMQrWBAFoGolEp7/L9Szn0yeLQAJg
+    CXp4OSn/ojSsmuUVBLICARCzGgtVZX85R5CyMTXgu9eUJDtnl3yEY8K4y67I
+    ZXF+Tp82PRvzizexCslFBLiGm2BveEnXREp8BeL5jgUE/+PURNcp4sCIb6G8
+    8H49fmFOMWTkAznwI8ejW4iWX+QWJsmf9CYrzBNL4YTPKSsJ8te7d+XVxMIF
+    whbCRDBsBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBDesMcm1xvWs1I5AdSO
+    6bnCgEBAMycFDlDtCfZjGW/3NBPt2ttJFpuhEydvAdXj/9NysoFxeiINDNhP
+    nTsMmKSngiswmFzzs6ImBtrVztCa1zal]
+mcollective_install_stomp_server: true
+
+puppet_mode:          'server'
+puppet_dns_alt_names: 'puppet.aws.ledcom.ch, puppet.int.aws.ledcom.ch'
+puppet_manifest_path: '$confdir/environments/$environment/site/site.pp'
+puppet_module_path:   '/etc/puppet/environments/$environment/modules:/etc/puppet/environments/$environment/dist'
+puppet_db:            'puppetdb'
+puppet_server:        'puppet.int.aws.ledcom.ch'
+

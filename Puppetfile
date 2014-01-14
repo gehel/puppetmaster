@@ -1,3 +1,6 @@
+mod 'activemq',
+  :git => 'https://github.com/example42/puppet-activemq.git'
+
 mod 'apache',
   :git => 'https://github.com/example42/puppet-apache.git'
 
