@@ -22,12 +22,6 @@ class role::default {
     ensure => present,
   }
 
-  class { 'mcollective':
-  }
-
-  class { 'puppet':
-  }
-  
   class { 'puppi':
   }
   
