@@ -8,6 +8,7 @@ class role::dev_workstation inherits role::default {
     'phantomjs',
     'synergy',
     'virtualbox',
+    'wireshark',
     'xclip',
     ]:
     ensure => 'present',
