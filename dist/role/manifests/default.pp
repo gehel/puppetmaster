@@ -22,12 +22,15 @@ class role::default {
     ensure => present,
   }
 
-  class { 'puppi':
+  class { 'ntp':
   }
-  
+
   class { 'openssh':
   }
 
+  class { 'puppi':
+  }
+  
   class { 'timezone':
   }
 

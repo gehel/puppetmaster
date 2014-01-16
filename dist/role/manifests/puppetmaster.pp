@@ -1,6 +1,5 @@
 class role::puppetmaster inherits role::default {
   class { 'puppetdb':
-    install_prerequisites => false,
     http_host             => $::fqdn,
     before                => Class['puppet'],
   }
@@ -12,6 +11,7 @@ class role::puppetmaster inherits role::default {
     module_path   => '/etc/puppet/environments/$environment/modules:/etc/puppet/environments/$environment/dist',
     db            => 'puppetdb',
     server        => 'puppet.int.aws.ledcom.ch',
+    passenger     => true,
   }
 
   file { '/etc/puppet/public_key.pkcs7.pem':
