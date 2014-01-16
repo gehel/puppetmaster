@@ -22,6 +22,9 @@ mcollective_stomp_admin_password:
     nTsMmKSngiswmFzzs6ImBtrVztCa1zal]
 mcollective_install_stomp_server: true
 
+puppet_allow:
+    - '127.0.0.1'
+    - '*.ledcom.ch'
 puppet_mode:          'server'
 puppet_dns_alt_names: 'puppet.aws.ledcom.ch, puppet.int.aws.ledcom.ch'
 puppet_manifest_path: '$confdir/environments/$environment/site/site.pp'
