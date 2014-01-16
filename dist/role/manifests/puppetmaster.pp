@@ -26,8 +26,8 @@ class role::puppetmaster inherits role::default {
     ensure   => 'latest',
     provider => 'gem',
   } -> file { '/etc/puppet/hiera.yaml':
-    ensure => 'present',
-    source => 'puppet:///modules/role/hiera.yaml',
+    ensure => 'link',
+    target => '/etc/puppet/environments/production/hiera.yaml',
     owner  => 'root',
     group  => 'root',
     mode   => '0644',
