@@ -38,9 +38,6 @@ class role::dev_workstation inherits role::default {
 
   class { 'svn':
   }
-  
-  class { 'vagrant':
-  }
 
   package { 'ruby-dev': ensure => 'present', } -> class { 'vagrant': }
 
