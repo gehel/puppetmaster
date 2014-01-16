@@ -22,6 +22,9 @@ class role::default {
     ensure => present,
   }
 
+  class { 'logrotate':
+  }
+
   class { 'ntp':
   }
 
@@ -30,8 +33,11 @@ class role::default {
 
   class { 'puppi':
   }
-  
+
   class { 'timezone':
+  }
+
+  class { 'sudo':
   }
 
 }

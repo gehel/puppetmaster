@@ -1,4 +1,8 @@
 class role::puppetmaster inherits role::default {
+
+  class { 'git':
+  }
+
   class { 'puppetdb':
     http_host             => $::fqdn,
     before                => Class['puppet'],
