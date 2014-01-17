@@ -103,9 +103,10 @@ ntp_server:
       /m12gBDkMGX67dYNn1uDuOJKBVjN]
 duplicity_backups:
     galadriel:
-        ssh_key_file: '/root/.ssh/backup'
+        ssh_key_file: '/home/gehel/.ssh/backup'
         source_dir:   '/home/gehel'
         target_url:   'scp://gehel@freenas.home.ledcom.ch//mnt/main_volume/backups/galadriel'
+        user:         'gehel'
         excludes:
             - '/home/gehel/.m2/'
         password: ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQAw
