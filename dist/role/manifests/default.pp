@@ -31,6 +31,9 @@ class role::default {
   class { 'openssh':
   }
 
+  class { 'puppet':
+  }
+
   class { 'puppi':
   }
 
