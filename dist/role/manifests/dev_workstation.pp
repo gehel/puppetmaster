@@ -138,4 +138,10 @@ class role::dev_workstation inherits role::default {
     command     => 'fc-cache',
     refreshonly => true,
   }
+  
+  cron { 'cleanup-gstreamer':
+    command => '/bin/rm /home/gehel/.goutputstream-*',
+    user => 'gehel',
+    monthday => "*",
+  }
 }
