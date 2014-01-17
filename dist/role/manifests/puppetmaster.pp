@@ -1,16 +1,14 @@
 class role::puppetmaster inherits role::default {
-
-  class { 'git':
-  }
+  class { 'git': }
 
   class { 'puppetdb':
-    http_host             => $::fqdn,
-    before                => Class['puppet'],
+    http_host => $::fqdn,
+    before    => Class['puppet'],
   }
-  
-  class { 'puppetdashboard':
-    
-  }
+
+  class { 'mysql':
+  } ->
+  class { 'puppetdashboard': }
 
   file { '/etc/puppet/public_key.pkcs7.pem':
     owner => 'root',
