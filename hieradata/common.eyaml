@@ -5,17 +5,16 @@ firewall_destination:  '0/0'
 iptables_block_policy: 'accept'
 
 mcollective_install_client: true
-mcollective_psk:
-  - ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBADAFMAACAQAw
-    DQYJKoZIhvcNAQEBBQAEggEAE00reiGhkX1P4PQuMuAvt4nNhMb3MeIk8d+G
-    8ajrsJpJI3HXFz2XZRkDCY7Qr5bqJivVrn+oIP6D+ON4vG1iTGNO36DjOzDe
-    FrxQFYwl+e3LYbx/Fh3NzQkXa65L/0GefztDORqQhEMcbc1bJDLLA3qJFQHo
-    RzbEAAbb4Si6TEi0ulZgb44FWv4/265t41oLeY/96XFFh5saZa5bCjhTtP6d
-    90197u9mEn8ps3axJLBRwJaQzT1vLVN3+LGKhE6kH6igwYYh5pjz7h7+2FGg
-    k1wXbg+ryx1HIxdQS1q9RVusd7y4bILb8/Z9shihE/DmqEVxdJwgvRutN+E+
-    tWIvozBsBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBDcN82GxYG3PS2mijQ0
-    OjhAgEA7h+DILm9uKX6INIt2no7O9VJLSyzmKkAcaNnP1b9T/HLayQom92pj
-    9jAU5YBUxBM6RGCZljVYOz9Zz9vgWDZx]
+mcollective_psk: ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBADAFMAACAQAw
+                 DQYJKoZIhvcNAQEBBQAEggEAE00reiGhkX1P4PQuMuAvt4nNhMb3MeIk8d+G
+                 8ajrsJpJI3HXFz2XZRkDCY7Qr5bqJivVrn+oIP6D+ON4vG1iTGNO36DjOzDe
+                 FrxQFYwl+e3LYbx/Fh3NzQkXa65L/0GefztDORqQhEMcbc1bJDLLA3qJFQHo
+                 RzbEAAbb4Si6TEi0ulZgb44FWv4/265t41oLeY/96XFFh5saZa5bCjhTtP6d
+                 90197u9mEn8ps3axJLBRwJaQzT1vLVN3+LGKhE6kH6igwYYh5pjz7h7+2FGg
+                 k1wXbg+ryx1HIxdQS1q9RVusd7y4bILb8/Z9shihE/DmqEVxdJwgvRutN+E+
+                 tWIvozBsBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBDcN82GxYG3PS2mijQ0
+                 OjhAgEA7h+DILm9uKX6INIt2no7O9VJLSyzmKkAcaNnP1b9T/HLayQom92pj
+                 9jAU5YBUxBM6RGCZljVYOz9Zz9vgWDZx]
 
 monitor: true
 monitor_tool:
