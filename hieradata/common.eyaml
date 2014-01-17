@@ -27,10 +27,6 @@ openssh_exchange_hostkeys: true
 puppi:          true
 puppi_version:  1
 
-puppet_allow:
-  - '*.eu-west-1.compute.internal'
-  - '*.ledcom.ch'
-  - '127.0.0.1'
 puppet_server:             'puppet.aws.ledcom.ch'
 puppet_environment:        'production'
 puppet_runinterval:        3600
