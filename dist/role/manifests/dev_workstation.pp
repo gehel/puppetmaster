@@ -45,6 +45,10 @@ class role::dev_workstation inherits role::default {
 
   Exec {
     logoutput => 'on_failure', }
+    
+  class { 'maven::maven':
+    version => '3.0.5',
+  }
 
   exec { 'download-STS':
     path    => '/usr/bin',
