@@ -60,7 +60,7 @@ puppet_server:        'puppet.int.aws.ledcom.ch'
 
 puppetdashboard_db_host:     'localhost'
 puppetdashboard_db_port:     '3306'
-puppetdashboard_dp_password:
+puppetdashboard_db_password:
   - ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBADAFMAACAQAw
     DQYJKoZIhvcNAQEBBQAEggEAN02+zgjsEU94DJCI79a8MivLl8iPIOuXZWWD
     E8dh8fsIW5SNRUwSqstbnCtCzwzVc7y6s4HkuVycOU7QZG2tER6IQ+DgtjLh
