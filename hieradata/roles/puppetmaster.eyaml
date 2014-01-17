@@ -58,4 +58,21 @@ puppet_module_path:   '/etc/puppet/environments/$environment/modules:/etc/puppet
 puppet_passenger:     true
 puppet_server:        'puppet.int.aws.ledcom.ch'
 
-puppetdashboard_
+puppetdashboard_db_host:     'localhost'
+puppetdashboard_db_port:     '3306'
+puppetdashboard_dp_password:
+  - ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBADAFMAACAQAw
+    DQYJKoZIhvcNAQEBBQAEggEAN02+zgjsEU94DJCI79a8MivLl8iPIOuXZWWD
+    E8dh8fsIW5SNRUwSqstbnCtCzwzVc7y6s4HkuVycOU7QZG2tER6IQ+DgtjLh
+    aMOVSGa5G+UkT8lXyMyrDT1OQyjC+KzEOD9G7bdE+aqazeLV6GOW0EySB3WI
+    E6f00nMtPxpStxiWMCDOwChcBiEyYSVrES2toM4mZx5jnxb28LAeiAg5oTGG
+    sWqgdc4VFfPDPg3qP33Gdz844XfzTgw3cngoWAC8sccKO3aJdK+Eb9EV3Uwe
+    zHvqc6BhJWzVXiIbnngulM8eK5XPUv4JX999dxsw2UczEPnGpsP6LZnEsPQK
+    4MMxbDBsBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBCiLOD9v6Sf4oCm5MtT
+    04oNgEAAWFPGGAJm7CIc8xC+3/qSrFAdo2gFIViDMsn5klJkazbkJ9oOE5Cq
+    tPFItH91B5ZyaElGJ3UQihfEA4DQ2dfx]
+puppetdashboard_ca_server:   'puppet.int.aws.ledcom.ch'
+puppetdashboard_inventory_server: 'puppet.int.aws.ledcom.ch'
+puppetdashboard_enable_inventory_service: true
+puppetdashboard_filebucket_server: 'puppet.int.aws.ledcom.ch'
+puppetdashboard_use_file_bucket_diffs: true
