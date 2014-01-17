@@ -7,8 +7,9 @@ class role::puppetmaster inherits role::default {
   }
 
   class { 'mysql':
+    absent => true,
   } ->
-  class { 'puppetdashboard': }
+  class { 'puppetdashboard': absent => true, }
 
   file { '/etc/puppet/public_key.pkcs7.pem':
     owner => 'root',
