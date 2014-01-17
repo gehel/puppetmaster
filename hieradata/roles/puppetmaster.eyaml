@@ -76,3 +76,4 @@ puppetdashboard_inventory_server: 'puppet.int.aws.ledcom.ch'
 puppetdashboard_enable_inventory_service: true
 puppetdashboard_filebucket_server: 'puppet.int.aws.ledcom.ch'
 puppetdashboard_use_file_bucket_diffs: true
+puppetdashboard_config_file: '/etc/puppet-dashboard/settings.yml'
