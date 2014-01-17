@@ -7,6 +7,9 @@ mod 'apache',
 mod 'apt',
   :git => 'https://github.com/example42/puppet-apt.git'
 
+mod 'autofs',
+  :git => 'https://github.com/example42/puppet-autofs.git'
+
 mod 'cntlm',
   :git => 'https://github.com/gehel/puppet-cntlm.git'
 
@@ -28,11 +31,20 @@ mod 'dnsmasq',
 mod 'duplicity',
   :git => 'https://github.com/gehel/puppet-duplicity.git'
 
+mod 'fail2ban',
+  :git => 'https://github.com/example42/puppet-fail2ban.git'
+
 mod 'firewall',
   :git => 'https://github.com/example42/puppet-firewall.git'
 
 mod 'git',
   :git => 'https://github.com/example42/puppet-git.git'
+
+mod 'haproxy',
+  :git => 'https://github.com/example42/puppet-haproxy.git'
+
+mod 'hosts',
+  :git => 'https://github.com/example42/puppet-hosts.git'
 
 mod 'icinga',
   :git => 'https://github.com/example42/puppet-icinga.git'
@@ -43,14 +55,32 @@ mod 'iptables',
 mod 'java',
   :git => 'https://github.com/example42/puppet-java.git'
 
+mod 'kibana',
+  :git => 'https://github.com/example42/puppet-kibana.git'
+
+mod 'limits',
+  :git => 'https://github.com/example42/puppet-limits.git'
+
 mod 'logrotate',
   :git => 'https://github.com/example42/puppet-logrotate.git'
+
+mod 'logstash',
+  :git => 'https://github.com/example42/puppet-logstash.git'
 
 mod 'mcollective',
   :git => 'https://github.com/example42/puppet-mcollective.git'
 
+mod 'memcached',
+  :git => 'https://github.com/example42/puppet-memcached.git'
+
+mod 'maven',
+  :git => 'https://github.com/example42/puppet-maven.git'
+
 mod 'monitor',
   :git => 'https://github.com/example42/puppet-monitor.git'
+
+mod 'mongodb',
+  :git => 'https://github.com/example42/puppet-mongodb.git'
 
 mod 'munin',
   :git => 'https://github.com/example42/puppet-munin.git'
@@ -61,6 +91,12 @@ mod 'mysql',
 mod 'nagios',
   :git => 'https://github.com/example42/puppet-nagios.git'
 
+mod 'newrelic',
+  :git => 'https://github.com/example42/puppet-newrelic.git'
+
+mod 'nfs',
+  :git => 'https://github.com/example42/puppet-nfs.git'
+
 mod 'nginx',
   :git => 'https://github.com/example42/puppet-nginx.git'
 
@@ -70,8 +106,23 @@ mod 'nrpe',
 mod 'ntp',
   :git => 'https://github.com/example42/puppet-ntp.git'
 
+mod 'openntpd',
+  :git => 'https://github.com/example42/puppet-openntpd.git'
+
 mod 'openssh',
   :git => 'https://github.com/example42/puppet-openssh.git'
+
+mod 'openvpn',
+  :git => 'https://github.com/example42/puppet-openvpn.git'
+
+mod 'pam',
+  :git => 'https://github.com/example42/puppet-pam.git'
+
+mod 'postfix',
+  :git => 'https://github.com/example42/puppet-postfix.git'
+
+mod 'postgresql',
+  :git => 'https://github.com/example42/puppet-postgresql.git'
 
 mod 'profile',
   :git => 'https://github.com/example42/puppet-profile.git'
@@ -87,6 +138,9 @@ mod 'puppetdb',
 
 mod 'puppi',
   :git => 'https://github.com/example42/puppi.git'
+
+mod 'rsync',
+  :git => 'https://github.com/example42/puppet-rsync.git'
 
 mod 'rsyslog',
   :git => 'https://github.com/example42/puppet-rsyslog.git'
