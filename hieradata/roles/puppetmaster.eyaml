@@ -22,6 +22,30 @@ mcollective_stomp_admin_password:
     nTsMmKSngiswmFzzs6ImBtrVztCa1zal]
 mcollective_install_stomp_server: true
 
+mysql_root_password: 
+  - ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBADAFMAACAQAw
+    DQYJKoZIhvcNAQEBBQAEggEAboJUKNyu/wpfCLzgFeKSyesEqBJk0p3HAbea
+    rDIAFXv01qCF0y48jtXmSsfJtVbynqtEnBleBxWTh/85YwAfhsEzLAH0xQW2
+    9z5lUr4OpjcOxYxRy6B6nz8vx8c3FFK09YHXRieux4c1mmxnK76rMeXc6sNL
+    LsZ5aPk6mQlt3JsC/mn112/DA4QJTjM8pvb39P3CAVwPPixWtJIerN+ONeWQ
+    UefU4I6wNONs2xyApv6Fl/zRPjEH9/1ju+xfE+3tm+TZ5zz/O+RNFZluA4Pu
+    BOC3vKboOpI4s7kpSKwYYhBZraKuzGvYyESeBnMHqTPOQnS5Un9zZPfaeDPH
+    V4m7CDBsBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBCyqzu+BZsjX9PKeK/z
+    om2pgEAgguY4hjgIuTmpynB2aMUzRygx+T75B/6gN+xneQ6/nzXXAOdhQJOM
+    ajCDJca+UazHwDvh8ooNSrw3xdoML2Hb]
+mysql_password_salt: 
+  - ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBADAFMAACAQAw
+    DQYJKoZIhvcNAQEBBQAEggEAqu9y0tZzEMUBsCukd11j8e5j8i5FsWInbLNn
+    83RIcfRVlFQ6wCk7TpRe6/eCmLWZMG+J6erhGH4H0C/x0x1xDhKTZ+brKkkk
+    vZvWgiwt7ttQN+Fh9WAbkyJaw7IXbafrX0X351PLF9vbHnYtPU6Fxrw4nAqp
+    4vo1QEt15PD5vJpDLk5CiyY4wXyFedwBbsj6wr0JWVphi6VyQnfep+gi4E6K
+    UKcktBbB97Oq0hJyxVkjxcJ5NKsbIovUfcdhEKGz8WT4fZ7VTvVSOVLW+1J5
+    Xc3JkTX8wi8MszGlbK/mPVOhK2Oe4YfH2hDf6yLLMg5MwclqOsI1XQtRpPu6
+    3HHJUjBsBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBCIsxoBjirzDKSK5qom
+    T/CogEB9bQ9I5dCCPGqxehdN7rDDslLVWh9eIqpUR09ic7M3thXOUVWv5Ouh
+    1Ey+WYjo3qaheOn7dL07m9K2f8ZYKzdL]
+
+
 puppet_allow:
   - '*.eu-west-1.compute.internal'
   - '*.ledcom.ch'
@@ -33,3 +57,5 @@ puppet_mode:          'server'
 puppet_module_path:   '/etc/puppet/environments/$environment/modules:/etc/puppet/environments/$environment/dist'
 puppet_passenger:     true
 puppet_server:        'puppet.int.aws.ledcom.ch'
+
+puppetdashboard_

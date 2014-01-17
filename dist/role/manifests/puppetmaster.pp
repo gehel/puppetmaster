@@ -7,6 +7,10 @@ class role::puppetmaster inherits role::default {
     http_host             => $::fqdn,
     before                => Class['puppet'],
   }
+  
+  class { 'puppetdashboard':
+    
+  }
 
   file { '/etc/puppet/public_key.pkcs7.pem':
     owner => 'root',
