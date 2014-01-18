@@ -1,4 +1,48 @@
 ---
+icinga_enable_idoutils:       true
+icinga_db_password_idoutils:  ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBADAFMAACAQAw
+                              DQYJKoZIhvcNAQEBBQAEggEADfg2i7yz9mHeF7Su9AU4rm+FqutN62DdVUxa
+                              tnyyZHU7bU+NE+W0SS1sIHluYUcBZCzVDToPFFialy0Ae9slTnl9s7MCRC7M
+                              k+X+WUQLvc2P0ChQHeoQozKhPb1EpAwrZXP8l6PsmGVO59SB3WXQD94vx7kA
+                              SF662eAcbtIYkjddXqsx/je6JlcLmnKTvP/xdbATer7q1hi+nfYpA6dfzbC0
+                              OaHH0FlEfW/kDS+9BgmV7sh49j0m1cKJ4kVNVaeNCJcpuYGyGS8MM8AKTidu
+                              bvoEdA28Xz+nW5X76bPCYcvEnkRPANUT0EuE/+LWTGPTa3AmhuPDtD3NYcWa
+                              WyuCQjBsBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBD8XnYCsK8cUHJXsaSi
+                              5CQvgEB2WVABh5ktCXatt0uSFed4RFYPkQkWbXYUeE7xitS3soPhrq6jZw02
+                              Sn2rcjcb6RDbSVDBpW6ESPt9G4xXoDQ9
+icinga_enable_icingaweb:      true
+icinga_db_password_icingaweb: ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBADAFMAACAQAw
+                              DQYJKoZIhvcNAQEBBQAEggEAuGnZ8WMNzH+WU357lRXN1hyqVYYYDOq7Rcqd
+                              H3KVy4w48PVCezMOnEeoVXQaH7veW7g9xcITfHYcIb/Qhku34lwFCx6h4dLu
+                              7AgeSfq89LzNh98n4NxilRmWJZkBG3PDBJPRCzmgF5N6zjEAMSnWM47Qb4rh
+                              6WjjwA29I7qO63VNSEjTWFTCYlCsKlUTqT9R6qNo3i5m2BzRM7iBw42hpCIo
+                              oSzaM71/1W4F/KDzco8m9ZpFJpncDDgpDLNTr/yM6b00Qfs66ekyM6b89YSw
+                              dbYqOhp0cX2bpmqDAHBz4zP716NmxLod8d8Ty9ALp0spQRAHKEFfUahKGgKw
+                              d6IS/DBsBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBBGVi6tVeNG2GJ/7NTT
+                              SXUjgED5QFq43pfbXxEsN7J4Ibcfw/a90q/4ZqayCNwzfsGprowLDnJmyliQ
+                              sSgAmGmfcMPES3aF4fggUHxG483MlybC]
+
+mysql_root_password: ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBADAFMAACAQAw
+                     DQYJKoZIhvcNAQEBBQAEggEAVCbbK+R4bYolOFEsFMcBB4I0mufq7mkQMIBG
+                     oj5NozQD/Bk/7r+ngf+zf2HtqarlsgCaR020kxSSptWCf6LGBfgpVz8hBsyJ
+                     RQifc/iE8xVKFDwAgyr+6HqtGjqbc1C5ePTI5PB+3mddU/EXCowOxDWw4Tmu
+                     DcwuBqHoV15zwtYc6R70CLniUgdiIU8hwsk8z5HMzESmG+GqAcUYHxViYeu7
+                     Jjz9nRuOxVJCZVddIazG01NoPc0OQ0YPmuevsDbv+3YrA2UlwFeyNCE74H0E
+                     TEoaNOzYut07cf60uTj1Rk2IfUiAbBXhcA3mgI0B3IDilL0PeHlpnLcIyRGg
+                     zY8jIjBsBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBDBDhzNgcDycGZMk0EH
+                     oFoagEDTDAKUMk9+LlPfOPymUnCphPoMNNwcE3NB7SUBK74c40Di6IurtOKl
+                     xOEqaJp0wAy34PnGMKj26/0ODPrWHAZt]
+mysql_password_salt: ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBADAFMAACAQAw
+                     DQYJKoZIhvcNAQEBBQAEggEAZG2ljMlUqqddPZnXKu19AaEpUGgDhThQrqwx
+                     BBBi5YjcgtZv6SKsYqve1/fu43r7ljHZ2YlQWlluNjlPsobeaTmZOQzRntet
+                     xdvasWkG0o9VQLSv0qv0hfue/L2+7DUXGUFpKwXgQPzTZkMGXkx1bC1qLAoB
+                     L3vccV13o2/v/Pth2Cec5fBBENV4a5bDeSyNQSL8U445/5hyRWqCA0XG2pyb
+                     rYauH3O9P4XspK+LLA+JBvCDfQiEQwd/0pmvXbquO6AC2BQIPHhyvmFvQohk
+                     79tsThiy80/r9CBI6XrDqda+2xX+BpHYDyjsIjiF/9HvFo0xKHFV0L5kNH7D
+                     likPnjBsBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBCmhB1jBcYrLwmdrifc
+                     G1zagECDzeSkdvarwTAfvH2uzGRILbmRdHnv6dYx1ibWFgnFAYrdx8FlpIgg
+                     JdU02zIJJyq2UIbtYGWnmYg5y5/03plg]
+
 puppet_allow:
   - '*.eu-west-1.compute.internal'
   - '*.ledcom.ch'
