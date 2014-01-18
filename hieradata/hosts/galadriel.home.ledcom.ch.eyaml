@@ -108,7 +108,15 @@ duplicity_backups:
         target_url:   'scp://gehel@freenas.home.ledcom.ch//mnt/main_volume/backups/galadriel'
         user:         'gehel'
         excludes:
+            - '/home/gehel/.cache/'
+            - '/home/gehel/.eclipse/'
+            - '/home/gehel/.IntelliJIdea12/'
             - '/home/gehel/.m2/'
+            - '/home/gehel/.mozilla/'
+            - '/home/gehel/.vagrant.d/'
+            - '/home/gehel/Downloads/'
+            - '/home/gehel/Dropbox/'
+            - '/home/gehel/Music/'
         password: ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQAw
                   DQYJKoZIhvcNAQEBBQAEggEAKj0Xe7fVlL9FfSfXK6LLHC/9q07T0ISqJLP/
                   flcuMF1Jk1ae9UqCkdew2vA4XCF/ONDlwhvMmytKeciiaD+72yROTC0jEVc0
