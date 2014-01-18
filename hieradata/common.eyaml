@@ -18,7 +18,7 @@ mcollective_psk: ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBADAFM
 
 monitor: true
 monitor_tool:
-    - 'nagios'
+    - 'icinga'
     - 'puppi'
 
 openssh_exchange_hostkeys: true
