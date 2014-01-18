@@ -91,6 +91,10 @@ cntlm_no_proxy:
       x/H8biEMJsHO+Wzx4yXKzyyzO4+IOZmFEhGKsul5Bv2pUmkuxzjOm88m840g
       cQUqoTBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBBOq9x7sSXd19d2Yg63
       uhFJgCB8zTJNI+wpVQDNVM3p7uzhgEOuiwKBQteJwtZhBBScLQ==]
+
+monitor_tool:
+    - 'puppi'
+
 ntp_server:
     - ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQAw
       DQYJKoZIhvcNAQEBBQAEggEABfa5m+rouDBE6V0ul2DstRbyxzvac+PMLGxa
