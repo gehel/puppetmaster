@@ -34,6 +34,9 @@ class role::puppetmaster inherits role::default {
   }
 
   class { 'mysql':
-  } -> class { 'icinga': }
+  }
+
+  class { 'icinga':
+  }
 
 }
