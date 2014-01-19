@@ -93,10 +93,10 @@ cntlm_no_proxy:
       uhFJgCB8zTJNI+wpVQDNVM3p7uzhgEOuiwKBQteJwtZhBBScLQ==]
 
 git_clones:
-    - rundeck:
-        source_url:      'https://github.com/dtolabs/rundeck.git'
-        destination_dir: '/home/gehel/dev/rundeck'
-        owner:           'gehel'
+    rundeck:
+      source_url:      'https://github.com/dtolabs/rundeck.git'
+      destination_dir: '/home/gehel/dev/rundeck'
+      owner:           'gehel'
 
 monitor_tool:
     - 'puppi'
