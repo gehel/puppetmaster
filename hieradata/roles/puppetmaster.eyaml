@@ -64,3 +64,4 @@ rundeck_projects:
         command_exec:        '/usr/local/bin/r10k deploy environment -p'
         command_description: 'r10k deploy'
         format:              'yaml'
+        filter:              'ledcom.ch'
