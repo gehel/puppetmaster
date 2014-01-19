@@ -31,6 +31,9 @@ mod 'dnsmasq',
 mod 'duplicity',
   :git => 'https://github.com/gehel/puppet-duplicity.git'
 
+mod 'exported_vars',
+  :git => 'https://github.com/gehel/puppet-exported_vars.git'
+
 mod 'fail2ban',
   :git => 'https://github.com/example42/puppet-fail2ban.git'
 

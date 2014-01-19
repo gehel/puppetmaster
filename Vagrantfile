@@ -9,13 +9,15 @@ Vagrant::Config.run do |config|
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "debian7"
 
+  config.vm.customize ["modifyvm", :id, "--memory", 2048]
+
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
   config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/debian-70rc1-x64-vbox4210.box"
 
   # Forward a port from the guest to the host, which allows for outside
   # computers to access the VM, whereas host only networking does not.
-  #config.vm.forward_port 5299, 5299
+  config.vm.forward_port 4440, 4440
 
   # Enable provisioning with Puppet stand alone.  Puppet manifests
   # are contained in a directory path relative to this Vagrantfile.
@@ -25,7 +27,7 @@ Vagrant::Config.run do |config|
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "site"
     puppet.module_path = "modules"
-    puppet.manifest_file  = "test-duplicity.pp"
+    puppet.manifest_file  = "test.pp"
   end
 
 end
