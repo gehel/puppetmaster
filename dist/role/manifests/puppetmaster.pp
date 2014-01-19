@@ -1,4 +1,6 @@
 class role::puppetmaster inherits role::default {
+  apt::conf { 'allow-unauthenticated': content => 'APT::Get::AllowUnauthenticated yes;', }
+
   class { 'git': }
 
   class { 'puppetdb':
@@ -37,6 +39,9 @@ class role::puppetmaster inherits role::default {
   }
 
   class { 'icinga':
+  }
+
+  class { 'rundeck':
   }
 
 }

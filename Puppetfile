@@ -32,7 +32,7 @@ mod 'duplicity',
   :git => 'https://github.com/gehel/puppet-duplicity.git'
 
 mod 'exported_vars',
-  :git => 'https://github.com/gehel/puppet-exported_vars.git'
+  :git => 'https://github.com/example42/puppet-exported_vars.git'
 
 mod 'fail2ban',
   :git => 'https://github.com/example42/puppet-fail2ban.git'
@@ -41,7 +41,7 @@ mod 'firewall',
   :git => 'https://github.com/example42/puppet-firewall.git'
 
 mod 'git',
-  :git => 'https://github.com/example42/puppet-git.git',
+  :git => 'https://github.com/example42/puppet-git.git'
 
 mod 'graphite',
   :git => 'https://github.com/echocat/puppet-graphite.git'

@@ -22,6 +22,9 @@ class role::default {
     ensure => present,
   }
 
+  class{ 'apt':
+  }
+
   class { 'logrotate':
   }
 
@@ -35,6 +38,9 @@ class role::default {
   }
 
   class { 'puppi':
+  }
+
+  class { 'rundeck::node':
   }
 
   class { 'timezone':

@@ -54,3 +54,13 @@ puppet_mode:          'server'
 puppet_module_path:   '/etc/puppet/environments/$environment/modules:/etc/puppet/environments/$environment/dist'
 puppet_passenger:     true
 puppet_server:        'puppet.int.aws.ledcom.ch'
+
+rundeck_manage_repos: true
+rundeck_projects:
+  puppetmaster:
+    jobs:
+      deploy-puppet-modules:
+        description:         'Deploy puppet modules via r10k'
+        command_exec:        '/usr/local/bin/r10k deploy environment -p'
+        command_description: 'r10k deploy'
+        format:              'yaml'
