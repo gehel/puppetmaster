@@ -55,6 +55,17 @@ puppet_module_path:   '/etc/puppet/environments/$environment/modules:/etc/puppet
 puppet_passenger:     true
 puppet_server:        'puppet.int.aws.ledcom.ch'
 
+rundeck_username:     'admin'
+rundeck_password:     ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQAw
+                      DQYJKoZIhvcNAQEBBQAEggEAa38oI7M8pi1ozkILm4NsOnMneNGaAlBywAtY
+                      eW+UL+DgOBNaowzlXwTME3NyCavYqp5sM5ieRzQamP57fdsdEUWZjoHOvfmP
+                      zkoJLJA00KVLWyriuiREidjcmql5W+0MzU4yzNduNclqT2sYlVCVITd0LcXm
+                      FHYuL+S0FRIn9oN8UpH9uWYZtNjC9QUYWjPT8yo7shQdj1KfpVuDV7PR9Si4
+                      +GgT5ibkWPXvVlst8+FWwWCd7fpW4vRME7iQoR3QARP0WZCVaU6dMDzG8M8X
+                      Og3H69YqMZxsidCIEP5I2botLrmgPCDxW34TqoN/fLx0rkMsSpwC6I7HKdvh
+                      zM4BLjA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBCF95F9QM/6Di7emeCd
+                      HnsngBD0yGOjIVqn9K+WArOUnWj5]
+
 rundeck_manage_repos: true
 rundeck_server_name:  'puppet.aws.ledcom.ch'
 rundeck_projects:
