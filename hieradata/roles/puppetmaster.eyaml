@@ -64,5 +64,5 @@ rundeck_projects:
         description:         'Deploy puppet modules via r10k'
         command_exec:        '/usr/local/bin/r10k -v info deploy environment -p'
         command_description: 'r10k deploy'
-        format:              'yaml'
+        format:              'xml'
         filter:              'ledcom.ch'
