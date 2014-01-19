@@ -65,7 +65,7 @@ rundeck_projects:
         command_exec:        '/usr/local/bin/r10k -v info deploy environment -p'
         command_description: 'r10k deploy'
         format:              'yaml'
-        filter:              'attribute: puppetmaster'
+        filter:              'role: puppetmaster'
 rundeck_node_attributes:
   - name:  'role'
     value: 'puppetmaster'
