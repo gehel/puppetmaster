@@ -38,8 +38,7 @@ mod 'firewall',
   :git => 'https://github.com/example42/puppet-firewall.git'
 
 mod 'git',
-  :git => 'https://github.com/gehel/puppet-git.git',
-  :ref => 'git-clone'
+  :git => 'https://github.com/example42/puppet-git.git',
 
 mod 'graphite',
   :git => 'https://github.com/echocat/puppet-graphite.git'
