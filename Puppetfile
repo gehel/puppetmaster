@@ -166,6 +166,9 @@ mod 'sudo',
 mod 'svn',
   :git => 'https://github.com/example42/puppet-svn.git'
 
+mod 'sysctl',
+  :git => 'https://github.com/example42/puppet-sysctl.git'
+
 mod 'timezone',
   :git => 'https://github.com/example42/puppet-timezone.git'
 

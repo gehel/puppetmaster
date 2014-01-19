@@ -88,12 +88,8 @@ class role::dev_workstation inherits role::default {
   }
 
   # inotify needs to be higher than default for IntelliJ to be happy
-  file { '/etc/sysctl.d/99-inotify.conf':
-    ensure  => 'present',
-    content => "fs.inotify.max_user_watches = 524288\n",
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0644',
+  sysctl::value { 'fs.inotify.max_user_watches':
+    value => '524288',
   }
 
   file { '/home/gehel/.homesick':

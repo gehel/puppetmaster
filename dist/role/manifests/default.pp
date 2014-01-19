@@ -22,7 +22,7 @@ class role::default {
     ensure => present,
   }
 
-  class{ 'apt':
+  class { 'apt':
   }
 
   class { 'logrotate':
@@ -41,6 +41,9 @@ class role::default {
   }
 
   class { 'rundeck::node':
+  }
+
+  class { 'sysctl':
   }
 
   class { 'timezone':
