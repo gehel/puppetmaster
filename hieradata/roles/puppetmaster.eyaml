@@ -56,6 +56,7 @@ puppet_passenger:     true
 puppet_server:        'puppet.int.aws.ledcom.ch'
 
 rundeck_manage_repos: true
+rundeck_server_name:  'puppet.aws.ledcom.ch'
 rundeck_projects:
   puppetmaster:
     jobs:
