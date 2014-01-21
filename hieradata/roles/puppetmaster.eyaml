@@ -60,24 +60,12 @@ rundeck_server_name:  'puppet.aws.ledcom.ch'
 rundeck_projects:
   puppetmaster:
     jobs:
-      deploy-puppet-modules:
-        template: 'rundeck/job/simple_job.yaml.erb'
-        parameters:
-          description:         'Deploy puppet modules via r10k'
-          command_exec:        'sudo /usr/local/bin/r10k -v info deploy environment -p'
-          command_description: 'r10k deploy'
-          format:              'yaml'
-          filter:              'role: puppetmaster'
+      r10k:
+        source: 'puppet:///modules/role/rundeck/r10k.yaml'
       puppet-agent:
         source: 'puppet:///modules/role/rundeck/puppet-agent.yaml'
-      deploy-puppet-modules-and-run-puppet:
-        template: 'rundeck/job/simple_job.yaml.erb'
-        parameters:
-          description:         'Deploy puppet modules and execute local puppet run'
-          command_exec:        'sudo /usr/local/bin/r10k -v info deploy environment -p'
-          command_description: 'r10k deploy'
-          format:              'yaml'
-          filter:              'role: puppetmaster'
+      r10k-and-puppet-agent:
+        source: 'puppet:///modules/role/rundeck/r10k-and-puppet-agent.yaml'
 rundeck_node_attributes:
   - name:  'role'
     value: 'puppetmaster'
