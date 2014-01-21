@@ -61,10 +61,13 @@ rundeck_projects:
   puppetmaster:
     jobs:
       r10k:
+        format: 'yaml'
         source: 'puppet:///modules/role/rundeck/r10k.yaml'
       puppet-agent:
+        format: 'yaml'
         source: 'puppet:///modules/role/rundeck/puppet-agent.yaml'
       r10k-and-puppet-agent:
+        format: 'yaml'
         source: 'puppet:///modules/role/rundeck/r10k-and-puppet-agent.yaml'
 rundeck_node_attributes:
   - name:  'role'
