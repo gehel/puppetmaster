@@ -44,4 +44,9 @@ class role::puppetmaster inherits role::default {
   class { 'rundeck':
   }
 
+  $rundeck_node_username = hiera('rundeck_node_username')
+  sudo::directive { 'rundeck-r10k':
+    content => "${rundeck_node_username} ALL=NOPASSWD: /usr/local/bin/r10k\n",    
+  }
+
 }

@@ -34,6 +34,7 @@ puppet_passenger:          true
 
 rundeck_ssh_public_key: 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDJBcfWKG4W7EkeXVhOTA1OBm0WIHbl8BpX0iRC4hTnoc9s/dAP8bKPnp9NNAP6iVr4cSsRzOmb41NwlamijS/pCavpkn9nmG2hkVa/uFVohV8B9+3Lus5SlSXlzgj0wBZT+6rX8N0DywfaZJckUcjvcrwS9qdVRBUjS5qjQq2TaHKu9Zoc7fSeypZJSSIoCo9ehuFb9THYdaVUchsQYW0M5MDnQkOW4qkWqoASTvcstIyXaqHrJrq5QSVslFloxcs4Htu6NDG8BSH3K1rsuvKN140JPOg5YGmq3R91R53k2CM5k40TZlIPb55EJ54H/3rmr4fGqIpredj0H3JLQ6+l'
 rundeck_ssh_public_key_type: rsa
+rundeck_node_username: 'rundeck_node'
 
 timezone: 'Europe/Zurich'
 
