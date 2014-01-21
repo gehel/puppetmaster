@@ -9,7 +9,7 @@
     keepgoing: false
     strategy: node-first
     commands:
-    - exec: sudo /usr/local/bin/sudo r10k -v info deploy environment
+    - exec: sudo /usr/local/bin/r10k -v info deploy environment
       description: r10k deploy
   nodefilters:
     dispatch:
