@@ -1,0 +1,26 @@
+- id: f3619702-8072-4f0d-9d8a-ec64b614f1cf
+  project: puppetmaster
+  name: Refresh and deploy
+  description: Refresh and deploy puppet modules
+  group: Puppet
+  loglevel: INFO
+  uuid: f3619702-8072-4f0d-9d8a-ec64b614f1cf
+  sequence:
+    keepgoing: false
+    strategy: node-first
+    commands:
+    - jobref:
+        group: Puppet
+        name: r10k
+        nodeStep: 'true'
+    - jobref:
+        group: Puppet
+        name: run puppet agent
+        nodeStep: 'true'
+  nodefilters:
+    dispatch:
+      threadcount: 1
+      keepgoing: false
+      excludePrecedence: true
+      rankOrder: ascending
+    filter: 'role: puppetmaster'

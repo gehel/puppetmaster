@@ -1,0 +1,20 @@
+- id: 5afccac3-19cf-4a66-9311-7a18def7f299
+  project: puppetmaster
+  name: run puppet agent
+  description: run puppet agent
+  group: Puppet
+  loglevel: INFO
+  uuid: 5afccac3-19cf-4a66-9311-7a18def7f299
+  sequence:
+    keepgoing: false
+    strategy: node-first
+    commands:
+    - exec: sudo /usr/bin/puppet agent -t
+      description: puppet agent -t
+  nodefilters:
+    dispatch:
+      threadcount: 1
+      keepgoing: true
+      excludePrecedence: true
+      rankOrder: ascending
+    filter: 'name: .*'
