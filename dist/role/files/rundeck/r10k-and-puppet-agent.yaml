@@ -1,7 +1,7 @@
 - id: f3619702-8072-4f0d-9d8a-ec64b614f1cf
   project: puppetmaster
-  name: Refresh and deploy
-  description: Refresh and deploy puppet modules
+  name: refresh and deploy
+  description: refresh and deploy puppet modules
   group: Puppet
   loglevel: INFO
   uuid: f3619702-8072-4f0d-9d8a-ec64b614f1cf
