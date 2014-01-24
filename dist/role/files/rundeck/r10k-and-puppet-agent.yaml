@@ -12,11 +12,9 @@
     - jobref:
         group: Puppet
         name: r10k
-        nodeStep: 'true'
     - jobref:
         group: Puppet
         name: run puppet agent
-        nodeStep: 'true'
   nodefilters:
     dispatch:
       threadcount: 1
