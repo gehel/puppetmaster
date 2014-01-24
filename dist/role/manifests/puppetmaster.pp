@@ -35,6 +35,9 @@ class role::puppetmaster inherits role::default {
     minute  => '*/5',
   }
 
+  class { 'mcollective':
+  }
+
   class { 'mysql':
   }
 
