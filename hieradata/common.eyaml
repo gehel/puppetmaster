@@ -4,6 +4,7 @@ firewall_tool:         'iptables'
 firewall_destination:  '0/0'
 iptables_block_policy: 'accept'
 
+mcollective_stomp_host: puppet.aws.ledcom.ch
 mcollective_install_client: true
 mcollective_psk: ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBADAFMAACAQAw
                  DQYJKoZIhvcNAQEBBQAEggEAE00reiGhkX1P4PQuMuAvt4nNhMb3MeIk8d+G
