@@ -35,17 +35,14 @@ class role::puppetmaster inherits role::default {
     minute  => '*/5',
   }
 
-  class { 'mcollective':
-  }
+  package { 'ruby-dev': ensure => present, } ->
+  class { 'mcollective': install_stomp_server => true, }
 
-  class { 'mysql':
-  }
+  class { 'mysql': }
 
-  class { 'icinga':
-  }
+  class { 'icinga': }
 
-  class { 'rundeck':
-  }
+  class { 'rundeck': }
 
   $rundeck_node_username = hiera('rundeck_node_username')
 
