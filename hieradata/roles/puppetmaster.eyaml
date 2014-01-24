@@ -22,6 +22,8 @@ icinga_db_password_icingaweb: ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEh
                               SXUjgED5QFq43pfbXxEsN7J4Ibcfw/a90q/4ZqayCNwzfsGprowLDnJmyliQ
                               sSgAmGmfcMPES3aF4fggUHxG483MlybC]
 
+mcollective_install_stomp_server: true
+
 mysql_root_password: ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBADAFMAACAQAw
                      DQYJKoZIhvcNAQEBBQAEggEAVCbbK+R4bYolOFEsFMcBB4I0mufq7mkQMIBG
                      oj5NozQD/Bk/7r+ngf+zf2HtqarlsgCaR020kxSSptWCf6LGBfgpVz8hBsyJ

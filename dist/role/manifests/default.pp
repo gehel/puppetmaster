@@ -14,6 +14,7 @@ class role::default {
     'less',
     'lsof',
     'puppet-el',
+    'ruby-dev',
     'screen',
     'secure-delete',
     'sysstat',
@@ -26,6 +27,10 @@ class role::default {
   }
 
   class { 'logrotate':
+  }
+
+  class { 'mcollective':
+    require => Package['ruby-dev'],
   }
 
   class { 'ntp':

@@ -35,9 +35,6 @@ class role::puppetmaster inherits role::default {
     minute  => '*/5',
   }
 
-  package { 'ruby-dev': ensure => present, } ->
-  class { 'mcollective': install_stomp_server => true, }
-
   class { 'mysql': }
 
   class { 'icinga': }
