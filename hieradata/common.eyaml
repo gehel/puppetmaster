@@ -39,3 +39,4 @@ rundeck_node_username: 'rundeck_node'
 
 timezone: 'Europe/Zurich'
 
+vagrant_install: gem
