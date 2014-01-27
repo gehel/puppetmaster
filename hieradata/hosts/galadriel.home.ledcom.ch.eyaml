@@ -99,6 +99,7 @@ git_clones:
       owner:           'gehel'
     puppetmaster:
       source_url:      'git@github.com:gehel/puppetmaster.git'
+      branch:          'production'
       destination_dir: '/home/gehel/dev/puppet/puppetmaster'
       owner:           'gehel'
 
