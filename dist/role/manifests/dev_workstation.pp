@@ -201,8 +201,10 @@ class role::dev_workstation inherits role::default {
   # basic dirs
   file { [
     '/home/gehel/dev',
-    '/home/gehel/dev/puppet',    
+    '/home/gehel/dev/aws',
     '/home/gehel/dev/JavaDojo',    
+    '/home/gehel/dev/puppet',
+    '/home/gehel/dev/utilities',
   ]:
     ensure => 'directory',
     owner  => 'gehel',

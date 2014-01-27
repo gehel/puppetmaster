@@ -102,9 +102,37 @@ git_clones:
       branch:          'production'
       destination_dir: '/home/gehel/dev/puppet/puppetmaster'
       owner:           'gehel'
+    java-dojo-parent-pom:
+      source_url:      'git@github.com:JavaDojo/java-dojo-parent-pom.git'
+      destination_dir: '/home/gehel/dev/JavaDojo/java-dojo-parent-pom'
+      owner:           'gehel'
     MarsRover:
       source_url:      'git@github.com:JavaDojo/MarsRover.git'
       destination_dir: '/home/gehel/dev/JavaDojo/MarsRover'
+      owner:           'gehel'
+    aws-cloudformation:
+      source_url:      'git@github.com:gehel/aws-cloudformation.git'
+      destination_dir: '/home/gehel/dev/aws/aws-cloudformation'
+      owner:           'gehel'
+    vagrant-vms:
+      source_url:      'git@github.com:gehel/vagrant-vms.git'
+      destination_dir: '/home/gehel/dev/vagrant-vms'
+      owner:           'gehel'
+    ubuntu-desktop-preseed:
+      source_url:      'git@github.com:gehel/ubuntu-desktop-preseed.git'
+      destination_dir: '/home/gehel/dev/ubuntu-desktop-preseed'
+      owner:           'gehel'
+    ledcom-parent-pom:
+      source_url:      'git@github.com:gehel/ledcom-parent-pom.git'
+      destination_dir: '/home/gehel/dev/utilities/ledcom-parent-pom'
+      owner:           'gehel'
+    jmx-rmi-agent:
+      source_url:      'git@github.com:gehel/jmx-rmi-agent.git'
+      destination_dir: '/home/gehel/dev/utilities/jmx-rmi-agent'
+      owner:           'gehel'
+    log4jtools:
+      source_url:      'git@github.com:gehel/log4jtools.git'
+      destination_dir: '/home/gehel/dev/utilities/log4jtools'
       owner:           'gehel'
 
 monitor_tool:
