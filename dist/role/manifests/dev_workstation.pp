@@ -151,11 +151,11 @@ class role::dev_workstation inherits role::default {
     mode   => '0775',
   }
   file { '/home/gehel/eyaml/private_key.pkcs7.pem':
-    ensure => 'present',
-    source => hiera('eyaml_private_key'),
-    owner  => 'gehel',
-    group  => 'group',
-    mode   => '0660',
+    ensure  => 'present',
+    content => hiera('eyaml_private_key'),
+    owner   => 'gehel',
+    group   => 'group',
+    mode    => '0660',
   }
   file { '/home/gehel/eyaml/public_key.pkcs7.pem':
     ensure => 'present',
