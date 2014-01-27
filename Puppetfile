@@ -154,6 +154,9 @@ mod 'rsyslog',
 mod 'r10k',
   :git => 'https://github.com/acidprime/r10k.git'
 
+mod 'ruby',
+  :git => 'https://github.com/puppetlabs/puppetlabs-ruby.git'
+
 mod 'rundeck',
   :git => 'https://github.com/gehel/puppet-rundeck.git'
 
