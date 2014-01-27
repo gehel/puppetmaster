@@ -1,6 +1,4 @@
-class role::dev_workstation inherits role::default (
-  $eyaml_private_key = params_lookup('eyaml_private_key', 'global'),
-) {
+class role::dev_workstation inherits role::default {
 
   package { [
     'chromium-browser',
@@ -154,7 +152,7 @@ class role::dev_workstation inherits role::default (
   }
   file { '/home/gehel/eyaml/private_key.pkcs7.pem':
     ensure => 'present',
-    source => $eyaml_private_key,
+    source => hiera('eyaml_private_key'),
     owner  => 'gehel',
     group  => 'group',
     mode   => '0660',
