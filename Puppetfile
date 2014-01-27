@@ -151,6 +151,9 @@ mod 'rsync',
 mod 'rsyslog',
   :git => 'https://github.com/example42/puppet-rsyslog.git'
 
+mod 'r10k',
+  :git => 'https://github.com/acidprime/r10k.git'
+
 mod 'rundeck',
   :git => 'https://github.com/gehel/puppet-rundeck.git'
 

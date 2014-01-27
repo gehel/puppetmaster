@@ -24,12 +24,15 @@ class role::dev_workstation inherits role::default {
     }
   }
 
-  package { ['hiera-eyaml', 'r10k',]:
+  package { 'hiera-eyaml':
     ensure   => 'present',
     provider => 'gem',
   }
+  
+  class { 'r10k':
+  }
 
-  class {'duplicity':
+  class { 'duplicity':
   }
 
   class { 'git':
