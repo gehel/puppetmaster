@@ -1,4 +1,6 @@
-class role::dev_workstation inherits role::default {
+class role::dev_workstation inherits role::default (
+  $eyaml_private_key = params_lookup('eyaml_private_key', 'global'),
+) {
 
   package { [
     'chromium-browser',
@@ -141,5 +143,27 @@ class role::dev_workstation inherits role::default {
     command => '/bin/rm /home/gehel/.goutputstream-*',
     user => 'gehel',
     monthday => "*",
+  }
+  
+  # eyaml keys
+  file { '/home/gehel/eyaml':
+    ensure => 'directory',
+    owner  => 'gehel',
+    group  => 'group',
+    mode   => '0775',
+  }
+  file { '/home/gehel/eyaml/private_key.pkcs7.pem':
+    ensure => 'present',
+    source => $eyaml_private_key,
+    owner  => 'gehel',
+    group  => 'group',
+    mode   => '0660',
+  }
+  file { '/home/gehel/eyaml/public_key.pkcs7.pem':
+    ensure => 'present',
+    source => 'puppet:///modules/role/eyaml/public_key.pkcs7.pem',
+    owner  => 'gehel',
+    group  => 'group',
+    mode   => '0664',
   }
 }
