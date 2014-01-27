@@ -3,6 +3,7 @@ class role::dev_workstation inherits role::default {
   package { [
     'chromium-browser',
     'cmus',
+    'git-svn',
     'maven2',
     'openjdk-7-jdk',
     'phantomjs',
