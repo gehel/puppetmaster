@@ -27,9 +27,7 @@ class role::puppetmaster inherits role::default {
     mode   => '0644',
   }
 
-  package { 'r10k':
-    ensure   => 'latest',
-    provider => 'gem',
+  class { 'r10k':
   } -> cron { 'r10k-deploy-env':
     command => '/usr/local/bin/r10k deploy environment -p',
     minute  => '*/5',
