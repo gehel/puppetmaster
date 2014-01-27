@@ -155,7 +155,7 @@ class role::dev_workstation inherits role::default {
     content => hiera('eyaml_private_key'),
     owner   => 'gehel',
     group   => 'gehel',
-    mode    => '0660',
+    mode    => '0600',
   }
   file { '/home/gehel/eyaml/public_key.pkcs7.pem':
     ensure => 'present',
@@ -164,4 +164,35 @@ class role::dev_workstation inherits role::default {
     group  => 'gehel',
     mode   => '0664',
   }
+
+  # SSH keys
+  file { '/home/gehel/.ssh/backup':
+    ensure  => 'present',
+    content => hiera('ssh_gehel_backup_private_key'),    
+    owner   => 'gehel',
+    group   => 'gehel',
+    mode    => '0600',
+  }
+  file { '/home/gehel/.ssh/backup.pub':
+    ensure => 'present',
+    source => 'puppet:///modules/role/gehel/ssh/backup.pub',
+    owner  => 'gehel',
+    group  => 'gehel',
+    mode   => '0600',
+  }
+  file { '/home/gehel/.ssh/id_dsa':
+    ensure  => 'present',
+    content => hiera('ssh_gehel_private_key'),    
+    owner   => 'gehel',
+    group   => 'gehel',
+    mode    => '0600',
+  }
+  file { '/home/gehel/.ssh/id_dsa.pub':
+    ensure => 'present',
+    source => 'puppet:///modules/role/gehel/ssh/id_dsa.pub',
+    owner  => 'gehel',
+    group  => 'gehel',
+    mode   => '0600',
+  }
+
 }
