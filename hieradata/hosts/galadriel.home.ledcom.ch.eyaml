@@ -102,6 +102,10 @@ git_clones:
       branch:          'production'
       destination_dir: '/home/gehel/dev/puppet/puppetmaster'
       owner:           'gehel'
+    MarsRover:
+      source_url:      'git@github.com:JavaDojo/MarsRover.git'
+      destination_dir: '/home/gehel/dev/JavaDojo/MarsRover'
+      owner:           'gehel'
 
 monitor_tool:
     - 'puppi'

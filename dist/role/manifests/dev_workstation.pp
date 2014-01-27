@@ -197,5 +197,17 @@ class role::dev_workstation inherits role::default {
     group  => 'gehel',
     mode   => '0600',
   }
+  
+  # basic dirs
+  file { [
+    '/home/gehel/dev',
+    '/home/gehel/dev/puppet',    
+    '/home/gehel/dev/JavaDojo',    
+  ]:
+    ensure => 'directory',
+    owner  => 'gehel',
+    group  => 'gehel',
+    mode   => '0775',
+  }
 
 }
