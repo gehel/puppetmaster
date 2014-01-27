@@ -11,6 +11,7 @@ class role::dev_workstation inherits role::default {
     'virtualbox',
     'wireshark',
     'xclip',
+    'xmlstarlet',
     ]:
     ensure => 'present',
   }
