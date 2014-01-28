@@ -59,7 +59,7 @@ class role::puppetmaster inherits role::default {
 
   file { '/root/.ssh/id_rsa.pub':
     ensure => 'present',
-    source => 'puppet:///modules/role/puppetmaster/ssh/id_dsa.pub',
+    source => 'puppet:///modules/role/puppetmaster/ssh/id_rsa.pub',
     owner  => 'root',
     group  => 'root',
     mode   => '0644',

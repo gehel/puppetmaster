@@ -27,6 +27,7 @@
 		<project>profile</project>
 		<project>puppet</project>
 		<project>puppi</project>
+		<project>r10k</project>
 		<project>rsyslog</project>
 		<project>rvm</project>
 		<project>stdlib</project>
