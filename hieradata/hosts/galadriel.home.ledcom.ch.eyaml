@@ -106,13 +106,13 @@ git_clones:
       source_url:      'git@github.com:JavaDojo/java-dojo-parent-pom.git'
       destination_dir: '/home/gehel/dev/JavaDojo/java-dojo-parent-pom'
       owner:           'gehel'
-    MarsRover:
-      source_url:      'git@github.com:JavaDojo/MarsRover.git'
-      destination_dir: '/home/gehel/dev/JavaDojo/MarsRover'
+    marsrover:
+      source_url:      'git@github.com:JavaDojo/marsrover.git'
+      destination_dir: '/home/gehel/dev/JavaDojo/marsrover'
       owner:           'gehel'
-    aws-cloudformation:
-      source_url:      'git@github.com:gehel/aws-cloudformation.git'
-      destination_dir: '/home/gehel/dev/aws/aws-cloudformation'
+    cloudformation:
+      source_url:      'git@github.com:gehel/cloudformation.git'
+      destination_dir: '/home/gehel/dev/aws/cloudformation'
       owner:           'gehel'
     vagrant-vms:
       source_url:      'git@github.com:gehel/vagrant-vms.git'
