@@ -181,7 +181,7 @@ class role::dev_workstation inherits role::default {
     source => 'puppet:///modules/role/gehel/ssh/backup.pub',
     owner  => 'gehel',
     group  => 'gehel',
-    mode   => '0600',
+    mode   => '0644',
   }
   file { '/home/gehel/.ssh/id_dsa':
     ensure  => 'present',
@@ -195,7 +195,7 @@ class role::dev_workstation inherits role::default {
     source => 'puppet:///modules/role/gehel/ssh/id_dsa.pub',
     owner  => 'gehel',
     group  => 'gehel',
-    mode   => '0600',
+    mode   => '0644',
   }
   
   # basic dirs

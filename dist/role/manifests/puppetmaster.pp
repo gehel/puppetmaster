@@ -28,21 +28,41 @@ class role::puppetmaster inherits role::default {
   }
 
   class { 'r10k':
+    remote => 'git@github.com:gehel/puppetmaster.git',
   } -> cron { 'r10k-deploy-env':
     command => '/usr/local/bin/r10k deploy environment -p',
     minute  => '*/5',
   }
 
-  class { 'mysql': }
+  class { 'mysql':
+  }
 
-  class { 'icinga': }
+  class { 'icinga':
+  }
 
-  class { 'rundeck': }
+  class { 'rundeck':
+  }
 
   $rundeck_node_username = hiera('rundeck_node_username')
 
   sudo::directive { 'rundeck-r10k': content => "${rundeck_node_username} ALL=NOPASSWD: /usr/local/bin/r10k\n", }
 
   sudo::directive { 'rundeck-puppet': content => "${rundeck_node_username} ALL=NOPASSWD: /usr/bin/puppet\n", }
+
+  file { '/root/.ssh/id_rsa':
+    ensure  => 'present',
+    content => hiera('ssh_puppetmaster_root_private_key'),
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0600',
+  }
+
+  file { '/root/.ssh/id_rsa.pub':
+    ensure => 'present',
+    source => 'puppet:///modules/role/puppetmaster/ssh/id_dsa.pub',
+    owner  => 'root',
+    group  => 'root',
+    mode   => '0644',
+  }
 
 }

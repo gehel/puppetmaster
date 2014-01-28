@@ -1,192 +1,192 @@
 mod 'activemq',
-  :git => 'https://github.com/example42/puppet-activemq.git'
+  :git => 'git@github.com:example42/puppet-activemq.git'
 
 mod 'apache',
-  :git => 'https://github.com/example42/puppet-apache.git'
+  :git => 'git@github.com:example42/puppet-apache.git'
 
 mod 'apt',
-  :git => 'https://github.com/example42/puppet-apt.git'
+  :git => 'git@github.com:example42/puppet-apt.git'
 
 mod 'autofs',
-  :git => 'https://github.com/example42/puppet-autofs.git'
+  :git => 'git@github.com:example42/puppet-autofs.git'
 
 mod 'cntlm',
-  :git => 'https://github.com/gehel/puppet-cntlm.git'
+  :git => 'git@github.com:gehel/puppet-cntlm.git'
 
 mod 'collectd',
-  :git => 'https://github.com/example42/puppet-collectd.git'
+  :git => 'git@github.com:example42/puppet-collectd.git'
 
 mod 'concat',
-  :git => 'https://github.com/puppetlabs/puppetlabs-concat.git'
+  :git => 'git@github.com:puppetlabs/puppetlabs-concat.git'
 
 mod 'ddclient',
-  :git => 'https://github.com/example42/puppet-ddclient.git'
+  :git => 'git@github.com:example42/puppet-ddclient.git'
 
 mod 'dns',
-  :git => 'https://github.com/masterzen/puppet-dns.git'
+  :git => 'git@github.com:masterzen/puppet-dns.git'
 
 mod 'dnsmasq',
-  :git => 'https://github.com/example42/puppet-dnsmasq.git'
+  :git => 'git@github.com:example42/puppet-dnsmasq.git'
 
 mod 'duplicity',
-  :git => 'https://github.com/gehel/puppet-duplicity.git'
+  :git => 'git@github.com:gehel/puppet-duplicity.git'
 
 mod 'exported_vars',
-  :git => 'https://github.com/example42/puppet-exported_vars.git'
+  :git => 'git@github.com:example42/puppet-exported_vars.git'
 
 mod 'fail2ban',
-  :git => 'https://github.com/example42/puppet-fail2ban.git'
+  :git => 'git@github.com:example42/puppet-fail2ban.git'
 
 mod 'firewall',
-  :git => 'https://github.com/example42/puppet-firewall.git'
+  :git => 'git@github.com:example42/puppet-firewall.git'
 
 mod 'git',
-  :git => 'https://github.com/example42/puppet-git.git'
+  :git => 'git@github.com:example42/puppet-git.git'
 
 mod 'graphite',
-  :git => 'https://github.com/echocat/puppet-graphite.git'
+  :git => 'git@github.com:echocat/puppet-graphite.git'
 
 mod 'haproxy',
-  :git => 'https://github.com/example42/puppet-haproxy.git'
+  :git => 'git@github.com:example42/puppet-haproxy.git'
 
 mod 'hosts',
-  :git => 'https://github.com/example42/puppet-hosts.git'
+  :git => 'git@github.com:example42/puppet-hosts.git'
 
 mod 'icinga',
-  :git => 'https://github.com/example42/puppet-icinga.git'
+  :git => 'git@github.com:example42/puppet-icinga.git'
 
 mod 'iptables',
-  :git => 'https://github.com/example42/puppet-iptables.git'
+  :git => 'git@github.com:example42/puppet-iptables.git'
 
 mod 'java',
-  :git => 'https://github.com/example42/puppet-java.git'
+  :git => 'git@github.com:example42/puppet-java.git'
 
 mod 'kibana',
-  :git => 'https://github.com/example42/puppet-kibana.git'
+  :git => 'git@github.com:example42/puppet-kibana.git'
 
 mod 'limits',
-  :git => 'https://github.com/example42/puppet-limits.git'
+  :git => 'git@github.com:example42/puppet-limits.git'
 
 mod 'logrotate',
-  :git => 'https://github.com/example42/puppet-logrotate.git'
+  :git => 'git@github.com:example42/puppet-logrotate.git'
 
 mod 'logstash',
-  :git => 'https://github.com/example42/puppet-logstash.git'
+  :git => 'git@github.com:example42/puppet-logstash.git'
 
 mod 'mcollective',
-  :git => 'https://github.com/example42/puppet-mcollective.git'
+  :git => 'git@github.com:example42/puppet-mcollective.git'
 
 mod 'memcached',
-  :git => 'https://github.com/example42/puppet-memcached.git'
+  :git => 'git@github.com:example42/puppet-memcached.git'
 
 mod 'maven',
-  :git => 'https://github.com/example42/puppet-maven.git'
+  :git => 'git@github.com:example42/puppet-maven.git'
 
 mod 'monitor',
-  :git => 'https://github.com/example42/puppet-monitor.git'
+  :git => 'git@github.com:example42/puppet-monitor.git'
 
 mod 'mongodb',
-  :git => 'https://github.com/example42/puppet-mongodb.git'
+  :git => 'git@github.com:example42/puppet-mongodb.git'
 
 mod 'munin',
-  :git => 'https://github.com/example42/puppet-munin.git'
+  :git => 'git@github.com:example42/puppet-munin.git'
 
 mod 'mysql',
-  :git => 'https://github.com/example42/puppet-mysql.git'
+  :git => 'git@github.com:example42/puppet-mysql.git'
 
 mod 'nagios',
-  :git => 'https://github.com/example42/puppet-nagios.git'
+  :git => 'git@github.com:example42/puppet-nagios.git'
 
 mod 'newrelic',
-  :git => 'https://github.com/example42/puppet-newrelic.git'
+  :git => 'git@github.com:example42/puppet-newrelic.git'
 
 mod 'nfs',
-  :git => 'https://github.com/example42/puppet-nfs.git'
+  :git => 'git@github.com:example42/puppet-nfs.git'
 
 mod 'nginx',
-  :git => 'https://github.com/example42/puppet-nginx.git'
+  :git => 'git@github.com:example42/puppet-nginx.git'
 
 mod 'nrpe',
-  :git => 'https://github.com/example42/puppet-nrpe.git'
+  :git => 'git@github.com:example42/puppet-nrpe.git'
 
 mod 'ntp',
-  :git => 'https://github.com/example42/puppet-ntp.git'
+  :git => 'git@github.com:example42/puppet-ntp.git'
 
 mod 'openntpd',
-  :git => 'https://github.com/example42/puppet-openntpd.git'
+  :git => 'git@github.com:example42/puppet-openntpd.git'
 
 mod 'openssh',
-  :git => 'https://github.com/example42/puppet-openssh.git'
+  :git => 'git@github.com:example42/puppet-openssh.git'
 
 mod 'openvpn',
-  :git => 'https://github.com/example42/puppet-openvpn.git'
+  :git => 'git@github.com:example42/puppet-openvpn.git'
 
 mod 'pam',
-  :git => 'https://github.com/example42/puppet-pam.git'
+  :git => 'git@github.com:example42/puppet-pam.git'
 
 mod 'postfix',
-  :git => 'https://github.com/example42/puppet-postfix.git'
+  :git => 'git@github.com:example42/puppet-postfix.git'
 
 mod 'postgresql',
-  :git => 'https://github.com/example42/puppet-postgresql.git'
+  :git => 'git@github.com:example42/puppet-postgresql.git'
 
 mod 'profile',
-  :git => 'https://github.com/example42/puppet-profile.git'
+  :git => 'git@github.com:example42/puppet-profile.git'
 
 mod 'puppet',
-  :git => 'https://github.com/example42/puppet-puppet.git'
+  :git => 'git@github.com:example42/puppet-puppet.git'
 
 mod 'puppetdashboard',
-  :git => 'https://github.com/example42/puppet-puppetdashboard.git'
+  :git => 'git@github.com:example42/puppet-puppetdashboard.git'
 
 mod 'puppetdb',
-  :git => 'https://github.com/example42/puppet-puppetdb.git'
+  :git => 'git@github.com:example42/puppet-puppetdb.git'
 
 mod 'puppi',
-  :git => 'https://github.com/example42/puppi.git'
+  :git => 'git@github.com:example42/puppi.git'
 
 mod 'rsync',
-  :git => 'https://github.com/example42/puppet-rsync.git'
+  :git => 'git@github.com:example42/puppet-rsync.git'
 
 mod 'rsyslog',
-  :git => 'https://github.com/example42/puppet-rsyslog.git'
+  :git => 'git@github.com:example42/puppet-rsyslog.git'
 
 mod 'r10k',
-  :git => 'https://github.com/acidprime/r10k.git'
+  :git => 'git@github.com:acidprime/r10k.git'
 
 mod 'ruby',
-  :git => 'https://github.com/puppetlabs/puppetlabs-ruby.git'
+  :git => 'git@github.com:puppetlabs/puppetlabs-ruby.git'
 
 mod 'rundeck',
-  :git => 'https://github.com/gehel/puppet-rundeck.git'
+  :git => 'git@github.com:gehel/puppet-rundeck.git'
 
 mod 'rvm',
-  :git => 'https://github.com/example42/puppet-rvm.git'
+  :git => 'git@github.com:example42/puppet-rvm.git'
 
 mod 'stdlib',
-  :git => 'https://github.com/puppetlabs/puppetlabs-stdlib.git'
+  :git => 'git@github.com:puppetlabs/puppetlabs-stdlib.git'
 
 mod 'sudo',
-  :git => 'https://github.com/example42/puppet-sudo.git'
+  :git => 'git@github.com:example42/puppet-sudo.git'
 
 mod 'svn',
-  :git => 'https://github.com/example42/puppet-svn.git'
+  :git => 'git@github.com:example42/puppet-svn.git'
 
 mod 'sysctl',
-  :git => 'https://github.com/example42/puppet-sysctl.git'
+  :git => 'git@github.com:example42/puppet-sysctl.git'
 
 mod 'timezone',
-  :git => 'https://github.com/example42/puppet-timezone.git'
+  :git => 'git@github.com:example42/puppet-timezone.git'
 
 mod 'tomcat',
-  :git => 'https://github.com/example42/puppet-tomcat.git'
+  :git => 'git@github.com:example42/puppet-tomcat.git'
 
 mod 'vagrant',
-  :git => 'https://github.com/example42/puppet-vagrant.git'
+  :git => 'git@github.com:example42/puppet-vagrant.git'
 
 mod 'varnish',
-  :git => 'https://github.com/example42/puppet-varnish.git'
+  :git => 'git@github.com:example42/puppet-varnish.git'
 
 mod 'wget',
-  :git => 'https://github.com/example42/puppet-wget.git'
+  :git => 'git@github.com:example42/puppet-wget.git'
 
