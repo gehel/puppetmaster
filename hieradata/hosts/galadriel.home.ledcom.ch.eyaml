@@ -135,7 +135,7 @@ git_clones:
       destination_dir: '/home/gehel/dev/utilities/log4jtools'
       owner:           'gehel'
     ohi-java:
-      source_url:      'git@git.tuxz.net:20202/ohi-io/ohi-java.git'
+      source_url:      'ssh://git@git.tuxz.net:20202/ohi-io/ohi-java.git'
       destination_dir: '/home/gehel/dev/ohi/ohi-java'
       owner:           'gehel'
 
