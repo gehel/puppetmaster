@@ -102,6 +102,10 @@ git_clones:
       branch:          'production'
       destination_dir: '/home/gehel/dev/puppet/puppetmaster'
       owner:           'gehel'
+    puppetmaster:
+      source_url:      'git@github.com:example42/Example42-templates.git'
+      destination_dir: '/home/gehel/dev/puppet/Example42-templates'
+      owner:           'gehel'
     java-dojo-parent-pom:
       source_url:      'git@github.com:JavaDojo/java-dojo-parent-pom.git'
       destination_dir: '/home/gehel/dev/JavaDojo/java-dojo-parent-pom'
