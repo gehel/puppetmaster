@@ -25,6 +25,9 @@ mod 'ddclient',
 mod 'dns',
   :git => 'git@github.com:masterzen/puppet-dns.git'
 
+mod 'dropbox',
+  :git => 'git@github.com:gehel/puppet-dropbox.git'
+
 mod 'dnsmasq',
   :git => 'git@github.com:example42/puppet-dnsmasq.git'
 

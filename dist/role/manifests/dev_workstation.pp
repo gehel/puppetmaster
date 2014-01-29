@@ -33,6 +33,9 @@ class role::dev_workstation inherits role::default {
   class { 'r10k':
   }
 
+  class { 'dropbox':
+  }
+
   class { 'duplicity':
   }
 
