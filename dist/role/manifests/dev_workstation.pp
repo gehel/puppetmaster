@@ -1,6 +1,7 @@
 class role::dev_workstation inherits role::default {
 
   package { [
+    'calibre',
     'chromium-browser',
     'cmus',
     'git-svn',
@@ -201,6 +202,7 @@ class role::dev_workstation inherits role::default {
   file { [
     '/home/gehel/dev',
     '/home/gehel/dev/aws',
+    '/home/gehel/dev/ohi',
     '/home/gehel/dev/JavaDojo',    
     '/home/gehel/dev/puppet',
     '/home/gehel/dev/utilities',
@@ -211,4 +213,5 @@ class role::dev_workstation inherits role::default {
     mode   => '0775',
   }
 
+  # TODO: DropBox
 }
