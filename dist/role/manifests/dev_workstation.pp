@@ -71,13 +71,13 @@ class role::dev_workstation inherits role::default {
 
   exec { 'download-Geppetto':
     path    => '/usr/bin',
-    command => 'wget -cv https://downloads.puppetlabs.com/geppetto/geppetto-linux.gtk.x86_64-3.2.0-R201307041307.zip',
+    command => 'wget -cv https://downloads.puppetlabs.com/geppetto/4.x/geppetto-linux.gtk.x86_64-4.0.0-R201310140657.zip',
     cwd     => '/tmp',
-    creates => '/tmp/geppetto-linux.gtk.x86_64-3.2.0-R201307041307.zip',
+    creates => '/tmp/geppetto-linux.gtk.x86_64-4.0.0-R201310140657.zip',
     unless  => 'test -d /opt/geppetto',
   } -> exec { 'untar-Geppetto':
     path    => '/usr/bin',
-    command => 'unzip /tmp/geppetto-linux.gtk.x86_64-3.2.0-R201307041307.zip',
+    command => 'unzip /tmp/geppetto-linux.gtk.x86_64-4.0.0-R201310140657.zip',
     cwd     => '/opt',
     creates => '/opt/geppetto',
   }
