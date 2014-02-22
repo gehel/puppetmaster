@@ -137,8 +137,7 @@ mod 'profile',
   :git => 'git@github.com:example42/puppet-profile.git'
 
 mod 'puppet',
-  :git => 'git@github.com:gehel/puppet-puppet.git',
-  :ref => 'puppetmaster-certificates'
+  :git => 'git@github.com:example42/puppet-puppet.git'
 
 mod 'puppetdashboard',
   :git => 'git@github.com:example42/puppet-puppetdashboard.git'
