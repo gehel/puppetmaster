@@ -1,30 +1,4 @@
 ---
-icinga_enable_idoutils:       true
-icinga_db_password_idoutils: >
-    ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBADAFMAACAQAw
-    DQYJKoZIhvcNAQEBBQAEggEAtTNcFwodQE313NLfWx1NP/QU6o4X9PcX7yBL
-    E+6zfIbylUhgozuJR9HwIB6iXPhF2ExVpRqv9x4wKIC+gyl/7VIVFnXbP7+O
-    sTu2zaPSPJqlVKQzmGhUIT/Z6mjMrz+gM417eLEccftQngb8Efgkn5VUJw9L
-    hJ+z7HmlbENV+2VTyssz60nXK+YYvQLNQnavWBpTMJuiecn7/XallzXuaNZs
-    opbwDSfnKSbD5gWheur3AZz4C7Pn5fKk0za5Dd8LmvnNPXVDb/OhhAIFRamn
-    AaV52f0pb5bK4/x+9MK/ZJzbINNopCdT285rHvQs5ls1plNpTtF3R7aU3lpf
-    bz8oMjBsBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBCU8n+f+NintHHob3Qt
-    gQWGgECkBIG84DNG+1mF6GbzGdVQ7Bb0miA1Qqk+ryg4crmoKa1yg7z3z8xE
-    HZP1RHjKNNIRd1ErpAIMGk5ETklZ2Q3P]
-
-icinga_enable_icingaweb:      true
-icinga_db_password_icingaweb: >
-    ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBADAFMAACAQAw
-    DQYJKoZIhvcNAQEBBQAEggEARohXbbt1mvBl6mHfd51oRmEBF4nTmKkNL7DF
-    XLa4UcYE/ZiZzEf4L8ENMZU4KtJi1A7XUpNy+SeDfG5ODl8tD1x/4oacdjWS
-    GPXFrdpzri/Lu66Xw5y6bvigLKqtScMMsnfq1dgtD9mTmFp9XXYbQPzHi2nr
-    Yt3W9qH7YPYqQYjyg8RIXiKnDbPU1/GBGjpdIEbBwIxLf5QEalZ7UjOOjKzZ
-    8N3rAe+/TKUkkCCXdPm9M8Xk+7deM7oqSDHdfkXkyzA5xvAY5jF96XVPEI6M
-    PCmOEcen075g8jnHRBBC28fTzJ100FtnZoSM9Y+AuscMXJMpeC8bFYSQQ5Vd
-    2aW+KzBsBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBBLfTsyV9yP/DzmglwA
-    jsGngEC8WTe04s0zCXf3BS0MKYEtAq+1gKnqGxCbRGGHH6DziOHqDaf/U3L3
-    XzSJUVg0VEF5Yst3Aei/597Lk7LDIy++]
-
 mcollective_stomp_host: puppet.int.aws.ledcom.ch
 mcollective_install_stomp_server: true
 
@@ -64,70 +38,9 @@ puppet_module_path:   '/etc/puppet/environments/$environment/modules:/etc/puppet
 puppet_passenger:     true
 puppet_server:        'puppet.int.aws.ledcom.ch'
 
-rundeck_manage_repos: true
-rundeck_server_name:  'puppet.aws.ledcom.ch'
-rundeck_projects:
-  puppetmaster:
-    jobs:
-      r10k:
-        format: 'yaml'
-        source: 'puppet:///modules/role/rundeck/r10k.yaml'
-      puppet-agent:
-        format: 'yaml'
-        source: 'puppet:///modules/role/rundeck/puppet-agent.yaml'
-      r10k-and-puppet-agent:
-        format: 'yaml'
-        source: 'puppet:///modules/role/rundeck/r10k-and-puppet-agent.yaml'
 rundeck_node_attributes:
   - name:  'role'
     value: 'puppetmaster'
-rundeck_ssh_private_key: >
-    ENC[PKCS7,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
-    FggTyQHWRhK4x+3zHx7FovfvT75YYNSt]
 
 ssh_puppetmaster_root_private_key: >
     ENC[PKCS7,MIIH/QYJKoZIhvcNAQcDoIIH7jCCB+oCAQAxggEhMIIBHQIBADAFMAACAQAw
@@ -176,4 +89,3 @@ ssh_puppetmaster_root_private_key: >
     bD8TLoPOjFZok3lQjz46yWAIq+krljr9p+K2I8JInwVaCI1ze/V48UrgfCsv
     ANcwKqS62o7z0v5U6CaYlCKXugDUPw2k7B/9iOPmSjP5NpXGJ47EC2hOIgPV
     lirfmxBES3Z2tALDW6+8jKJldP3PCo8x]
-
