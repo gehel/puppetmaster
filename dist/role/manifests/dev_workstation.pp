@@ -60,6 +60,7 @@ class role::dev_workstation inherits role::default {
     path    => '/usr/bin',
     command => 'wget -cv http://download.springsource.com/release/STS/3.4.0/dist/e4.3/spring-tool-suite-3.4.0.RELEASE-e4.3.1-linux-gtk-x86_64.tar.gz',
     cwd     => '/tmp',
+    timeout => '900',
     creates => '/tmp/spring-tool-suite-3.4.0.RELEASE-e4.3.1-linux-gtk-x86_64.tar.gz',
     unless  => 'test -d /opt/springsource/sts-3.4.0.RELEASE',
   } -> exec { 'untar-STS':
@@ -73,6 +74,7 @@ class role::dev_workstation inherits role::default {
     path    => '/usr/bin',
     command => 'wget -cv https://downloads.puppetlabs.com/geppetto/4.x/geppetto-linux.gtk.x86_64-4.0.0-R201310140657.zip',
     cwd     => '/tmp',
+    timeout => '900',
     creates => '/tmp/geppetto-linux.gtk.x86_64-4.0.0-R201310140657.zip',
     unless  => 'test -d /opt/geppetto',
   } -> exec { 'untar-Geppetto':
