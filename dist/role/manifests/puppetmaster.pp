@@ -37,18 +37,6 @@ class role::puppetmaster inherits role::default {
   class { 'mysql':
   }
 
-  class { 'icinga':
-  }
-
-  class { 'rundeck':
-  }
-
-  $rundeck_node_username = hiera('rundeck_node_username')
-
-  sudo::directive { 'rundeck-r10k': content => "${rundeck_node_username} ALL=NOPASSWD: /usr/local/bin/r10k\n", }
-
-  sudo::directive { 'rundeck-puppet': content => "${rundeck_node_username} ALL=NOPASSWD: /usr/bin/puppet\n", }
-
   file { '/root/.ssh/id_rsa':
     ensure  => 'present',
     content => hiera('ssh_puppetmaster_root_private_key'),
