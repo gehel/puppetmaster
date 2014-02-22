@@ -70,15 +70,15 @@ duplicity_backups:
             - '/home/gehel/Dropbox/'
             - '/home/gehel/Music/'
         password: >
-    ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQAw
-    DQYJKoZIhvcNAQEBBQAEggEAMy953nAO/N5Zja3TP+Xj+nLkUvT8KF15F2HX
-    5WJ7pcF7420i8gxtojE9R5UkIPabW0R0Fcqp/7P03lgQVsUEUfTmmkRsoZa9
-    7ZA1bXO9rPg8tKPhVr1qdRvqJMmrtsUdiiLd9QVgLcm5Po4KMph+6GQIJatg
-    /TGoOujnONfqILEAyy1pPH+YGtzRTngl+/zonRu7Z/zeTcwgmfYCN3oXMZTW
-    t9oWRxXu4/Q0phgkwDVpbeV0ubl9n+1CPwWvItm4ZqsW0g7+lf79ko0/857w
-    S/h/7TE/fsuEkMFS7pnrfnqAkf6zn8ONn8N/wdJTJGRaGZ5m4rgO3tVIVc9f
-    GcmdUTA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBCf7nZBwfDpoVFM+9V3
-    WuWygBCHy6iOojEklLp8H5mRcUwj]
+          ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQAw
+          DQYJKoZIhvcNAQEBBQAEggEAMy953nAO/N5Zja3TP+Xj+nLkUvT8KF15F2HX
+          5WJ7pcF7420i8gxtojE9R5UkIPabW0R0Fcqp/7P03lgQVsUEUfTmmkRsoZa9
+          7ZA1bXO9rPg8tKPhVr1qdRvqJMmrtsUdiiLd9QVgLcm5Po4KMph+6GQIJatg
+          /TGoOujnONfqILEAyy1pPH+YGtzRTngl+/zonRu7Z/zeTcwgmfYCN3oXMZTW
+          t9oWRxXu4/Q0phgkwDVpbeV0ubl9n+1CPwWvItm4ZqsW0g7+lf79ko0/857w
+          S/h/7TE/fsuEkMFS7pnrfnqAkf6zn8ONn8N/wdJTJGRaGZ5m4rgO3tVIVc9f
+          GcmdUTA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBCf7nZBwfDpoVFM+9V3
+          WuWygBCHy6iOojEklLp8H5mRcUwj]
 
 ssh_gehel_backup_private_key: >
     ENC[PKCS7,MIIH/QYJKoZIhvcNAQcDoIIH7jCCB+oCAQAxggEhMIIBHQIBADAFMAACAQAw
