@@ -84,16 +84,16 @@ class role::dev_workstation inherits role::default {
 
   exec { 'download-IntelliJ':
     path    => '/usr/bin',
-    command => 'wget -cv http://download-ln.jetbrains.com/idea/ideaIU-12.1.6.tar.gz',
+    command => 'wget -cv http://download-ln.jetbrains.com/idea/ideaIU-13.0.2.tar.gz',
     cwd     => '/tmp',
     timeout => '900',
-    creates => '/tmp/ideaIU-12.1.6.tar.gz',
-    unless  => 'test -d /opt/idea-IU-129.1359',
+    creates => '/tmp/ideaIU-13.0.2.tar.gz',
+    unless  => 'test -d /opt/idea-IU-13.0.2',
   } -> exec { 'untar-IntelliJ':
     path    => '/usr/bin:/bin',
-    command => 'tar xzvf /tmp/ideaIU-12.1.6.tar.gz',
+    command => 'tar xzvf /tmp/ideaIU-13.0.2.tar.gz',
     cwd     => '/opt',
-    creates => '/opt/idea-IU-129.1359',
+    creates => '/opt/idea-IU-13.0.2',
   }
 
   # inotify needs to be higher than default for IntelliJ to be happy
