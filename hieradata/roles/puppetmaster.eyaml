@@ -36,7 +36,7 @@ puppet_manifest_path: '$confdir/environments/$environment/site/site.pp'
 puppet_mode:          'server'
 puppet_module_path:   '/etc/puppet/environments/$environment/modules:/etc/puppet/environments/$environment/dist'
 puppet_passenger:     true
-puppet_server:        'puppet.aws.ledcom.ch'
+puppet_server:        'puppet.int.aws.ledcom.ch'
 
 rundeck_node_attributes:
   - name:  'role'

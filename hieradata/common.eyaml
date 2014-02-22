@@ -71,6 +71,12 @@ monitor_tool:
     - 'icinga'
     - 'puppi'
 
+ntp_server:
+    - 0.pool.ntp.org
+    - 1.pool.ntp.org
+    - 2.pool.ntp.org
+    - 3.pool.ntp.org
+
 openssh_exchange_hostkeys: true
 
 puppi:          true
