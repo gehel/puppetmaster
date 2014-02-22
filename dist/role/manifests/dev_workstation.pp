@@ -89,8 +89,8 @@ class role::dev_workstation inherits role::default {
     command => 'wget -cv http://download-ln.jetbrains.com/idea/ideaIU-13.0.2.tar.gz',
     cwd     => '/tmp',
     timeout => '900',
-    creates => '/tmp/ideaIU-133.696.tar.gz',
-    unless  => 'test -d /opt/idea-IU-13.0.2',
+    creates => '/tmp/ideaIU-13.0.2.tar.gz',
+    unless  => 'test -d /opt/idea-IU-133.696',
   } -> exec { 'untar-IntelliJ':
     path    => '/usr/bin:/bin',
     command => 'tar xzvf /tmp/ideaIU-13.0.2.tar.gz',
