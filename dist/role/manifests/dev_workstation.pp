@@ -1,6 +1,7 @@
 class role::dev_workstation inherits role::default {
 
   package { [
+    'bitcoin-qt',
     'calibre',
     'chromium-browser',
     'cmus',
