@@ -56,6 +56,7 @@ duplicity_backups:
         target_url:   'scp://gehel@freenas.home.ledcom.ch//mnt/main_volume/backups/galadriel'
         user:         'gehel'
         excludes:
+            - '/home/gehel/.bitcoin/blocks'
             - '/home/gehel/.cache/'
             - '/home/gehel/.eclipse/'
             - '/home/gehel/.IntelliJIdea12/'
