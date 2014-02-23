@@ -10,6 +10,7 @@ class role::dev_workstation inherits role::default {
     'maven2',
     'openjdk-7-jdk',
     'phantomjs',
+    'sound-juicer',
     'sshfs',
     'synergy',
     'virtualbox',
