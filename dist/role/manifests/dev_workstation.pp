@@ -14,6 +14,7 @@ class role::dev_workstation inherits role::default {
     'sshfs',
     'synergy',
     'virtualbox',
+    'vuze',
     'wireshark',
     'xclip',
     'xmlstarlet',
