@@ -8,6 +8,7 @@ class role::dev_workstation inherits role::default {
     'gitk',
     'git-svn',
     'maven2',
+    'minicom',
     'openjdk-7-jdk',
     'phantomjs',
     'sound-juicer',
