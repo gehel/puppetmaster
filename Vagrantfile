@@ -7,13 +7,13 @@ Vagrant::Config.run do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "debian7"
-
-  config.vm.customize ["modifyvm", :id, "--memory", 2048]
+  config.vm.box = "debian-7.3-puppet"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/debian-70rc1-x64-vbox4210.box"
+  config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/debian-73-x64-virtualbox-puppet.box"
+
+  config.vm.customize ["modifyvm", :id, "--memory", 2048]
 
   # Forward a port from the guest to the host, which allows for outside
   # computers to access the VM, whereas host only networking does not.
@@ -27,7 +27,7 @@ Vagrant::Config.run do |config|
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "site"
     puppet.module_path = "modules"
-    puppet.manifest_file  = "test.pp"
+    puppet.manifest_file  = "shorewall-test.pp"
   end
 
 end

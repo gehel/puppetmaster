@@ -166,6 +166,9 @@ mod 'rundeck',
 mod 'rvm',
   :git => 'git@github.com:example42/puppet-rvm.git'
 
+mod 'shorewall',
+  :git => 'git@github.com:gehel/puppet-shorewall.git'
+
 mod 'stdlib',
   :git => 'git@github.com:puppetlabs/puppetlabs-stdlib.git'
 

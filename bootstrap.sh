@@ -25,15 +25,16 @@ chmod 600 /root/.ssh/id_rsa
 ssh-keyscan github.com >> /root/.ssh/known_hosts
 
 echo 'make sure everything is up to date'
-wget http://apt.puppetlabs.com/puppetlabs-release-`lsb_release -cs`.deb
-dpkg -i puppetlabs-release-`lsb_release -cs`.deb
 apt-get update
 apt-get dist-upgrade -y
 
 echo 'install puppet and dependencies'
+wget http://apt.puppetlabs.com/puppetlabs-release-`lsb_release -cs`.deb
+dpkg -i puppetlabs-release-`lsb_release -cs`.deb
+apt-get update
 apt-get install -y unattended-upgrades puppet git rubygems ruby-systemu ruby-log4r libsystemu-ruby liblog4r-ruby
-gem install r10k
-gem install hiera-eyaml
+gem install --no-rdoc --no-ri r10k
+gem install --no-rdoc --no-ri hiera-eyaml
 
 /usr/local/bin/r10k -v info deploy environment
 

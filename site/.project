@@ -33,6 +33,7 @@
 		<project>rsyslog</project>
 		<project>rundeck</project>
 		<project>rvm</project>
+		<project>shorewall</project>
 		<project>stdlib</project>
 		<project>sudo</project>
 		<project>svn</project>
