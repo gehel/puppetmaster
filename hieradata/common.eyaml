@@ -54,17 +54,7 @@ iptables_block_policy: 'accept'
 
 mcollective_stomp_host: puppet.aws.ledcom.ch
 mcollective_install_client: true
-mcollective_psk: >
-    ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBADAFMAACAQAw
-    DQYJKoZIhvcNAQEBBQAEggEAkcRxFtrwiwrjubTKU39sbL8MGaTP4f5VFDgD
-    A7I4isF7M2orVsEhlpCWOvu8vK5VUsBdlnvbYhHaM/wPnV5M7rNDxZdWJhpf
-    5rYeEucDSM3T443zZumNspIqIQSdFE8d6+An3XSlszpox/zDPI3WRHY3cxkQ
-    67MnM/aUEUQdKip01ZNPHa/QNATFB6bXE9y2m/TjGjYGhx5OmD8jlgmtwGER
-    Z6pa+pkRfaVt/Cd/FVQ/939DTnTdUEvKXYYNKv8F64gsyv83MgV/9YaxUcu9
-    0KlRc1NOT+iwQJCyXUGigu+95exNT85AVdX+gEs3FvrXeBe7e5NxCCYTPaTH
-    8vdSRTBsBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBD/FbH/F83jLS5zV3mp
-    2sqFgEBqtk2RsV6mH2/SHaLIwijtB9S36DPVKoG2Kxf+iDD1iuVd7rhWfAqi
-    UfrsHvisiIC0GXXZOb1Y4ZlGcbm5v5Rc]
+mcollective_psk: not_so_sercret_password
 
 monitor: true
 monitor_tool:
