@@ -8,5 +8,9 @@ node 'galadriel.home.ledcom.ch' {
   class { 'role::dev_workstation': }
 }
 
+node 'voyage.home.ledcom.ch' {
+  class { 'role::firewall': }
+}
+
 node default {
 }
