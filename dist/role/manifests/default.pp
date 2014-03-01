@@ -14,7 +14,6 @@ class role::default {
     'less',
     'lsof',
     'puppet-el',
-    'ruby-dev',
     'screen',
     'secure-delete',
     'sysstat',
@@ -29,32 +28,23 @@ class role::default {
   class { 'logrotate':
   }
 
-  class { 'mcollective':
-    require => Package['ruby-dev'],
-  }
+  class { 'ruby::dev':
+  } -> class { 'mcollective': }
 
-  class { 'ntp':
-  }
+  class { 'ntp': }
 
-  class { 'openssh':
-  }
+  class { 'openssh': }
 
-  class { 'puppet':
-  }
+  class { 'puppet': }
 
-  class { 'puppi':
-  }
+  class { 'puppi': }
 
-  class { 'rundeck::node':
-  }
+  class { 'rundeck::node': }
 
-  class { 'sysctl':
-  }
+  class { 'sysctl': }
 
-  class { 'timezone':
-  }
+  class { 'timezone': }
 
-  class { 'sudo':
-  }
+  class { 'sudo': }
 
 }
