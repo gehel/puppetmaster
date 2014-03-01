@@ -14,6 +14,7 @@ class role::default {
     'less',
     'lsof',
     'puppet-el',
+    'ruby-dev',
     'screen',
     'secure-delete',
     'sysstat',
