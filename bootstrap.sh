@@ -31,11 +31,6 @@ apt-get update
 apt-get dist-upgrade -y
 
 echo 'install puppet and dependencies'
-/usr/sbin/locale-gen enUS.utf8
-export LANGUAGE=en_US.utf8
-export LC_ALL=en_US.utf8
-export LANG=en_US.utf8
-
 apt-get install -y unattended-upgrades puppet git rubygems ruby-systemu ruby-log4r libsystemu-ruby liblog4r-ruby
 gem install r10k
 gem install hiera-eyaml
