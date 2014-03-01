@@ -1,9 +1,9 @@
 #!/bin/sh
 
 echo "Enter SSH private key of server, base64 encoded"
-read $SSH_PRIVATE_KEY
+read SSH_PRIVATE_KEY
 echo "Enter eyaml private key, base64 encoded"
-read $EYAML_PRIVATE_KEY
+read EYAML_PRIVATE_KEY
 
 cat > /etc/r10k.yaml << EOF
 :cachedir: '/var/cache/r10k'
