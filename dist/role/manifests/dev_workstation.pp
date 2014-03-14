@@ -5,6 +5,7 @@ class role::dev_workstation inherits role::default {
     'calibre',
     'chromium-browser',
     'cmus',
+    'gimp',
     'gitk',
     'git-svn',
     'maven2',
