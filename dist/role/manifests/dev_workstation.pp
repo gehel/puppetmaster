@@ -13,6 +13,7 @@ class role::dev_workstation inherits role::default {
     'nmap',
     'openjdk-7-jdk',
     'phantomjs',
+    'puppet-lint',
     'sound-juicer',
     'sshfs',
     'synergy',
