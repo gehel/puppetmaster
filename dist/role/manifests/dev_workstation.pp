@@ -8,6 +8,7 @@ class role::dev_workstation inherits role::default {
     'gimp',
     'gitk',
     'git-svn',
+    'graphviz',
     'maven2',
     'minicom',
     'nmap',
