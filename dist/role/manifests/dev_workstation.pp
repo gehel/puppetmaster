@@ -11,6 +11,7 @@ class role::dev_workstation inherits role::default {
     'git-svn',
     'gparted',
     'graphviz',
+    'keepass2',
     'maven2',
     'minicom',
     'nmap',
