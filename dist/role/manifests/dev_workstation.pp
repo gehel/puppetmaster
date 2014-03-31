@@ -19,6 +19,7 @@ class role::dev_workstation inherits role::default {
     'phantomjs',
     'puppet-lint',
     'sound-juicer',
+    'sqlitebrowser',
     'sshfs',
     'synergy',
     'virtualbox',
