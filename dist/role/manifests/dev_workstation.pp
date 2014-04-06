@@ -13,6 +13,7 @@ class role::dev_workstation inherits role::default {
     'graphviz',
     'keepass2',
     'maven2',
+    'mencoder',
     'minicom',
     'nmap',
     'openjdk-7-jdk',
