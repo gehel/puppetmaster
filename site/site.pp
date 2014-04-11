@@ -4,6 +4,10 @@ case $::server_role {
   }
 }
 
+node 'durin.home.ledcom.ch' {
+  class { 'role::dev_workstation': }
+}
+
 node 'galadriel.home.ledcom.ch' {
   class { 'role::dev_workstation': }
 }
