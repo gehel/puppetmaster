@@ -19,6 +19,7 @@ class role::dev_workstation inherits role::default {
     'openjdk-7-jdk',
     'phantomjs',
     'puppet-lint',
+    'python-setuptools',
     'sound-juicer',
     'sqlitebrowser',
     'sshfs',
