@@ -111,6 +111,8 @@ class role::dev_workstation inherits role::default {
     cwd     => '/opt',
     creates => '/opt/idea-133.696',
   }
+  
+  #TODO: add PyCharm installation
 
   # inotify needs to be higher than default for IntelliJ to be happy
   sysctl::value { 'fs.inotify.max_user_watches':
