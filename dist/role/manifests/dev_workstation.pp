@@ -29,6 +29,7 @@ class role::dev_workstation inherits role::default {
     'synergy',
     'virtualbox',
     'virtualenvwrapper',
+    'visualvm',
     'wireshark',
     'xchat',
     'xclip',
