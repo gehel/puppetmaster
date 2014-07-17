@@ -17,6 +17,7 @@ class role::dev_workstation inherits role::default {
     'mencoder',
     'minicom',
     'nmap',
+    'nodejs-legacy',
     'npm',
     'openjdk-7-jdk',
     'phantomjs',
