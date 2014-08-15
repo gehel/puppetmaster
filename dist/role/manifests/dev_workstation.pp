@@ -37,6 +37,7 @@ class role::dev_workstation inherits role::default {
     'xchat',
     'xclip',
     'xmlstarlet',
+    'xvfb',
     ]:
     ensure => 'present',
   }
