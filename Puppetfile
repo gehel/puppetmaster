@@ -7,6 +7,9 @@ mod 'apache',
 mod 'apt',
   :git => 'git@github.com:puppetlabs/puppetlabs-apt.git'
 
+mod 'augeasproviders_shellvar',
+  :git => 'git@github.com:hercules-team/augeasproviders_shellvar.git'
+
 mod 'autofs',
   :git => 'git@github.com:example42/puppet-autofs.git'
 
