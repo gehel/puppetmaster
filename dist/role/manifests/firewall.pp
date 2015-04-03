@@ -11,4 +11,43 @@ class role::firewall inherits role::default {
     special => 'hourly',
   }
 
+  class { 'shorewall': }
+  
+  shorewall::zone {
+    'net':
+      type => 'ipv4';
+    'fon':
+      type => 'ipv4';
+  }
+
+  shorewall::interface {
+    'eth0':
+      zone    => 'net',
+      rfc1918 => true,
+      options => 'dhcp,tcpflags,nosmurfs,routefilter,logmartians';
+    'eth1':
+      zone    => 'loc',
+      rfc1918 => true,
+      options => 'dhcp,tcpflags,nosmurfs,routefilter,logmartians';
+  }
+
+  shorewall::policy {
+    'fw-to-fw':
+      sourcezone              =>      '$FW',
+      destinationzone         =>      '$FW',
+      policy                  =>      'ACCEPT',
+      order                   =>      100;
+    'fw-to-net':
+      sourcezone              =>      '$FW',
+      destinationzone         =>      'net',
+      policy                  =>      'ACCEPT',
+      shloglevel              =>      '$LOG',
+      order                   =>      110;
+    'net-to-fw':
+      sourcezone              =>      'net',
+      destinationzone         =>      '$FW',
+      policy                  =>      'DROP',
+      shloglevel              =>      '$LOG',
+      order                   =>      120;
+  } 
 }
