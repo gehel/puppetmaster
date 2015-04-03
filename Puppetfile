@@ -22,6 +22,9 @@ mod 'collectd',
 mod 'concat',
   :git => 'git@github.com:puppetlabs/puppetlabs-concat.git'
 
+mod 'concat_native',
+  :git => 'git@github.com:theforeman/puppet-concat_native.git'
+
 mod 'ddclient',
   :git => 'git@github.com:example42/puppet-ddclient.git'
 
