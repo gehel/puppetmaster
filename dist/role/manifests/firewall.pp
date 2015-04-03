@@ -134,7 +134,17 @@ class role::firewall inherits role::default {
       source      => 'all',
       destination => '$FW',
       action      => 'SSH(ACCEPT)',
-      order       => 200;
+      order       => 1;
+    'dns-loc-to-fw':
+      source      => 'loc',
+      destination => '$FW',
+      action      => 'DNS(ACCEPT)',
+      order       => 2;
+    'dns-fon-to-fw':
+      source      => 'fon',
+      destination => '$FW',
+      action      => 'DNS(ACCEPT)',
+      order       => 3;
   }
   
   class { 'dnsmasq':
