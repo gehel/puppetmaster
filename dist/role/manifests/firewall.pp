@@ -11,56 +11,47 @@ class role::firewall inherits role::default {
     special => 'hourly',
   }
 
-  network_config { 'lo':
-    ensure  => 'present',
-    family  => 'inet',
-    method  => 'loopback',
-    onboot  => 'true',
-  }
-
-  network_config { 'eth0':
-    ensure  => 'present',
-    family  => 'inet',
-    method  => 'dhcp',
-    onboot  => 'true',
-  }
-
-  network_config { 'eth1':
-    ensure  => 'present',
-    family  => 'inet',
-    method  => 'manual',
-    onboot  => 'true',
-  }
-
-  network_config { 'wlan0':
-    ensure  => 'present',
-    family  => 'inet',
-    method  => 'manual',
-    onboot  => 'true',
-    options => {
-      hostapd => '/etc/hostapd/hostapd.wlan0.conf',
-    },
-  }
-
-  network_config { 'br0':
-    ensure    => 'present',
-    family    => 'inet',
-    method    => 'static',
-    ipaddress => '192.168.1.1',
-    netmask   => '255.255.255.0',
-    onboot    => 'true',
-    options   => {
-      bridge-ports => 'eth1, wlan0',
-    },
-  }
-
-  network_config { 'eth2':
-    ensure    => 'present',
-    family    => 'inet',
-    method    => 'static',
-    ipaddress => '192.168.2.1',
-    netmask   => '255.255.255.0',
-    onboot    => 'true',
+  network_config {
+    'lo':
+      ensure  => 'present',
+      family  => 'inet',
+      method  => 'loopback',
+      onboot  => 'true';
+    'eth0':
+      ensure  => 'present',
+      family  => 'inet',
+      method  => 'dhcp',
+      onboot  => 'true';
+    'eth1':
+      ensure  => 'present',
+      family  => 'inet',
+      method  => 'manual',
+      onboot  => 'true';
+    'wlan0':
+      ensure  => 'present',
+      family  => 'inet',
+      method  => 'manual',
+      onboot  => 'true',
+      options => {
+        hostapd => '/etc/hostapd/hostapd.wlan0.conf',
+      };
+    'br0':
+      ensure    => 'present',
+      family    => 'inet',
+      method    => 'static',
+      ipaddress => '192.168.1.1',
+      netmask   => '255.255.255.0',
+      onboot    => 'true',
+      options   => {
+        bridge-ports => 'eth1, wlan0',
+      };
+    'eth2':
+      ensure    => 'present',
+      family    => 'inet',
+      method    => 'static',
+      ipaddress => '192.168.2.1',
+      netmask   => '255.255.255.0',
+      onboot    => 'true';
   }
 
   class { 'hostapd':
@@ -138,6 +129,14 @@ class role::firewall inherits role::default {
       order                   =>      999;
   }
   
+  shorewall::rule {
+    'ssh-to-fw':
+      source      => 'all',
+      destination => '$FW',
+      action      => 'SSH(ACCEPT)',
+      order       => 200;
+  }
+  
   class { 'dnsmasq':
     domain            => 'home.ledcom.ch',
   }  
@@ -149,28 +148,24 @@ class role::firewall inherits role::default {
     lease_time => '24h'
   }
 
-  dnsmasq::dhcpstatic { 'host20':
-    mac => '54:04:a6:63:01:15',
-    ip  => '192.168.1.20',
-  }
-  dnsmasq::dhcpstatic { 'host30':
-    mac => 'B8:27:EB:C2:1C:11',
-    ip  => '192.168.1.30',
-  }
-  dnsmasq::dhcpstatic { 'host40':
-    mac => 'e0:cb:4e:b2:98:c7',
-    ip  => '192.168.1.40',
-  }
-  dnsmasq::dhcpstatic { 'host41':
-    mac => '00:25:d3:f7:71:be:c7',
-    ip  => '192.168.1.41',
-  }
-  dnsmasq::dhcpstatic { 'host50':
-    mac => 'e4:11:5b:fc:e5:5a',
-    ip  => '192.168.1.50',
-  }
-  dnsmasq::dhcpstatic { 'host51':
-    mac => '08:11:96:9e:d3:6c',
-    ip  => '192.168.1.51',
+  dnsmasq::dhcpstatic {
+    'host20':
+      mac => '54:04:a6:63:01:15',
+      ip  => '192.168.1.20';
+    'host30':
+      mac => 'B8:27:EB:C2:1C:11',
+      ip  => '192.168.1.30';
+    'host40':
+      mac => 'e0:cb:4e:b2:98:c7',
+      ip  => '192.168.1.40';
+    'host41':
+      mac => '00:25:d3:f7:71:be:c7',
+      ip  => '192.168.1.41';
+    'host50':
+      mac => 'e4:11:5b:fc:e5:5a',
+      ip  => '192.168.1.50';
+    'host51':
+      mac => '08:11:96:9e:d3:6c',
+      ip  => '192.168.1.51';
   }
 }
