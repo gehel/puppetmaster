@@ -28,6 +28,9 @@ mod 'ddclient',
 mod 'dns',
   :git => 'git@github.com:masterzen/puppet-dns.git'
 
+mod 'dnsmasq',
+  :git => 'git@github.com:rlex/puppet-dnsmasq.git'
+
 mod 'dropbox',
   :git => 'git@github.com:gehel/puppet-dropbox.git'
 
@@ -57,6 +60,9 @@ mod 'graphite',
 
 mod 'haproxy',
   :git => 'git@github.com:example42/puppet-haproxy.git'
+
+mod 'hostapd',
+  :git => 'git@github.com:mcanevet/puppet-hostapd.git'
 
 mod 'hosts',
   :git => 'git@github.com:example42/puppet-hosts.git'

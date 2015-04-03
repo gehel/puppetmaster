@@ -63,6 +63,20 @@ class role::firewall inherits role::default {
     onboot    => 'true',
   }
 
+  class { 'hostapd':
+    ssid           => 'LEDCOM',
+    interface      => 'wlan0',
+    bridge         => 'br0',
+    driver         => 'nl80211',
+    channel        => 9,
+    hw_mode        => 'g',
+    wpa            => '2',
+    wpa_passphrase => '88BD12F633',
+    wpa_key_mgmt   => 'WPA-PSK',
+    wpa_pairwise   => 'TKIP',
+    rsn_pairwise   => 'CCMP',
+  }
+
   class { 'shorewall': }
   
   shorewall::zone {
@@ -122,5 +136,41 @@ class role::firewall inherits role::default {
       policy                  =>      'REJECT',
       shloglevel              =>      'info',
       order                   =>      999;
-  } 
+  }
+  
+  class { 'dnsmasq':
+    domain            => 'home.ledcom.ch',
+  }  
+
+  dnsmasq::dhcp { 'br0':
+    dhcp_start => '192.168.1.100',
+    dhcp_end   => '192.168.1.200',
+    netmask    => '255.255.255.0',
+    lease_time => '24h'
+  }
+
+  dnsmasq::dhcpstatic { 'host20':
+    mac => '54:04:a6:63:01:15',
+    ip  => '192.168.1.20',
+  }
+  dnsmasq::dhcpstatic { 'host30':
+    mac => 'B8:27:EB:C2:1C:11',
+    ip  => '192.168.1.30',
+  }
+  dnsmasq::dhcpstatic { 'host40':
+    mac => 'e0:cb:4e:b2:98:c7',
+    ip  => '192.168.1.40',
+  }
+  dnsmasq::dhcpstatic { 'host41':
+    mac => '00:25:d3:f7:71:be:c7',
+    ip  => '192.168.1.41',
+  }
+  dnsmasq::dhcpstatic { 'host50':
+    mac => 'e4:11:5b:fc:e5:5a',
+    ip  => '192.168.1.50',
+  }
+  dnsmasq::dhcpstatic { 'host51':
+    mac => '08:11:96:9e:d3:6c',
+    ip  => '192.168.1.51',
+  }
 }
