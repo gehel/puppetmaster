@@ -141,31 +141,31 @@ class role::firewall inherits role::default {
     domain            => 'home.ledcom.ch',
   }  
 
-  dnsmasq::dhcp { 'br0':
-    dhcp_start => '192.168.1.100',
-    dhcp_end   => '192.168.1.200',
-    netmask    => '255.255.255.0',
-    lease_time => '24h'
-  }
+#  dnsmasq::dhcp { 'br0':
+#    dhcp_start => '192.168.1.100',
+#    dhcp_end   => '192.168.1.200',
+#    netmask    => '255.255.255.0',
+#    lease_time => '24h'
+#  }
 
-  dnsmasq::dhcpstatic {
-    'host20':
-      mac => '54:04:a6:63:01:15',
-      ip  => '192.168.1.20';
-    'host30':
-      mac => 'B8:27:EB:C2:1C:11',
-      ip  => '192.168.1.30';
-    'host40':
-      mac => 'e0:cb:4e:b2:98:c7',
-      ip  => '192.168.1.40';
-    'host41':
-      mac => '00:25:d3:f7:71:be:c7',
-      ip  => '192.168.1.41';
-    'host50':
-      mac => 'e4:11:5b:fc:e5:5a',
-      ip  => '192.168.1.50';
-    'host51':
-      mac => '08:11:96:9e:d3:6c',
-    ip  => '192.168.1.51';
-  }
+#  dnsmasq::dhcpstatic {
+#    'host20':
+#      mac => '54:04:a6:63:01:15',
+#      ip  => '192.168.1.20';
+#    'host30':
+#      mac => 'B8:27:EB:C2:1C:11',
+#      ip  => '192.168.1.30';
+#    'host40':
+#      mac => 'e0:cb:4e:b2:98:c7',
+#      ip  => '192.168.1.40';
+#    'host41':
+#      mac => '00:25:d3:f7:71:be:c7',
+#      ip  => '192.168.1.41';
+#    'host50':
+#      mac => 'e4:11:5b:fc:e5:5a',
+#      ip  => '192.168.1.50';
+#    'host51':
+#      mac => '08:11:96:9e:d3:6c',
+#    ip  => '192.168.1.51';
+#  }
 }
