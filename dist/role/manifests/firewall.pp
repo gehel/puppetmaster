@@ -141,12 +141,12 @@ class role::firewall inherits role::default {
     domain            => 'home.ledcom.ch',
   }  
 
-#  dnsmasq::dhcp { 'br0':
-#    dhcp_start => '192.168.1.100',
-#    dhcp_end   => '192.168.1.200',
-#    netmask    => '255.255.255.0',
-#    lease_time => '24h'
-#  }
+  dnsmasq::dhcp { 'br0':
+    dhcp_start => '192.168.1.100',
+    dhcp_end   => '192.168.1.200',
+    netmask    => '255.255.255.0',
+    lease_time => '24h'
+  }
 
 #  dnsmasq::dhcpstatic {
 #    'host20':
