@@ -100,6 +100,9 @@ mod 'mysql',
 mod 'nagios',
   :git => 'git@github.com:example42/puppet-nagios.git'
 
+mod 'network',
+  :git => 'git@github.com:puppet-community/puppet-network.git'
+
 mod 'newrelic',
   :git => 'git@github.com:example42/puppet-newrelic.git'
 

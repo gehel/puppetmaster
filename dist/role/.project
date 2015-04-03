@@ -20,6 +20,7 @@
 		<project>munin</project>
 		<project>mysql</project>
 		<project>nagios</project>
+		<project>network</project>
 		<project>nginx</project>
 		<project>nrpe</project>
 		<project>ntp</project>
