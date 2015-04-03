@@ -35,8 +35,6 @@ class role::default {
 
   class { 'puppi': }
 
-  class { 'sysctl': }
-
   class { 'timezone': }
 
   class { 'sudo': }
