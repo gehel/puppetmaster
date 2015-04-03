@@ -79,7 +79,7 @@ class role::firewall inherits role::default {
       zone    => 'net',
       rfc1918 => true,
       options => 'dhcp,tcpflags,nosmurfs,routefilter,logmartians';
-    'eth1':
+    'br0':
       zone    => 'loc',
       rfc1918 => true,
       options => 'dhcp,tcpflags,nosmurfs,routefilter,logmartians';
@@ -95,6 +95,11 @@ class role::firewall inherits role::default {
       destinationzone         =>      'net',
       policy                  =>      'ACCEPT',
       order                   =>      10;
+    'fon-to-net':
+      sourcezone              =>      'fon',
+      destinationzone         =>      'net',
+      policy                  =>      'ACCEPT',
+      order                   =>      20;
     'fw-to-fw':
       sourcezone              =>      '$FW',
       destinationzone         =>      '$FW',
