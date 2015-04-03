@@ -159,7 +159,7 @@ class role::firewall inherits role::default {
       mac => 'e0:cb:4e:b2:98:c7',
       ip  => '192.168.1.40';
     'host41':
-      mac => '00:25:d3:f7:71:be:c7',
+      mac => '00:25:d3:f7:71:be',
       ip  => '192.168.1.41';
     'host50':
       mac => 'e4:11:5b:fc:e5:5a',
