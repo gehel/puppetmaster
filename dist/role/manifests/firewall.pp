@@ -14,9 +14,11 @@ class role::firewall inherits role::default {
   class { 'shorewall': }
   
   shorewall::zone {
-    'net':
-      type => 'ipv4';
     'fon':
+      type => 'ipv4';
+    'loc':
+      type => 'ipv4';
+    'net':
       type => 'ipv4';
   }
 
@@ -29,9 +31,18 @@ class role::firewall inherits role::default {
       zone    => 'loc',
       rfc1918 => true,
       options => 'dhcp,tcpflags,nosmurfs,routefilter,logmartians';
+    'eth2':
+      zone    => 'fon',
+      rfc1918 => true,
+      options => 'dhcp,tcpflags,nosmurfs,routefilter,logmartians';
   }
 
   shorewall::policy {
+    'loc-to-net':
+      sourcezone              =>      'loc',
+      destinationzone         =>      'net',
+      policy                  =>      'ACCEPT',
+      order                   =>      10;
     'fw-to-fw':
       sourcezone              =>      '$FW',
       destinationzone         =>      '$FW',
