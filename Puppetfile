@@ -10,6 +10,9 @@ mod 'apt',
 mod 'autofs',
   :git => 'git@github.com:example42/puppet-autofs.git'
 
+mod 'boolean',
+  :git => 'git@github.com:adrienthebo/puppet-boolean.git'
+
 mod 'cntlm',
   :git => 'git@github.com:gehel/puppet-cntlm.git'
 
@@ -39,6 +42,9 @@ mod 'exported_vars',
 
 mod 'fail2ban',
   :git => 'git@github.com:example42/puppet-fail2ban.git'
+
+mod 'filemapper',
+  :git => 'git@github.com:adrienthebo/puppet-filemapper.git'
 
 mod 'firewall',
   :git => 'git@github.com:example42/puppet-firewall.git'
