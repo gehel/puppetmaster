@@ -5,7 +5,7 @@ mod 'apache',
   :git => 'git@github.com:example42/puppet-apache.git'
 
 mod 'apt',
-  :git => 'git@github.com:example42/puppet-apt.git'
+  :git => 'git@github.com:puppetlabs/puppetlabs-apt.git'
 
 mod 'autofs',
   :git => 'git@github.com:example42/puppet-autofs.git'
@@ -113,7 +113,7 @@ mod 'nrpe',
   :git => 'git@github.com:example42/puppet-nrpe.git'
 
 mod 'ntp',
-  :git => 'git@github.com:example42/puppet-ntp.git'
+  :git => 'git@github.com:puppetlabs/puppetlabs-ntp.git'
 
 mod 'openntpd',
   :git => 'git@github.com:example42/puppet-openntpd.git'
@@ -167,7 +167,7 @@ mod 'rvm',
   :git => 'git@github.com:example42/puppet-rvm.git'
 
 mod 'shorewall',
-  :git => 'git@github.com:gehel/puppet-shorewall.git'
+  :git => 'git@github.com:duritong/puppet-shorewall.git'
 
 mod 'stdlib',
   :git => 'git@github.com:puppetlabs/puppetlabs-stdlib.git'
@@ -179,7 +179,7 @@ mod 'svn',
   :git => 'git@github.com:example42/puppet-svn.git'
 
 mod 'sysctl',
-  :git => 'git@github.com:example42/puppet-sysctl.git'
+  :git => 'git@github.com:puppetlabs/puppetlabs-sysctl.git'
 
 mod 'timezone',
   :git => 'git@github.com:example42/puppet-timezone.git'
@@ -194,5 +194,5 @@ mod 'varnish',
   :git => 'git@github.com:example42/puppet-varnish.git'
 
 mod 'wget',
-  :git => 'git@github.com:example42/puppet-wget.git'
+  :git => 'git@github.com:maestrodev/puppet-wget.git'
 

@@ -23,14 +23,9 @@ class role::default {
     ensure => present,
   }
 
-  class { 'apt':
-  }
+  class { 'apt': }
 
-  class { 'logrotate':
-  }
-
-  class { 'ruby::dev':
-  } -> class { 'mcollective': }
+  class { 'logrotate': }
 
   class { 'ntp': }
 
@@ -39,8 +34,6 @@ class role::default {
   class { 'puppet': }
 
   class { 'puppi': }
-
-  class { 'rundeck::node': }
 
   class { 'sysctl': }
 
