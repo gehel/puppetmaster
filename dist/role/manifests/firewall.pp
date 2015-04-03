@@ -148,6 +148,13 @@ class role::firewall inherits role::default {
     lease_time => '24h'
   }
 
+  dnsmasq::dhcp { 'fon':
+    dhcp_start => '192.168.2.100',
+    dhcp_end   => '192.168.2.200',
+    netmask    => '255.255.255.0',
+    lease_time => '24h'
+  }
+
   dnsmasq::dhcpstatic {
     'host20':
       mac => '54:04:a6:63:01:15',
