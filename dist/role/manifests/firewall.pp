@@ -68,6 +68,13 @@ class role::firewall inherits role::default {
 #    rsn_pairwise   => 'CCMP',
 #  }
 
+  augeas { 'enable_ip_forwarding':
+    changes => 'set /files/etc/shorewall/shorewall.conf/IP_FORWARDING Yes',
+    lens    => 'Shellvars.lns',
+    incl    => '/etc/shorewall/shorewall.conf',
+    notify  => Service[shorewall];
+  }
+
   class { 'shorewall': }
   
   shorewall::zone {
