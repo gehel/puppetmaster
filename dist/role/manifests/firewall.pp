@@ -54,19 +54,19 @@ class role::firewall inherits role::default {
       onboot    => 'true';
   }
 
-  class { 'hostapd':
-    ssid           => 'LEDCOM',
-    interface      => 'wlan0',
-    bridge         => 'br0',
-    driver         => 'nl80211',
-    channel        => 9,
-    hw_mode        => 'g',
-    wpa            => '2',
-    wpa_passphrase => '88BD12F633',
-    wpa_key_mgmt   => 'WPA-PSK',
-    wpa_pairwise   => 'TKIP',
-    rsn_pairwise   => 'CCMP',
-  }
+#  class { 'hostapd':
+#    ssid           => 'LEDCOM',
+#    interface      => 'wlan0',
+#    bridge         => 'br0',
+#    driver         => 'nl80211',
+#    channel        => 9,
+#    hw_mode        => 'g',
+#    wpa            => '2',
+#    wpa_passphrase => '88BD12F633',
+#    wpa_key_mgmt   => 'WPA-PSK',
+#    wpa_pairwise   => 'TKIP',
+#    rsn_pairwise   => 'CCMP',
+#  }
 
   class { 'shorewall': }
   
@@ -166,6 +166,6 @@ class role::firewall inherits role::default {
       ip  => '192.168.1.50';
     'host51':
       mac => '08:11:96:9e:d3:6c',
-      ip  => '192.168.1.51';
+    ip  => '192.168.1.51';
   }
 }
