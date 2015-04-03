@@ -52,13 +52,18 @@ class role::firewall inherits role::default {
       sourcezone              =>      '$FW',
       destinationzone         =>      'net',
       policy                  =>      'ACCEPT',
-      shloglevel              =>      '$LOG',
       order                   =>      110;
     'net-to-fw':
       sourcezone              =>      'net',
       destinationzone         =>      '$FW',
       policy                  =>      'DROP',
-      shloglevel              =>      '$LOG',
+      shloglevel              =>      'info',
       order                   =>      120;
+    'default':
+      sourcezone              =>      'all',
+      destinationzone         =>      'all',
+      policy                  =>      'REJECT',
+      shloglevel              =>      'info',
+      order                   =>      999;
   } 
 }
