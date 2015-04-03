@@ -34,9 +34,6 @@ mod 'dnsmasq',
 mod 'dropbox',
   :git => 'git@github.com:gehel/puppet-dropbox.git'
 
-mod 'dnsmasq',
-  :git => 'git@github.com:example42/puppet-dnsmasq.git'
-
 mod 'duplicity',
   :git => 'git@github.com:gehel/puppet-duplicity.git'
 
