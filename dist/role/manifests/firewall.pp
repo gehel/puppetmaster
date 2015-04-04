@@ -223,7 +223,7 @@ class role::firewall inherits role::default {
   }
 
   dnsmasq::dhcpstatic {
-    'host20':
+    'freenas':
       mac => '54:04:a6:63:01:15',
       ip  => '192.168.1.20';
     'host30':
@@ -244,6 +244,12 @@ class role::firewall inherits role::default {
     'fon':
       mac => 'c4:71:30:3d:aa:30',
       ip  => '192.168.3.2';
+  }
+
+  host {
+    'freenas':
+      ip           => '192.168.1.20',
+      host_aliases => 'freenas.home.ledcom.ch';
   }
 
   class { 'datadog_agent':
