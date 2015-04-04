@@ -72,7 +72,7 @@ class role::firewall inherits role::default {
     changes => 'set /files/etc/shorewall/shorewall.conf/IP_FORWARDING Yes',
     lens    => 'Shellvars.lns',
     incl    => '/etc/shorewall/shorewall.conf',
-    notify  => Service[shorewall];
+    notify  => Service[shorewall],
   }
 
   class { 'shorewall': }
@@ -135,23 +135,38 @@ class role::firewall inherits role::default {
       shloglevel              =>      'info',
       order                   =>      999;
   }
-  
+
+  shorewall::masq { 'NAT-to-internet':
+    interface => 'eth0',
+    source    => '192.168.0.0/16',
+  }
+
   shorewall::rule {
     'ssh-to-fw':
       source      => 'all',
       destination => '$FW',
       action      => 'SSH(ACCEPT)',
       order       => 1;
+    'ping-loc-to-fw':
+      source      => 'loc',
+      destination => '$FW',
+      action      => 'Ping(ACCEPT)',
+      order       => 2;
+    'ping-fon-to-fw':
+      source      => 'fon',
+      destination => '$FW',
+      action      => 'Ping(ACCEPT)',
+      order       => 3;
     'dns-loc-to-fw':
       source      => 'loc',
       destination => '$FW',
       action      => 'DNS(ACCEPT)',
-      order       => 2;
+      order       => 4;
     'dns-fon-to-fw':
       source      => 'fon',
       destination => '$FW',
       action      => 'DNS(ACCEPT)',
-      order       => 3;
+      order       => 5;
   }
   
   class { 'dnsmasq':
