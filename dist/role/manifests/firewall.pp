@@ -223,33 +223,78 @@ class role::firewall inherits role::default {
   }
 
   dnsmasq::dhcpstatic {
+    'fon':
+      mac => 'c4:71:30:3d:aa:30',
+      ip  => '192.168.3.2';
     'freenas':
       mac => '54:04:a6:63:01:15',
       ip  => '192.168.1.20';
-    'host30':
+    'openelec':
       mac => 'B8:27:EB:C2:1C:11',
       ip  => '192.168.1.30';
-    'host40':
+    'mediacenter':
       mac => 'e0:cb:4e:b2:98:c7',
       ip  => '192.168.1.40';
-    'host41':
+    'mediacenter-wifi':
       mac => '00:25:d3:f7:71:be',
-      ip  => '192.168.1.41';
+      ip  => '192.168.2.40';
     'galadriel':
       mac => 'e4:11:5b:fc:e5:5a',
       ip  => '192.168.1.50';
     'galadriel-wifi':
       mac => '08:11:96:9e:d3:6c',
       ip  => '192.168.2.50';
-    'fon':
-      mac => 'c4:71:30:3d:aa:30',
-      ip  => '192.168.3.2';
+    'mrg-phone':
+      mac => '20:64:32:0a:49:5c',
+      ip  => '192.168.2.51';
+    'mrg-tablet':
+      mac => '08:d4:2b:17:6c:7c',
+      ip  => '192.168.2.52';
+    'france-macbook':
+      mac => '58:b0:35:5c:7f:5c',
+      ip  => '192.168.1.60';
+    'france-iphone':
+      mac => 'f0:f6:1c:3f:0e:c8',
+      ip  => '192.168.1.61';
   }
 
   host {
+    'voyage':
+      ip           => '192.168.1.1',
+      host_aliases => [ 'voyage.home.ledcom.ch', 'fw.home.ledcom.ch' ];
+    'fon':
+      ip           => '192.168.3.2',
+      host_aliases => 'fon.home.ledcom.ch';
     'freenas':
       ip           => '192.168.1.20',
       host_aliases => 'freenas.home.ledcom.ch';
+    'openelec':
+      ip           => '192.168.1.30',
+      host_aliases => 'openelec.home.ledcom.ch';
+    'mediacenter':
+      ip           => '192.168.1.40',
+      host_aliases => 'mediacenter.home.ledcom.ch';
+    'mediacenter-wifi':
+      ip           => '192.168.2.40',
+      host_aliases => 'mediacenter-wifi.home.ledcom.ch';
+    'galadriel':
+      ip           => '192.168.1.50',
+      host_aliases => 'galadriel.home.ledcom.ch';
+    'galadriel-wifi':
+      ip           => '192.168.2.50',
+      host_aliases => 'galadriel-wifi.home.ledcom.ch';
+    'mrg-phone':
+      ip           => '192.168.2.51',
+      host_aliases => 'mrg-phone.home.ledcom.ch';
+    'mrg-tablet':
+      ip           => '192.168.2.52',
+      host_aliases => 'mrg-tablet.home.ledcom.ch';
+    'france-macbook':
+      ip           => '192.168.1.60',
+      host_aliases => 'france-mackbook.home.ledcom.ch';
+    'france-iphone':
+      ip           => '192.168.1.61',
+      host_aliases => 'france-iphone.home.ledcom.ch';
   }
 
   class { 'datadog_agent':
