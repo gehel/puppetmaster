@@ -7,6 +7,7 @@
 		<project>apt</project>
 		<project>cntlm</project>
 		<project>concat</project>
+		<project>datadog_agent</project>
 		<project>ddclient</project>
 		<project>dnsmasq</project>
 		<project>firewall</project>
