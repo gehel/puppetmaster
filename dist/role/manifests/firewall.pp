@@ -48,18 +48,6 @@ class role::firewall inherits role::default {
       options   => {
         hostapd => '/etc/hostapd/hostapd.wlan0.conf',
       };
-    'he-ipv6':
-      ensure    => 'present',
-      family    => 'inet6',
-      method    => 'v4tunnel',
-      ipaddress => '2001:470:25:3ec::2',
-      netmask   => '64',
-      options   => {
-        endpoint => '216.66.80.98',
-        local    => '85.218.91.27',
-        ttl      => '255',
-        gateway  => '2001:470:25:3ec::1',
-      }
   }
 
 #  class { 'hostapd':
