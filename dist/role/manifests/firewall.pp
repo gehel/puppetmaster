@@ -12,6 +12,8 @@ class role::firewall inherits role::default {
   }
 
   network_config {
+    'br0':
+      ensure => 'absent';
     'lo':
       ensure  => 'present',
       family  => 'inet',
@@ -103,52 +105,64 @@ class role::firewall inherits role::default {
 
   shorewall::policy {
     'loc-to-net':
-      sourcezone              =>      'loc',
-      destinationzone         =>      'net',
-      policy                  =>      'ACCEPT',
-      order                   =>      10;
+      sourcezone      => 'loc',
+      destinationzone => 'net',
+      policy          => 'ACCEPT',
+      order           => 10;
     'wifi-to-net':
-      sourcezone              =>      'wifi',
-      destinationzone         =>      'net',
-      policy                  =>      'ACCEPT',
-      order                   =>      11;
+      sourcezone      => 'wifi',
+      destinationzone => 'net',
+      policy          => 'ACCEPT',
+      order           => 11;
     'loc-to-wifi':
-      sourcezone              =>      'loc',
-      destinationzone         =>      'wifi',
-      policy                  =>      'ACCEPT',
-      order                   =>      12;
+      sourcezone      => 'loc',
+      destinationzone => 'wifi',
+      policy          => 'ACCEPT',
+      order           => 12;
     'wifi-to-loc':
-      sourcezone              =>      'wifi',
-      destinationzone         =>      'loc',
-      policy                  =>      'ACCEPT',
-      order                   =>      13;
+      sourcezone      => 'wifi',
+      destinationzone => 'loc',
+      policy          => 'ACCEPT',
+      order           => 13;
     'fon-to-net':
-      sourcezone              =>      'fon',
-      destinationzone         =>      'net',
-      policy                  =>      'ACCEPT',
-      order                   =>      20;
+      sourcezone      => 'fon',
+      destinationzone => 'net',
+      policy          => 'ACCEPT',
+      order           => 20;
+    'fon-to-loc':
+      sourcezone      => 'fon',
+      destinationzone => 'loc',
+      policy          => 'REJECT',
+      shloglevel      => 'info',
+      order           => 21;
+    'fon-to-wifi':
+      sourcezone      => 'fon',
+      destinationzone => 'wifi',
+      policy          => 'REJECT',
+      shloglevel      => 'info',
+      order           => 22;
     'fw-to-fw':
-      sourcezone              =>      '$FW',
-      destinationzone         =>      '$FW',
-      policy                  =>      'ACCEPT',
-      order                   =>      100;
+      sourcezone      => '$FW',
+      destinationzone => '$FW',
+      policy          => 'ACCEPT',
+      order           => 100;
     'fw-to-net':
-      sourcezone              =>      '$FW',
-      destinationzone         =>      'net',
-      policy                  =>      'ACCEPT',
-      order                   =>      110;
+      sourcezone      => '$FW',
+      destinationzone => 'net',
+      policy          => 'ACCEPT',
+      order           => 110;
     'net-to-fw':
-      sourcezone              =>      'net',
-      destinationzone         =>      '$FW',
-      policy                  =>      'DROP',
-      shloglevel              =>      'info',
-      order                   =>      998;
+      sourcezone      => 'net',
+      destinationzone => '$FW',
+      policy          => 'DROP',
+      shloglevel      => 'info',
+      order           => 998;
     'default':
-      sourcezone              =>      'all',
-      destinationzone         =>      'all',
-      policy                  =>      'REJECT',
-      shloglevel              =>      'info',
-      order                   =>      999;
+      sourcezone      => 'all',
+      destinationzone => 'all',
+      policy          => 'REJECT',
+      shloglevel      => 'info',
+      order           => 999;
   }
 
   shorewall::masq { 'NAT-to-internet':
@@ -162,21 +176,26 @@ class role::firewall inherits role::default {
       destination => '$FW',
       action      => 'SSH(ACCEPT)',
       order       => 1;
+    'ping-hurricane-electric-to-fw':
+      source      => 'net:66.220.2.74',
+      destination => '$FW',
+      action      => 'Ping(ACCEPT)',
+      order       => 10;
     'ping-loc-to-fw':
       source      => 'loc',
       destination => '$FW',
       action      => 'Ping(ACCEPT)',
-      order       => 10;
+      order       => 11;
     'ping-wifi-to-fw':
       source      => 'wifi',
       destination => '$FW',
       action      => 'Ping(ACCEPT)',
-      order       => 11;
+      order       => 12;
     'ping-fon-to-fw':
       source      => 'fon',
       destination => '$FW',
       action      => 'Ping(ACCEPT)',
-      order       => 12;
+      order       => 13;
     'dns-loc-to-fw':
       source      => 'loc',
       destination => '$FW',
@@ -229,11 +248,14 @@ class role::firewall inherits role::default {
     'host41':
       mac => '00:25:d3:f7:71:be',
       ip  => '192.168.1.41';
-    'host50':
+    'galadriel':
       mac => 'e4:11:5b:fc:e5:5a',
       ip  => '192.168.1.50';
-    'host51':
+    'galadriel-wifi':
       mac => '08:11:96:9e:d3:6c',
-    ip  => '192.168.1.51';
+      ip  => '192.168.2.50';
+    'fon':
+      mac => 'c4:71:30:3d:aa:30',
+      ip  => '192.168.3.2';
   }
 }
