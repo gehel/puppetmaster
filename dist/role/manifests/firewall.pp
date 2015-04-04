@@ -23,35 +23,29 @@ class role::firewall inherits role::default {
       method  => 'dhcp',
       onboot  => 'true';
     'eth1':
-      ensure  => 'present',
-      family  => 'inet',
-      method  => 'manual',
-      onboot  => 'true';
-    'wlan0':
-      ensure  => 'present',
-      family  => 'inet',
-      method  => 'manual',
-      onboot  => 'true',
-      options => {
-        hostapd => '/etc/hostapd/hostapd.wlan0.conf',
-      };
-    'br0':
       ensure    => 'present',
       family    => 'inet',
       method    => 'static',
       ipaddress => '192.168.1.1',
       netmask   => '255.255.255.0',
-      onboot    => 'true',
-      options   => {
-        bridge-ports => 'eth1, wlan0',
-      };
+      onboot    => 'true';
     'eth2':
       ensure    => 'present',
       family    => 'inet',
       method    => 'static',
-      ipaddress => '192.168.2.1',
+      ipaddress => '192.168.3.1',
       netmask   => '255.255.255.0',
       onboot    => 'true';
+    'wlan0':
+      ensure  => 'present',
+      family  => 'inet',
+      method    => 'static',
+      ipaddress => '192.168.2.1',
+      netmask   => '255.255.255.0',
+      onboot  => 'true',
+      options => {
+        hostapd => '/etc/hostapd/hostapd.wlan0.conf',
+      };
   }
 
 #  class { 'hostapd':
@@ -78,11 +72,13 @@ class role::firewall inherits role::default {
   class { 'shorewall': }
   
   shorewall::zone {
-    'fon':
+    'net':
       type => 'ipv4';
     'loc':
       type => 'ipv4';
-    'net':
+    'wifi':
+      type => 'ipv4';
+    'fon':
       type => 'ipv4';
   }
 
@@ -91,12 +87,16 @@ class role::firewall inherits role::default {
       zone    => 'net',
       rfc1918 => true,
       options => 'dhcp,tcpflags,nosmurfs,routefilter,logmartians';
-    'br0':
+    'eth1':
       zone    => 'loc',
       rfc1918 => true,
       options => 'dhcp,tcpflags,nosmurfs,routefilter,logmartians';
     'eth2':
       zone    => 'fon',
+      rfc1918 => true,
+      options => 'dhcp,tcpflags,nosmurfs,routefilter,logmartians';
+    'wlan0':
+      zone    => 'wifi',
       rfc1918 => true,
       options => 'dhcp,tcpflags,nosmurfs,routefilter,logmartians';
   }
@@ -107,6 +107,21 @@ class role::firewall inherits role::default {
       destinationzone         =>      'net',
       policy                  =>      'ACCEPT',
       order                   =>      10;
+    'wifi-to-net':
+      sourcezone              =>      'wifi',
+      destinationzone         =>      'net',
+      policy                  =>      'ACCEPT',
+      order                   =>      11;
+    'loc-to-wifi':
+      sourcezone              =>      'loc',
+      destinationzone         =>      'wifi',
+      policy                  =>      'ACCEPT',
+      order                   =>      12;
+    'wifi-to-loc':
+      sourcezone              =>      'wifi',
+      destinationzone         =>      'loc',
+      policy                  =>      'ACCEPT',
+      order                   =>      13;
     'fon-to-net':
       sourcezone              =>      'fon',
       destinationzone         =>      'net',
@@ -127,7 +142,7 @@ class role::firewall inherits role::default {
       destinationzone         =>      '$FW',
       policy                  =>      'DROP',
       shloglevel              =>      'info',
-      order                   =>      120;
+      order                   =>      998;
     'default':
       sourcezone              =>      'all',
       destinationzone         =>      'all',
@@ -151,40 +166,54 @@ class role::firewall inherits role::default {
       source      => 'loc',
       destination => '$FW',
       action      => 'Ping(ACCEPT)',
-      order       => 2;
+      order       => 10;
+    'ping-wifi-to-fw':
+      source      => 'wifi',
+      destination => '$FW',
+      action      => 'Ping(ACCEPT)',
+      order       => 11;
     'ping-fon-to-fw':
       source      => 'fon',
       destination => '$FW',
       action      => 'Ping(ACCEPT)',
-      order       => 3;
+      order       => 12;
     'dns-loc-to-fw':
       source      => 'loc',
       destination => '$FW',
       action      => 'DNS(ACCEPT)',
-      order       => 4;
+      order       => 20;
+    'dns-wifi-to-fw':
+      source      => 'wifi',
+      destination => '$FW',
+      action      => 'DNS(ACCEPT)',
+      order       => 21;
     'dns-fon-to-fw':
       source      => 'fon',
       destination => '$FW',
       action      => 'DNS(ACCEPT)',
-      order       => 5;
+      order       => 22;
   }
   
   class { 'dnsmasq':
     domain            => 'home.ledcom.ch',
   }  
 
-  dnsmasq::dhcp { 'br0':
-    dhcp_start => '192.168.1.100',
-    dhcp_end   => '192.168.1.200',
-    netmask    => '255.255.255.0',
-    lease_time => '24h'
-  }
-
-  dnsmasq::dhcp { 'fon':
-    dhcp_start => '192.168.2.100',
-    dhcp_end   => '192.168.2.200',
-    netmask    => '255.255.255.0',
-    lease_time => '24h'
+  dnsmasq::dhcp {
+    'loc':
+      dhcp_start => '192.168.1.100',
+      dhcp_end   => '192.168.1.200',
+      netmask    => '255.255.255.0',
+      lease_time => '24h';
+    'wifi':
+      dhcp_start => '192.168.2.100',
+      dhcp_end   => '192.168.2.200',
+      netmask    => '255.255.255.0',
+      lease_time => '24h';
+    'fon':
+      dhcp_start => '192.168.3.100',
+      dhcp_end   => '192.168.3.200',
+      netmask    => '255.255.255.0',
+      lease_time => '24h';
   }
 
   dnsmasq::dhcpstatic {
