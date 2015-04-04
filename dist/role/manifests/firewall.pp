@@ -1,4 +1,5 @@
 class role::firewall inherits role::default {
+  
   file { '/usr/local/sbin/puppet-standalone.sh':
     ensure => 'present',
     source => 'puppet:///modules/role/puppet/puppet-standalone.sh',
@@ -49,20 +50,6 @@ class role::firewall inherits role::default {
         hostapd => '/etc/hostapd/hostapd.wlan0.conf',
       };
   }
-
-#  class { 'hostapd':
-#    ssid           => 'LEDCOM',
-#    interface      => 'wlan0',
-#    bridge         => 'br0',
-#    driver         => 'nl80211',
-#    channel        => 9,
-#    hw_mode        => 'g',
-#    wpa            => '2',
-#    wpa_passphrase => '88BD12F633',
-#    wpa_key_mgmt   => 'WPA-PSK',
-#    wpa_pairwise   => 'TKIP',
-#    rsn_pairwise   => 'CCMP',
-#  }
 
   augeas { 'enable_ip_forwarding':
     changes => 'set /files/etc/shorewall/shorewall.conf/IP_FORWARDING Yes',
@@ -258,4 +245,9 @@ class role::firewall inherits role::default {
       mac => 'c4:71:30:3d:aa:30',
       ip  => '192.168.3.2';
   }
+
+  class { 'datadog_agent':
+    api_key => '6f91f73035983c640628104708038c66',
+  }
+
 }
