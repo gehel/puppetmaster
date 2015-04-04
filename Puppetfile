@@ -22,7 +22,7 @@ mod 'collectd',
 mod 'concat',
   :git => 'git@github.com:puppetlabs/puppetlabs-concat.git'
 
-mod 'datadog-agent',
+mod 'datadog_agent',
   :git => 'git@github.com:DataDog/puppet-datadog-agent.git'
 
 mod 'ddclient',
