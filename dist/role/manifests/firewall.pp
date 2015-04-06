@@ -301,4 +301,21 @@ class role::firewall inherits role::default {
     api_key => '6f91f73035983c640628104708038c66',
   }
 
+  class { 'tftp': }
+  
+  class { 'pxe': }
+  
+  pxe::images { 'coreos':
+    os   => 'coreos',
+    ver  => '607.0.0',
+    arch => 'amd64',
+  }
+  pxe::menu { 'CoreOS':
+    file => 'coreos',
+  }
+  pxe::menu::entry { 'CoreOS default':
+    file   => 'coreos',
+    kernel => 'coreos_production_pxe.vmlinuz',
+    append => 'initrd=coreos_production_pxe_image.cpio.gz',
+  }
 }

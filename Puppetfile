@@ -142,6 +142,9 @@ mod 'openvpn',
 mod 'pam',
   :git => 'git@github.com:example42/puppet-pam.git'
 
+mod 'permute',
+  :git => 'git@github.com:xaque208/puppet-permute.git'
+
 mod 'postfix',
   :git => 'git@github.com:example42/puppet-postfix.git'
 
@@ -162,6 +165,9 @@ mod 'puppetdb',
 
 mod 'puppi',
   :git => 'git@github.com:example42/puppi.git'
+
+mod 'pxe',
+  :git => 'git@github.com:gehel/puppet-pxe.git'
 
 mod 'rsync',
   :git => 'git@github.com:example42/puppet-rsync.git'
@@ -196,6 +202,9 @@ mod 'svn',
 mod 'sysctl',
   :git => 'git@github.com:puppetlabs/puppetlabs-sysctl.git'
 
+mod 'tftp',
+  :git => 'git@github.com:puppetlabs/puppetlabs-tftp.git'
+
 mod 'timezone',
   :git => 'git@github.com:example42/puppet-timezone.git'
 
@@ -210,4 +219,7 @@ mod 'varnish',
 
 mod 'wget',
   :git => 'git@github.com:maestrodev/puppet-wget.git'
+
+mod 'xinetd',
+  :git => 'git@github.com:puppetlabs/puppetlabs-xinetd.git'
 
