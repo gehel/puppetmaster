@@ -1,6 +1,7 @@
 class role::default {
   # Base packages, always installed
   package { [
+    'ack-grep',
     'bash-completion',
     'bzip2',
     'curl',
