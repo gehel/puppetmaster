@@ -345,6 +345,6 @@ class role::firewall inherits role::default {
   pxe::menu::entry { 'Boot CoreOS':
     file   => 'coreos',
     kernel => "images/coreos/${coreos_version}/amd64/coreos_production_pxe.vmlinuz",
-    append => "initrd=images/coreos/${coreos_version}/amd64/coreos_production_pxe_image.cpio.gz rootfstype=btrfs coreos.autologin cloud-config-url=http://pastebin.com/raw.php?i=KPNSF9Xf",
+    append => "initrd=images/coreos/${coreos_version}/amd64/coreos_production_pxe_image.cpio.gz rootfstype=btrfs root=/dev/sda1 cloud-config-url=http://pastebin.com/raw.php?i=KPNSF9Xf",
   }
 }
