@@ -198,10 +198,22 @@ class role::firewall inherits role::default {
       destination => '$FW',
       action      => 'DNS(ACCEPT)',
       order       => 22;
+    'tftp-loc-to-fw':
+      source      => 'loc',
+      destination => '$FW',
+      action      => 'TFTP(ACCEPT)',
+      order       => 30;
+    'tftp-wifi-to-fw':
+      source      => 'wifi',
+      destination => '$FW',
+      action      => 'TFTP(ACCEPT)',
+      order       => 31;
   }
   
   class { 'dnsmasq':
-    domain            => 'home.ledcom.ch',
+    domain    => 'home.ledcom.ch',
+    dhcp_boot => 'coreos,voyage,192.168.1.1',
+    tftp_root => $tftp::directory,
   }  
 
   dnsmasq::dhcp {
