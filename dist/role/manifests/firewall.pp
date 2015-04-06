@@ -332,17 +332,19 @@ class role::firewall inherits role::default {
   
   class { 'pxe': }
   
+  $coreos_version = '607.0.0'
+  
   pxe::images { 'coreos':
     os   => 'coreos',
-    ver  => '607.0.0',
+    ver  => $coreos_version,
     arch => 'amd64',
   }
   pxe::menu { 'CoreOS':
     file => 'coreos',
   }
-  pxe::menu::entry { 'CoreOS':
+  pxe::menu::entry { 'Boot CoreOS':
     file   => 'coreos',
-    kernel => 'images/coreos/607.0.0/amd64/coreos_production_pxe.vmlinuz',
-    append => 'initrd=images/coreos/607.0.0/amd64/coreos_production_pxe_image.cpio.gz',
+    kernel => "images/coreos/${coreos_version}/amd64/coreos_production_pxe.vmlinuz",
+    append => "initrd=images/coreos/${coreos_version}/amd64/coreos_production_pxe_image.cpio.gz",
   }
 }
