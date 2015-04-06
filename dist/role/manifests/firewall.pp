@@ -212,7 +212,7 @@ class role::firewall inherits role::default {
   
   class { 'dnsmasq':
     domain    => 'home.ledcom.ch',
-    dhcp_boot => 'coreos,voyage,192.168.1.1',
+    dhcp_boot => 'pxelinux.0,voyage,192.168.1.1',
     tftp_root => $tftp::directory,
   }  
 
