@@ -208,6 +208,21 @@ class role::firewall inherits role::default {
       destination => '$FW',
       action      => 'TFTP(ACCEPT)',
       order       => 31;
+    'ntp-loc-to-fw':
+      source      => 'loc',
+      destination => '$FW',
+      action      => 'NTP(ACCEPT)',
+      order       => 40;
+    'ntp-wifi-to-fw':
+      source      => 'wifi',
+      destination => '$FW',
+      action      => 'NTP(ACCEPT)',
+      order       => 41;
+    'ntp-fon-to-fw':
+      source      => 'fon',
+      destination => '$FW',
+      action      => 'NTP(ACCEPT)',
+      order       => 42;
   }
   
   class { 'dnsmasq':
