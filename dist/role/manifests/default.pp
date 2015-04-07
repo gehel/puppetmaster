@@ -39,5 +39,31 @@ class role::default {
   class { 'timezone': }
 
   class { 'sudo': }
+  
+  class { 'collectd':
+    purge        => true,
+    recurse      => true,
+    purge_config => true,
+  }
+  class { 'collectd::plugin::conntrack': }
+  class { 'collectd::plugin::cpu': }
+  class { 'collectd::plugin::cpufreq': }
+  class { 'collectd::plugin::df': }
+  class { 'collectd::plugin::disk': }
+  class { 'collectd::plugin::entropy': }
+  class { 'collectd::plugin::interface': }
+  class { 'collectd::plugin::irq': }
+  class { 'collectd::plugin::iptables': }
+  class { 'collectd::plugin::load': }
+  class { 'collectd::plugin::memory': }
+  class { 'collectd::plugin::ntpd': }
+  class {'collectd::plugin::sensors': }
+  class { 'collectd::plugin::swap': }
+  class {'collectd::plugin::uptime': }
+  class {'collectd::plugin::users': }
+  class { 'collectd::plugin::vmem': }
+  class { 'collectd::plugin::write_graphite':
+    graphitehost => '192.168.1.166',
+  }
 
 }

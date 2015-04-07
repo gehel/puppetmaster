@@ -17,7 +17,7 @@ mod 'cntlm',
   :git => 'git@github.com:gehel/puppet-cntlm.git'
 
 mod 'collectd',
-  :git => 'git@github.com:example42/puppet-collectd.git'
+  :git => 'git@github.com:pdxcat/puppet-module-collectd.git'
 
 mod 'concat',
   :git => 'git@github.com:puppetlabs/puppetlabs-concat.git'
@@ -167,7 +167,7 @@ mod 'puppi',
   :git => 'git@github.com:example42/puppi.git'
 
 mod 'pxe',
-  :git => 'git@github.com:gehel/puppet-pxe.git'
+  :git => 'git@github.com:xaque208/puppet-pxe.git'
 
 mod 'rsync',
   :git => 'git@github.com:example42/puppet-rsync.git'

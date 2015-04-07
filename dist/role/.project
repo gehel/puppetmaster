@@ -6,6 +6,7 @@
 		<project>apache</project>
 		<project>apt</project>
 		<project>cntlm</project>
+		<project>collectd</project>
 		<project>concat</project>
 		<project>datadog_agent</project>
 		<project>ddclient</project>
