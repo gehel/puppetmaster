@@ -65,7 +65,7 @@ class role::default {
   class { 'collectd::plugin::users': }
   class { 'collectd::plugin::vmem': }
   class { 'collectd::plugin::write_graphite':
-    graphitehost => '192.168.1.166',
+    graphitehost => '192.168.2.166',
   }
 
 }
