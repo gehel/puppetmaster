@@ -223,6 +223,20 @@ class role::firewall inherits role::default {
       destination => '$FW',
       action      => 'NTP(ACCEPT)',
       order       => 42;
+    'graphite-fw-to-loc':
+      source          => '$FW',
+      destination     => 'loc',
+      action          => 'ACCEPT',
+      proto           => 'tcp',
+      destinationport => '2003',
+      order           => 50;
+    'graphite-fw-to-wifi':
+      source          => '$FW',
+      destination     => 'wifi',
+      action          => 'ACCEPT',
+      proto           => 'tcp',
+      destinationport => '2003',
+      order           => 51;
   }
   
   class { 'dnsmasq':
