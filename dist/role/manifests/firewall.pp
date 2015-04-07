@@ -339,11 +339,7 @@ class role::firewall inherits role::default {
     ver  => $coreos_version,
     arch => 'amd64',
   }
-  pxe::menu { 'CoreOS':
-    file => 'coreos',
-  }  
-  pxe::menu::entry { 'C0A802A6':
-    file   => 'coreos',
+  pxe::menu::host { 'C0A802A6':
     kernel => "images/coreos/${coreos_version}/amd64/coreos_production_pxe.vmlinuz",
     append => "initrd=images/coreos/${coreos_version}/amd64/coreos_production_pxe_image.cpio.gz root=LABEL=ROOT cloud-config-url=http://pastebin.com/raw.php?i=KPNSF9Xf",
   }
