@@ -45,6 +45,10 @@ class role::default {
     recurse      => true,
     purge_config => true,
   }
+  class { 'collectd::plugin::logfile':
+    log_level => 'info',
+    log_file => '/var/log/collected.log'
+  }
   class { 'collectd::plugin::conntrack': }
   class { 'collectd::plugin::cpu': }
   class { 'collectd::plugin::cpufreq': }
