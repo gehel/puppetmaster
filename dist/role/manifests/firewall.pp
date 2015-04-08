@@ -360,6 +360,6 @@ class role::firewall inherits role::default {
   # mediacenter (192.168.1.40)
   pxe::menu::host { 'C0A80128':
     kernel => "images/coreos/${coreos_version}/amd64/coreos_production_pxe.vmlinuz",
-    append => "initrd=images/coreos/${coreos_version}/amd64/coreos_production_pxe_image.cpio.gz root=LABEL=ROOT cloud-config-url=http://pastebin.com/raw.php?i=KPNSF9Xf",
+    append => "initrd=images/coreos/${coreos_version}/amd64/coreos_production_pxe_image.cpio.gz rootfstype=btrfs cloud-config-url=http://pastebin.com/raw.php?i=KPNSF9Xf",
   }
 }
