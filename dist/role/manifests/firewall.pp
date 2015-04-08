@@ -312,12 +312,12 @@ class role::firewall inherits role::default {
     'openelec':
       ip           => '192.168.1.30',
       host_aliases => 'openelec.home.ledcom.ch';
-    'mediacenter':
+    'coreos':
       ip           => '192.168.1.40',
-      host_aliases => 'mediacenter.home.ledcom.ch';
-    'mediacenter-wifi':
+      host_aliases => 'coreos.home.ledcom.ch';
+    'coreos-wifi':
       ip           => '192.168.2.40',
-      host_aliases => 'mediacenter-wifi.home.ledcom.ch';
+      host_aliases => 'coreos-wifi.home.ledcom.ch';
     'galadriel':
       ip           => '192.168.1.50',
       host_aliases => 'galadriel.home.ledcom.ch';
@@ -357,7 +357,7 @@ class role::firewall inherits role::default {
     kernel => "images/coreos/${coreos_version}/amd64/coreos_production_pxe.vmlinuz",
     append => "initrd=images/coreos/${coreos_version}/amd64/coreos_production_pxe_image.cpio.gz root=LABEL=ROOT cloud-config-url=http://pastebin.com/raw.php?i=KPNSF9Xf",
   }
-  # mediacenter (192.168.1.40)
+  # coreos (192.168.1.40)
   pxe::menu::host { 'C0A80128':
     kernel => "images/coreos/${coreos_version}/amd64/coreos_production_pxe.vmlinuz",
     append => "initrd=images/coreos/${coreos_version}/amd64/coreos_production_pxe_image.cpio.gz root=LABEL=ROOT cloud-config-url=http://pastebin.com/raw.php?i=KPNSF9Xf",
