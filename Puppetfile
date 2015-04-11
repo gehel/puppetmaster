@@ -122,7 +122,7 @@ mod 'nfs',
   :git => 'git@github.com:example42/puppet-nfs.git'
 
 mod 'nginx',
-  :git => 'git@github.com:example42/puppet-nginx.git'
+  :git => 'git@github.com:jfryman/puppet-nginx.git'
 
 mod 'nrpe',
   :git => 'git@github.com:example42/puppet-nrpe.git'

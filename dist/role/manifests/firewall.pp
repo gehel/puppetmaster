@@ -163,6 +163,16 @@ class role::firewall inherits role::default {
       destination => '$FW',
       action      => 'SSH(ACCEPT)',
       order       => 1;
+    'http-to-fw':
+      source      => 'all',
+      destination => '$FW',
+      action      => 'HTTP(ACCEPT)',
+      order       => 2;
+    'https-to-fw':
+      source      => 'all',
+      destination => '$FW',
+      action      => 'HTTPS(ACCEPT)',
+      order       => 3;
     'ping-hurricane-electric-to-fw':
       source      => 'net:66.220.2.74',
       destination => '$FW',
@@ -237,6 +247,13 @@ class role::firewall inherits role::default {
       proto           => 'tcp',
       destinationport => '2003',
       order           => 51;
+    'grafana-fw-to-loc':
+      source          => '$FW',
+      destination     => 'wifi:192.168.1.40',
+      action          => 'ACCEPT',
+      proto           => 'tcp',
+      destinationport => '3000',
+      order           => 52;
   }
   
   class { 'tftp': }
@@ -361,5 +378,10 @@ class role::firewall inherits role::default {
   pxe::menu::host { 'C0A80128':
     kernel => "images/coreos/${coreos_version}/amd64/coreos_production_pxe.vmlinuz",
     append => "initrd=images/coreos/${coreos_version}/amd64/coreos_production_pxe_image.cpio.gz root=LABEL=ROOT cloud-config-url=http://pastebin.com/raw.php?i=KPNSF9Xf",
+  }
+  
+  class { 'nginx': }
+  nginx::resource::vhost { 'grafana.home.ledcom.ch':
+    proxy => 'http://192.168.1.40:3000',
   }
 }
