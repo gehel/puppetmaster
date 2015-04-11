@@ -389,7 +389,12 @@ class role::firewall inherits role::default {
     stub_status => true,
   }
   class { 'collectd::plugin::nginx':
-    url => 'http://localhost',
+    url => 'http://localhost/status',
   }
-  
+  class { 'datadog_agent::integrations::nginx':
+    instances => [
+      { 'nginx_status_url'  => 'http://localhost/status', },
+    ],
+  }
+
 }
