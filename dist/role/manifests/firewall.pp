@@ -464,4 +464,10 @@ class role::firewall inherits role::default {
     ],
   }
 
+  class { 'fail2ban':
+    jails_config   => 'file',
+    jails_template => 'fail2ban/jail.local.erb',
+    jails          => ['ssh'],
+  }
+
 }
