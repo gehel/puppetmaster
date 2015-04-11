@@ -398,10 +398,6 @@ class role::firewall inherits role::default {
   nginx::resource::vhost { 'graphite.home.ledcom.ch':
     proxy => 'http://192.168.1.40:80',
   }
-  nginx::resource::location { '/status':
-    vhost => 'graphite.home.ledcom.ch',
-    stub_status => true,
-  }
   class { 'collectd::plugin::nginx':
     url => 'http://localhost/status',
   }
