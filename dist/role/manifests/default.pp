@@ -52,7 +52,10 @@ class role::default {
   class { 'collectd::plugin::conntrack': }
   class { 'collectd::plugin::cpu': }
   class { 'collectd::plugin::cpufreq': }
-  class { 'collectd::plugin::df': }
+  class { 'collectd::plugin::df':
+    fstypes        => [ 'devpts', 'proc', 'udev' ],
+    ignoreselected => true,
+  }
   class { 'collectd::plugin::disk': }
   class { 'collectd::plugin::entropy': }
   class { 'collectd::plugin::interface': }
