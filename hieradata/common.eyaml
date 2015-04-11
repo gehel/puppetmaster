@@ -58,7 +58,6 @@ mcollective_psk: not_so_sercret_password
 
 monitor: true
 monitor_tool:
-    - 'icinga'
     - 'puppi'
 
 ntp_server:
