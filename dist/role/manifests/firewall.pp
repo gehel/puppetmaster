@@ -249,7 +249,7 @@ class role::firewall inherits role::default {
       order           => 51;
     'grafana-fw-to-loc':
       source          => '$FW',
-      destination     => 'wifi:192.168.1.40',
+      destination     => 'loc:192.168.1.40',
       action          => 'ACCEPT',
       proto           => 'tcp',
       destinationport => '3000',
