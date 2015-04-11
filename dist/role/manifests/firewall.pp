@@ -384,4 +384,8 @@ class role::firewall inherits role::default {
   nginx::resource::vhost { 'grafana.home.ledcom.ch':
     proxy => 'http://192.168.1.40:3000',
   }
+  class { 'collectd::plugin::nginx':
+    url => 'http://localhost',
+  }
+  
 }
