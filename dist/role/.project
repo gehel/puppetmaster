@@ -11,6 +11,7 @@
 		<project>datadog_agent</project>
 		<project>ddclient</project>
 		<project>dnsmasq</project>
+		<project>fail2ban</project>
 		<project>firewall</project>
 		<project>git</project>
 		<project>icinga</project>

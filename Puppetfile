@@ -44,7 +44,7 @@ mod 'exported_vars',
   :git => 'git@github.com:example42/puppet-exported_vars.git'
 
 mod 'fail2ban',
-  :git => 'git@github.com:example42/puppet-fail2ban.git'
+  :git => 'git@github.com:netmanagers/puppet-fail2ban.git'
 
 mod 'filemapper',
   :git => 'git@github.com:adrienthebo/puppet-filemapper.git'
