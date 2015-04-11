@@ -375,7 +375,14 @@ class role::firewall inherits role::default {
   
   class { 'nginx': }
 
+  file { '/var/www':
+    ensure => 'directory',
+    owner  => 'nobody',
+    group  => 'nogroup',
+    mode   => '0755',
+  }
   nginx::resource::vhost { 'localhost':
+    www_root => '/var/www',
   }
   nginx::resource::location { '/status':
     vhost => 'localhost',
