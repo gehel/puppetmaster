@@ -254,6 +254,13 @@ class role::firewall inherits role::default {
       proto           => 'tcp',
       destinationport => '3000',
       order           => 52;
+    'graphiteweb-fw-to-loc':
+      source          => '$FW',
+      destination     => 'loc:192.168.1.40',
+      action          => 'ACCEPT',
+      proto           => 'tcp',
+      destinationport => '80',
+      order           => 53;
   }
   
   class { 'tftp': }
@@ -386,6 +393,13 @@ class role::firewall inherits role::default {
   }
   nginx::resource::location { '/status':
     vhost => 'grafana.home.ledcom.ch',
+    stub_status => true,
+  }
+  nginx::resource::vhost { 'graphite.home.ledcom.ch':
+    proxy => 'http://192.168.1.40:80',
+  }
+  nginx::resource::location { '/status':
+    vhost => 'graphite.home.ledcom.ch',
     stub_status => true,
   }
   class { 'collectd::plugin::nginx':
