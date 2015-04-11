@@ -393,10 +393,6 @@ class role::firewall inherits role::default {
   nginx::resource::vhost { 'grafana.home.ledcom.ch':
     proxy => 'http://192.168.1.40:3000',
   }
-  nginx::resource::location { '/status':
-    vhost => 'grafana.home.ledcom.ch',
-    stub_status => true,
-  }
 
   shorewall::rule { 'graphiteweb-fw-to-loc':
       source          => '$FW',
