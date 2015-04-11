@@ -468,6 +468,7 @@ class role::firewall inherits role::default {
     jails_config   => 'file',
     jails_template => 'fail2ban/jail.local.erb',
     jails          => ['ssh'],
+    banaction      => 'shorewall',
   }
 
 }
