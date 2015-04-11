@@ -455,6 +455,20 @@ class role::firewall inherits role::default {
     auth_basic_user_file => '/etc/nginx/htpasswd',
   }
 
+  shorewall::rule { 'transmission-fw-to-loc':
+      source          => '$FW',
+      destination     => 'loc:192.168.1.7',
+      action          => 'ACCEPT',
+      proto           => 'tcp',
+      destinationport => '9091',
+      order           => 105;
+  }
+  nginx::resource::vhost { 'transmission.home.ledcom.ch':
+    proxy                => 'http://192.168.1.7:9091',
+    auth_basic           => 'LedCom',
+    auth_basic_user_file => '/etc/nginx/htpasswd',
+  }
+
   class { 'collectd::plugin::nginx':
     url => 'http://localhost/status',
   }
