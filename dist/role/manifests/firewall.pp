@@ -375,6 +375,13 @@ class role::firewall inherits role::default {
   
   class { 'nginx': }
 
+  nginx::resource::vhost { 'localhost':
+  }
+  nginx::resource::location { '/status':
+    vhost => 'localhost',
+    stub_status => true,
+  }
+
   shorewall::rule { 'grafana-fw-to-loc':
       source          => '$FW',
       destination     => 'loc:192.168.1.40',
