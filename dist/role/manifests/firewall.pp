@@ -239,6 +239,8 @@ class role::firewall inherits role::default {
       order           => 51;
   }
   
+  class { 'tftp': }
+  ->
   class { 'dnsmasq':
     domain    => 'home.ledcom.ch',
     dhcp_boot => 'pxelinux.0,voyage,192.168.1.1',
@@ -342,8 +344,6 @@ class role::firewall inherits role::default {
     api_key => '6f91f73035983c640628104708038c66',
   }
 
-  class { 'tftp': }
-  
   class { 'pxe': }
   
   $coreos_version = '607.0.0'
