@@ -247,20 +247,6 @@ class role::firewall inherits role::default {
       proto           => 'tcp',
       destinationport => '2003',
       order           => 51;
-    'grafana-fw-to-loc':
-      source          => '$FW',
-      destination     => 'loc:192.168.1.40',
-      action          => 'ACCEPT',
-      proto           => 'tcp',
-      destinationport => '3000',
-      order           => 52;
-    'graphiteweb-fw-to-loc':
-      source          => '$FW',
-      destination     => 'loc:192.168.1.40',
-      action          => 'ACCEPT',
-      proto           => 'tcp',
-      destinationport => '80',
-      order           => 53;
   }
   
   class { 'tftp': }
@@ -388,6 +374,15 @@ class role::firewall inherits role::default {
   }
   
   class { 'nginx': }
+
+  shorewall::rule { 'grafana-fw-to-loc':
+      source          => '$FW',
+      destination     => 'loc:192.168.1.40',
+      action          => 'ACCEPT',
+      proto           => 'tcp',
+      destinationport => '3000',
+      order           => 100;
+  }
   nginx::resource::vhost { 'grafana.home.ledcom.ch':
     proxy => 'http://192.168.1.40:3000',
   }
@@ -395,9 +390,61 @@ class role::firewall inherits role::default {
     vhost => 'grafana.home.ledcom.ch',
     stub_status => true,
   }
+
+  shorewall::rule { 'graphiteweb-fw-to-loc':
+      source          => '$FW',
+      destination     => 'loc:192.168.1.40',
+      action          => 'ACCEPT',
+      proto           => 'tcp',
+      destinationport => '80',
+      order           => 101;
+  }
   nginx::resource::vhost { 'graphite.home.ledcom.ch':
     proxy => 'http://192.168.1.40:80',
   }
+
+  shorewall::rule { 'sabnzbd-fw-to-loc':
+      source          => '$FW',
+      destination     => 'loc:192.168.1.2',
+      action          => 'ACCEPT',
+      proto           => 'tcp',
+      destinationport => '8080',
+      order           => 102;
+  }
+  nginx::resource::vhost { 'sabnzbd.home.ledcom.ch':
+    proxy                => 'http://192.168.1.2:8080',
+    auth_basic           => 'LedCom',
+    auth_basic_user_file => '/etc/nginx/htpasswd',
+  }
+
+  shorewall::rule { 'couchpotato-fw-to-loc':
+      source          => '$FW',
+      destination     => 'loc:192.168.1.4',
+      action          => 'ACCEPT',
+      proto           => 'tcp',
+      destinationport => '5050',
+      order           => 103;
+  }
+  nginx::resource::vhost { 'couchpotato.home.ledcom.ch':
+    proxy                => 'http://192.168.1.4:5050',
+    auth_basic           => 'LedCom',
+    auth_basic_user_file => '/etc/nginx/htpasswd',
+  }
+
+  shorewall::rule { 'sickbeard-fw-to-loc':
+      source          => '$FW',
+      destination     => 'loc:192.168.1.5',
+      action          => 'ACCEPT',
+      proto           => 'tcp',
+      destinationport => '8081',
+      order           => 104;
+  }
+  nginx::resource::vhost { 'sickbeard.home.ledcom.ch':
+    proxy                => 'http://192.168.1.5:8081',
+    auth_basic           => 'LedCom',
+    auth_basic_user_file => '/etc/nginx/htpasswd',
+  }
+
   class { 'collectd::plugin::nginx':
     url => 'http://localhost/status',
   }
