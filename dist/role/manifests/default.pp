@@ -53,8 +53,9 @@ class role::default {
   class { 'collectd::plugin::cpu': }
   class { 'collectd::plugin::cpufreq': }
   class { 'collectd::plugin::df':
-    fstypes        => [ 'devpts', 'proc', 'udev' ],
-    ignoreselected => true,
+    fstypes          => [ 'devpts', 'proc', 'udev' ],
+    ignoreselected   => true,
+    valuespercentage => true,
   }
   class { 'collectd::plugin::disk': }
   class { 'collectd::plugin::entropy': }

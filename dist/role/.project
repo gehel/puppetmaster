@@ -39,6 +39,7 @@
 		<project>sudo</project>
 		<project>svn</project>
 		<project>tftp</project>
+		<project>timezone</project>
 		<project>tomcat</project>
 		<project>vagrant</project>
 		<project>varnish</project>
