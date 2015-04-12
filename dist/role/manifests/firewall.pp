@@ -11,7 +11,7 @@ class role::firewall inherits role::default {
   } ->
   cron { 'puppet-standalone':
     command => '/usr/local/sbin/puppet-standalone.sh',
-    special => 'hourly',
+    special => 'daily',
   }
 
   network_config {
