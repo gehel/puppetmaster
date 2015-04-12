@@ -481,10 +481,15 @@ class role::firewall inherits role::default {
   }
 
   class { 'fail2ban':
-    jails_config   => 'file',
-    jails_template => 'fail2ban/jail.local.erb',
-    jails          => ['ssh'],
+    jails_config   => 'concat',
     banaction      => 'shorewall',
+    mailto         => 'guillaume.lederrey@gmail.com',
+  }
+  fail2ban::jail { 'sshd':
+    port     => '22',
+    logpath  => '/var/log/auth.log',
+    maxretry => '5',
+    action   => 'shorewall',
   }
 
 }
