@@ -24,7 +24,11 @@ class role::default {
     ensure => present,
   }
 
-  class { 'apt': }
+  class { 'apt':
+    always_apt_update => true,
+    apt_update_frequency => 'daily',
+  }
+  class { 'apt::unattended_upgrades': }
 
   class { 'ntp': }
 
