@@ -1,6 +1,15 @@
 class role::firewall inherits role::default {
 
   $puppet_fqdn = 'voyage.home.ledcom.ch'
+
+  Logrotate::Rule {
+    rotate       => 4,
+    missingok    => true,
+    ifempty      => false,
+    compress     => true,
+    size         => '1M',
+    rotate_every => 'day',
+  }
   
   file { '/usr/local/sbin/puppet-standalone.sh':
     ensure  => 'present',
@@ -353,13 +362,14 @@ class role::firewall inherits role::default {
   }
 
   class { 'datadog_agent':
+    ensure  => 'absent',    
     api_key => '6f91f73035983c640628104708038c66',
   }
 
   class { 'pxe': }
-  
+
   $coreos_version = '607.0.0'
-  
+
   pxe::images { 'coreos':
     os   => 'coreos',
     ver  => $coreos_version,
@@ -474,11 +484,6 @@ class role::firewall inherits role::default {
   class { 'collectd::plugin::nginx':
     url => 'http://localhost/status',
   }
-  class { 'datadog_agent::integrations::nginx':
-    instances => [
-      { 'nginx_status_url'  => 'http://localhost/status', },
-    ],
-  }
 
   class { 'fail2ban':
     jails_config   => 'concat',
@@ -490,6 +495,10 @@ class role::firewall inherits role::default {
     logpath  => '/var/log/auth.log',
     maxretry => '5',
     action   => 'shorewall',
+  }
+  logrotate::rule { 'fail2ban':
+    path       => '/var/log/fail2ban.log',
+    postrotate => '/usr/local/bin/fail2ban-client set logtarget /var/log/fail2ban.log >/dev/null',
   }
 
 }
