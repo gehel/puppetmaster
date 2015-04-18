@@ -25,7 +25,6 @@ class role::default {
   }
 
   class { 'apt':
-    always_apt_update => true,
     apt_update_frequency => 'daily',
   }
   class { 'apt::unattended_upgrades': }
