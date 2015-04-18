@@ -474,6 +474,14 @@ class role::firewall inherits role::default {
       destinationport => '9091',
       order           => 105;
   }
+  shorewall::rule { 'transmission-port-forwarding':
+      source          => 'net',
+      destination     => 'loc:192.168.1.7:51413',
+      action          => 'DNAT',
+      proto           => 'tcp',
+      destinationport => '51413',
+      order           => 106;
+  }
   nginx::resource::vhost { 'transmission.home.ledcom.ch':
     proxy                => 'http://192.168.1.7:9091',
     auth_basic           => 'LedCom',
