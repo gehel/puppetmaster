@@ -362,7 +362,6 @@ class role::firewall inherits role::default {
   }
 
   class { 'datadog_agent':
-    ensure  => 'absent',    
     api_key => '6f91f73035983c640628104708038c66',
   }
 
