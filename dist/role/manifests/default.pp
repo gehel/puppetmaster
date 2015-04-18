@@ -83,6 +83,8 @@ class role::default {
   }
 
   logrotate::rule {
+    'collectd':
+      path => '/var/log/collected.log';
     'kern':
       path => '/var/log/kern.log';
     'messages':
