@@ -293,6 +293,9 @@ class role::firewall inherits role::default {
     'freenas':
       mac => '54:04:a6:63:01:15',
       ip  => '192.168.1.20';
+    'airpi':
+      mac => 'b8:27:eb:d0:88:d2',
+      ip  => '192.168.1.21';
     'openelec':
       mac => 'B8:27:EB:C2:1C:11',
       ip  => '192.168.1.30';
@@ -316,10 +319,10 @@ class role::firewall inherits role::default {
       ip  => '192.168.2.52';
     'france-macbook':
       mac => '58:b0:35:5c:7f:5c',
-      ip  => '192.168.1.60';
+      ip  => '192.168.2.60';
     'france-iphone':
       mac => 'f0:f6:1c:3f:0e:c8',
-      ip  => '192.168.1.61';
+      ip  => '192.168.2.61';
   }
 
   host {
@@ -332,6 +335,9 @@ class role::firewall inherits role::default {
     'freenas':
       ip           => '192.168.1.20',
       host_aliases => 'freenas.home.ledcom.ch';
+    'airpi':
+      ip           => '192.168.1.21',
+      host_aliases => 'airpi.home.ledcom.ch';
     'openelec':
       ip           => '192.168.1.30',
       host_aliases => 'openelec.home.ledcom.ch';
@@ -354,10 +360,10 @@ class role::firewall inherits role::default {
       ip           => '192.168.2.52',
       host_aliases => 'mrg-tablet.home.ledcom.ch';
     'france-macbook':
-      ip           => '192.168.1.60',
+      ip           => '192.168.2.60',
       host_aliases => 'france-mackbook.home.ledcom.ch';
     'france-iphone':
-      ip           => '192.168.1.61',
+      ip           => '192.168.2.61',
       host_aliases => 'france-iphone.home.ledcom.ch';
   }
 
