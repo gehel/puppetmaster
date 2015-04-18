@@ -26,8 +26,6 @@ class role::default {
 
   class { 'apt': }
 
-  class { 'logrotate': }
-
   class { 'ntp': }
 
   class { 'openssh': }
