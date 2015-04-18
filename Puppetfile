@@ -83,7 +83,7 @@ mod 'limits',
   :git => 'git@github.com:example42/puppet-limits.git'
 
 mod 'logrotate',
-  :git => 'git@github.com:example42/puppet-logrotate.git'
+  :git => 'git@github.com:rodjek/puppet-logrotate.git'
 
 mod 'logstash',
   :git => 'git@github.com:example42/puppet-logstash.git'

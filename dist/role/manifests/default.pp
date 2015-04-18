@@ -72,4 +72,20 @@ class role::default {
     graphitehost => '192.168.1.40',
   }
 
+  Logrotate::Rule {
+    rotate       => 4,
+    missingok    => true,
+    ifempty      => false,
+    compress     => true,
+    size         => '1M',
+    rotate_every => 'day',
+  }
+
+  logrotate::rule {
+    'kern':
+      path => '/var/log/kern.log';
+    'messages':
+      path => '/var/log/messages';
+  }
+
 }
