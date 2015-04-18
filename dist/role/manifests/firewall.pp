@@ -474,13 +474,21 @@ class role::firewall inherits role::default {
       destinationport => '9091',
       order           => 105;
   }
-  shorewall::rule { 'transmission-port-forwarding':
+  shorewall::rule { 'transmission-port-forwarding-tcp':
       source          => 'net',
       destination     => 'loc:192.168.1.7:51413',
       action          => 'DNAT',
       proto           => 'tcp',
       destinationport => '51413',
       order           => 106;
+  }
+  shorewall::rule { 'transmission-port-forwarding-udp':
+      source          => 'net',
+      destination     => 'loc:192.168.1.7:51413',
+      action          => 'DNAT',
+      proto           => 'udp',
+      destinationport => '51413',
+      order           => 107;
   }
   nginx::resource::vhost { 'transmission.home.ledcom.ch':
     proxy                => 'http://192.168.1.7:9091',
