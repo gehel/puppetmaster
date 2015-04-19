@@ -21,7 +21,7 @@ mod 'collectd',
 
 mod 'concat',
   :git => 'git@github.com:puppetlabs/puppetlabs-concat.git',
-  :tag => '1.2.0'
+  :tag => '1.1.2'
 
 mod 'datadog_agent',
   :git => 'git@github.com:DataDog/puppet-datadog-agent.git'
