@@ -1,7 +1,3 @@
-File {
-  backup => '.puppet-bak',
-}
-
 case $::server_role {
   'puppetmaster' : {
     class { 'role::puppetmaster': }
