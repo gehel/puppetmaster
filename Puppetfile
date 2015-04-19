@@ -170,6 +170,9 @@ mod 'puppi',
 mod 'pxe',
   :git => 'git@github.com:xaque208/puppet-pxe.git'
 
+mod 'python',
+  :git => 'git@github.com:stankevich/puppet-python.git'
+
 mod 'rsync',
   :git => 'git@github.com:example42/puppet-rsync.git'
 
@@ -217,6 +220,9 @@ mod 'vagrant',
 
 mod 'varnish',
   :git => 'git@github.com:example42/puppet-varnish.git'
+
+mod 'vcsrepo',
+  :git => 'git@github.com:puppetlabs/puppetlabs-vcsrepo.git'
 
 mod 'wget',
   :git => 'git@github.com:maestrodev/puppet-wget.git'

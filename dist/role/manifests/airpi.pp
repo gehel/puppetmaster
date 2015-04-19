@@ -38,5 +38,22 @@ class role::airpi inherits role::default {
     path       => '/var/log/fail2ban.log',
     postrotate => '/usr/local/bin/fail2ban-client set logtarget /var/log/fail2ban.log >/dev/null',
   }
+  
+  # AirPi itself
+  vcsrepo { '/home/pi/airpi':
+    ensure   => present,
+    provider => git,
+    source   => 'git@github.com:tomhartley/AirPi.git',
+  }
+  
+  class { 'python':
+    version => 'system',
+    pip     => true,
+    dev     => true,
+  }
+  python::pip { 'rpi.gpio':
+    ensure  => present,
+    pkgname => 'rpi.gpio',
+  }
 
 }

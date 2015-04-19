@@ -1,13 +1,3 @@
-filebucket { 'main':
-  path => false,
-}
-File {
-  backup => 'main',
-}
-Concat::Fragment {
-  backup => false,
-}
-
 case $::server_role {
   'puppetmaster' : {
     class { 'role::puppetmaster': }
