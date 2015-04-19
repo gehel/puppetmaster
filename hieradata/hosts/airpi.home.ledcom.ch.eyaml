@@ -1,0 +1,4 @@
+---
+firewall:       false
+puppet_runmode: manual
+
