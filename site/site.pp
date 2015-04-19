@@ -1,3 +1,10 @@
+filebucket { 'main':
+  path => '/var/backups/puppet',
+}
+File {
+  backup => 'main',
+}
+
 case $::server_role {
   'puppetmaster' : {
     class { 'role::puppetmaster': }
