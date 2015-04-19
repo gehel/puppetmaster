@@ -40,6 +40,14 @@ class role::airpi inherits role::default {
   }
   
   # AirPi itself
+  user { 'pi':
+    ensure => present,
+    home   => '/home/pi',
+    gid    => 'pi',
+    groups => [ 'pi', 'adm', 'dialout', 'cdrom', 'sudo', 'audio', 'video', 'plugdev', 'games', 'users', 'netdev', 'input', 'spi', 'gpio', 'i2c' ],
+    shell  => '/bin/bash',
+  }
+  kmod::load { 'i2c-dev': }
   vcsrepo { '/home/pi/airpi':
     ensure   => present,
     provider => git,

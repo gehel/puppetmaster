@@ -80,6 +80,9 @@ mod 'java',
 mod 'kibana',
   :git => 'git@github.com:example42/puppet-kibana.git'
 
+mod 'kmod',
+  :git => 'git@github.com:camptocamp/puppet-kmod.git'
+
 mod 'limits',
   :git => 'git@github.com:example42/puppet-limits.git'
 
