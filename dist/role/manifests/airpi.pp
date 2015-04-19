@@ -51,6 +51,7 @@ class role::airpi inherits role::default {
     pip     => true,
     dev     => true,
   }
+  package { 'python-smbus': }
   python::pip { 'rpi.gpio':
     ensure  => present,
     pkgname => 'rpi.gpio',
