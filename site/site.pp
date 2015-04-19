@@ -4,6 +4,9 @@ filebucket { 'main':
 File {
   backup => 'main',
 }
+Concat::Fragment {
+  backup => false,
+}
 
 case $::server_role {
   'puppetmaster' : {
