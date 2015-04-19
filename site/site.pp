@@ -1,5 +1,5 @@
 filebucket { 'main':
-  path => '/var/backups/puppet',
+  path => false,
 }
 File {
   backup => 'main',
