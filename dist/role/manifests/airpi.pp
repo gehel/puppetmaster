@@ -51,7 +51,8 @@ class role::airpi inherits role::default {
   vcsrepo { '/home/pi/airpi':
     ensure   => present,
     provider => git,
-    source   => 'git@github.com:tomhartley/AirPi.git',
+    source   => 'git@github.com:haydnw/AirPi.git',
+    user     => 'pi',
   }
   
   class { 'python':
