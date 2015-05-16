@@ -50,6 +50,18 @@ class role::dev_workstation inherits role::default {
     }
   }
 
+  file { '/usr/local/sbin/puppet-standalone.sh':
+    ensure  => 'present',
+    content => template('role/puppet/puppet-standalone.sh.erb'),
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0775',
+  } ->
+  cron { 'puppet-standalone':
+    command => '/usr/local/sbin/puppet-standalone.sh',
+    special => 'daily',
+  }
+
   package { 'hiera-eyaml':
     ensure   => 'present',
     provider => 'gem',
