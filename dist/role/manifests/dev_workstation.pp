@@ -60,8 +60,7 @@ class role::dev_workstation inherits role::default {
 
   #class { 'dropbox': }
 
-  class { 'duplicity':
-  }
+  #class { 'duplicity': }
 
   require git
 
