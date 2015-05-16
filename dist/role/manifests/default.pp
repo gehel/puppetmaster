@@ -25,7 +25,6 @@ class role::default {
   }
 
   class { 'apt': }
-  class { 'apt::unattended_upgrades': }
 
   class { 'ntp': }
 
