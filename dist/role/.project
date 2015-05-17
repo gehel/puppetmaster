@@ -44,6 +44,7 @@
 		<project>tomcat</project>
 		<project>vagrant</project>
 		<project>varnish</project>
+		<project>vcsrepo</project>
 		<project>wget</project>
 	</projects>
 	<buildSpec>

@@ -53,9 +53,6 @@ mod 'filemapper',
 mod 'firewall',
   :git => 'git@github.com:example42/puppet-firewall.git'
 
-mod 'git',
-  :git => 'git@github.com:example42/puppet-git.git'
-
 mod 'graphite',
   :git => 'git@github.com:echocat/puppet-graphite.git'
 

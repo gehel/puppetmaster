@@ -18,6 +18,7 @@ class role::dev_workstation inherits role::default {
     'nodejs-legacy',
     'npm',
     'openjdk-7-jdk',
+    'openjdk-8-jdk',
     'phantomjs',
     'python-dev',
     'puppet-lint',
@@ -72,7 +73,26 @@ class role::dev_workstation inherits role::default {
 
   class { 'duplicity': }
 
-  require git
+  Vcsrepo {
+    ensure   => present,
+    provider => git,
+    user     => 'gehel',
+  }
+  
+  vcsrepo {
+    '/home/gehel/dev/puppet/puppetmaster':
+      source => 'git@github.com:gehel/puppetmaster.git';
+    '/home/gehel/dev/vagrant-vms':
+      source => 'git@github.com:gehel/vagrant-vms.git';
+    '/home/gehel/dev/utilities/ledcom-parent-pom':
+      source => 'git@github.com:gehel/ledcom-parent-pom.git';
+    '/home/gehel/dev/utilities/jmx-rmi-agent':
+      source => 'git@github.com:gehel/jmx-rmi-agent.git';
+    '/home/gehel/dev/jmxtrans':
+      source => 'git@github.com:jmxtrans/jmxtrans.git';
+    '/home/gehel/dev/jmxtrans2':
+      source => 'git@github.com:jmxtrans/jmxtrans2.git';
+  }
 
   class { 'svn':
   }
