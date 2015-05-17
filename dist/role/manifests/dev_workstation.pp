@@ -14,7 +14,6 @@ class role::dev_workstation inherits role::default {
     'keepass2',
     'maven2',
     'meld',
-    'mencoder',
     'minicom',
     'nmap',
     'nodejs-legacy',
@@ -25,7 +24,6 @@ class role::dev_workstation inherits role::default {
     'puppet-lint',
     'python-nose',
     'python-setuptools',
-    'pyhton-virtualenv',
     'sound-juicer',
     'sqlitebrowser',
     'sshfs',
@@ -98,12 +96,12 @@ class role::dev_workstation inherits role::default {
     cwd     => '/tmp',
     timeout => '900',
     creates => '/tmp/ideaIU-14.1.3.tar.gz',
-    unless  => 'test -d /opt/idea-*',
+    unless  => 'test -d /opt/idea-IU-141.1010.3',
   } -> exec { 'untar-IntelliJ':
     path    => '/usr/bin:/bin',
     command => 'tar xzvf /tmp/ideaIU-14.1.3.tar.gz',
     cwd     => '/opt',
-    creates => '/opt/idea-133.696',
+    creates => '/opt/idea-IU-141.1010.3',
   }
   
   #TODO: add PyCharm installation
@@ -112,34 +110,8 @@ class role::dev_workstation inherits role::default {
   sysctl::value { 'fs.inotify.max_user_watches':
     value => '524288',
   }
-  # Source code pro font
-  file { '/usr/share/fonts/truetype/SourceCodePro':
-    ensure => 'directory',
-    owner  => 'root',
-    group  => 'root',
-    mode   => '0755',
-  } -> exec { 'download-source-code-pro':
-    path    => '/usr/bin',
-    command => 'wget -cv http://optimate.dl.sourceforge.net/project/sourcecodepro.adobe/SourceCodePro_FontsOnly-1.017.zip',
-    cwd     => '/tmp',
-    creates => '/tmp/SourceCodePro_FontsOnly-1.017.zip',
-    unless  => 'test -f /usr/share/fonts/truetype/SourceCodePro-Regular.ttf',
-  } -> exec { 'unzip-source-code-pro':
-    path    => '/usr/bin',
-    command => 'unzip /tmp/SourceCodePro_FontsOnly-1.017.zip',
-    cwd     => '/tmp',
-    creates => '/tmp/SourceCodePro_FontsOnly-1.017',
-    unless  => 'test -f /usr/share/fonts/truetype/SourceCodePro-Regular.ttf',
-  } -> exec { 'deploy-source-code-pro':
-    path    => '/usr/bin:/bin',
-    command => 'cp /tmp/SourceCodePro_FontsOnly-1.017/TTF/*.ttf /usr/share/fonts/truetype',
-    cwd     => '/tmp',
-    creates => '/usr/share/fonts/truetype/SourceCodePro-Regular.ttf',
-  } ~> exec { 'refresh-font-cache':
-    path        => '/usr/bin',
-    command     => 'fc-cache',
-    refreshonly => true,
-  }
+  
+  # TODO: Source code pro font
   
   cron { 'cleanup-gstreamer':
     command => '/bin/rm /home/gehel/.goutputstream-*',
