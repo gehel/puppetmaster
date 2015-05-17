@@ -54,6 +54,7 @@ class role::dev_workstation inherits role::default {
   }
   
   class { 'r10k':
+    remote => 'git@github.com:gehel/puppetmaster.git',
   }
 
   #class { 'dropbox': }
