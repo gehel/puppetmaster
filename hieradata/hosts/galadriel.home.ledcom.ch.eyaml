@@ -60,7 +60,7 @@ duplicity_backups:
             - '/home/gehel/.cache/'
             - '/home/gehel/.eclipse/'
             - '/home/gehel/.IntelliJIdea12/'
-            - '/home/gehel/.m2/'
+            - '/home/gehel/.m2/repository'
             - '/home/gehel/.mozilla/'
             - '/home/gehel/.vagrant.d/'
             - '/home/gehel/Downloads/'
