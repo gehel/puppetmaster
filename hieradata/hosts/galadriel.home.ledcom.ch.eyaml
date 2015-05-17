@@ -1,37 +1,13 @@
 ---
 git_clones:
-    rundeck:
-      source_url:      'https://github.com/dtolabs/rundeck.git'
-      destination_dir: '/home/gehel/dev/rundeck'
-      owner:           'gehel'
     puppetmaster:
       source_url:      'git@github.com:gehel/puppetmaster.git'
       branch:          'production'
       destination_dir: '/home/gehel/dev/puppet/puppetmaster'
       owner:           'gehel'
-    puppetmaster:
-      source_url:      'git@github.com:example42/Example42-templates.git'
-      destination_dir: '/home/gehel/dev/puppet/Example42-templates'
-      owner:           'gehel'
-    java-dojo-parent-pom:
-      source_url:      'git@github.com:JavaDojo/java-dojo-parent-pom.git'
-      destination_dir: '/home/gehel/dev/JavaDojo/java-dojo-parent-pom'
-      owner:           'gehel'
-    marsrover:
-      source_url:      'git@github.com:JavaDojo/marsrover.git'
-      destination_dir: '/home/gehel/dev/JavaDojo/marsrover'
-      owner:           'gehel'
-    cloudformation:
-      source_url:      'git@github.com:gehel/cloudformation.git'
-      destination_dir: '/home/gehel/dev/aws/cloudformation'
-      owner:           'gehel'
     vagrant-vms:
       source_url:      'git@github.com:gehel/vagrant-vms.git'
       destination_dir: '/home/gehel/dev/vagrant-vms'
-      owner:           'gehel'
-    ubuntu-desktop-preseed:
-      source_url:      'git@github.com:gehel/ubuntu-desktop-preseed.git'
-      destination_dir: '/home/gehel/dev/ubuntu-desktop-preseed'
       owner:           'gehel'
     ledcom-parent-pom:
       source_url:      'git@github.com:gehel/ledcom-parent-pom.git'
@@ -41,9 +17,13 @@ git_clones:
       source_url:      'git@github.com:gehel/jmx-rmi-agent.git'
       destination_dir: '/home/gehel/dev/utilities/jmx-rmi-agent'
       owner:           'gehel'
-    log4jtools:
-      source_url:      'git@github.com:gehel/log4jtools.git'
-      destination_dir: '/home/gehel/dev/utilities/log4jtools'
+    jmxtrans:
+      source_url:      'git@github.com:jmxtrans/jmxtrans.git'
+      destination_dir: '/home/gehel/dev/jmxtrans'
+      owner:           'gehel'
+    jmxtrans2:
+      source_url:      'git@github.com:jmxtrans/jmxtrans2.git'
+      destination_dir: '/home/gehel/dev/jmxtrans2'
       owner:           'gehel'
 
 monitor_tool:
