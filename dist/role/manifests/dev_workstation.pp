@@ -2,7 +2,6 @@ class role::dev_workstation inherits role::default {
 
   package { [
     'p7zip-full',
-    'bitcoin-qt',
     'calibre',
     'chromium-browser',
     'cmus',
@@ -55,6 +54,18 @@ class role::dev_workstation inherits role::default {
   
   class { 'r10k':
     remote => 'git@github.com:gehel/puppetmaster.git',
+  }
+
+  file { '/usr/local/sbin/puppet-standalone.sh':
+    ensure  => 'present',
+    content => template('role/puppet/puppet-standalone.sh.erb'),
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0775',
+  } ->
+  cron { 'puppet-standalone':
+    command => '/usr/local/sbin/puppet-standalone.sh',
+    special => 'daily',
   }
 
   #class { 'dropbox': }
