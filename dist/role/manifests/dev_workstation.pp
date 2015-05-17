@@ -1,5 +1,7 @@
 class role::dev_workstation inherits role::default {
 
+  notice('role: dev_workstation')
+
   package { [
     'p7zip-full',
     'calibre',
@@ -7,7 +9,6 @@ class role::dev_workstation inherits role::default {
     'cmus',
     'gimp',
     'gitk',
-    'git-svn',
     'gparted',
     'graphviz',
     'keepass2',
