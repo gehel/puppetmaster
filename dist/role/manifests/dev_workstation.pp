@@ -163,5 +163,6 @@ class role::dev_workstation inherits role::default {
     mode   => '0775',
   }
 
+  include docker
   # TODO: DropBox
 }

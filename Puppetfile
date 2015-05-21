@@ -35,6 +35,9 @@ mod 'dns',
 mod 'dnsmasq',
   :git => 'git@github.com:rlex/puppet-dnsmasq.git'
 
+mod 'docker',
+  :git => 'git@github.com:garethr/garethr-docker.git'
+
 mod 'dropbox',
   :git => 'git@github.com:gehel/puppet-dropbox.git'
 
