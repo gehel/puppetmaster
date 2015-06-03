@@ -99,6 +99,7 @@ class role::dev_workstation inherits role::default {
   class { 'svn':
   }
 
+  package { 'linux-headers-generic': }
   class { 'vagrant': }
 
   class { 'cntlm': }
