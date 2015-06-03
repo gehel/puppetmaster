@@ -26,6 +26,7 @@ class role::dev_workstation inherits role::default {
     'puppet-lint',
     'python-nose',
     'python-setuptools',
+    'rpm',
     'sound-juicer',
     'sqlitebrowser',
     'sshfs',
