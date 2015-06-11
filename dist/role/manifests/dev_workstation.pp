@@ -16,6 +16,7 @@ class role::dev_workstation inherits role::default {
     'maven2',
     'meld',
     'minicom',
+    'mitmproxy',
     'nmap',
     'nodejs-legacy',
     'npm',
