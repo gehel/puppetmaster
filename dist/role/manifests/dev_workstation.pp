@@ -32,6 +32,7 @@ class role::dev_workstation inherits role::default {
     'sqlitebrowser',
     'sshfs',
     'synergy',
+    'unar',
     'virtualbox',
     'virtualenvwrapper',
     'visualvm',
