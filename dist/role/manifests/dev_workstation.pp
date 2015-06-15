@@ -105,6 +105,8 @@ class role::dev_workstation inherits role::default {
   package { 'linux-headers-generic': }
   class { 'vagrant': }
 
+  class { 'docker': }
+
   class { 'cntlm': }
 
   Exec {
