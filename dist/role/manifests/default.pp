@@ -16,6 +16,7 @@ class role::default {
     'lsof',
     'puppet-el',
     'pv',
+    'pwgen',
     'screen',
     'secure-delete',
     'sysstat',
