@@ -4,6 +4,7 @@ class role::dev_workstation inherits role::default {
 
   package { [
     'p7zip-full',
+    'adobe-flashplugin',
     'calibre',
     'chromium-browser',
     'cmus',
