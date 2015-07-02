@@ -8,6 +8,7 @@ class role::dev_workstation inherits role::default {
     'calibre',
     'chromium-browser',
     'cmus',
+    'concordance',
     'gimp',
     'gitk',
     'gparted',
