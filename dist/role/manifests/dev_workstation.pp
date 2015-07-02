@@ -9,6 +9,7 @@ class role::dev_workstation inherits role::default {
     'chromium-browser',
     'cmus',
     'concordance',
+    'congruity',
     'gimp',
     'gitk',
     'gparted',
