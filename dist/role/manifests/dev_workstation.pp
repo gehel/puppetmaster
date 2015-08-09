@@ -3,8 +3,8 @@ class role::dev_workstation inherits role::default {
   notice('role: dev_workstation')
 
   package { [
-    'p7zip-full',
     'adobe-flashplugin',
+    'arduino',
     'calibre',
     'chromium-browser',
     'cmus',
@@ -25,6 +25,7 @@ class role::dev_workstation inherits role::default {
     'npm',
     'openjdk-7-jdk',
     'openjdk-8-jdk',
+    'p7zip-full',
     'phantomjs',
     'python-dev',
     'puppet-lint',
