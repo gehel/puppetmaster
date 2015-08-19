@@ -68,10 +68,8 @@ class role::default {
   class { 'collectd::plugin::uptime': }
   class { 'collectd::plugin::users': }
   class { 'collectd::plugin::vmem': }
-  class { 'collectd::plugin::write_graphite':
-    carbons => {
-      graphitehost => '192.168.1.40',
-    }
+  collectd::plugin::write_graphite::carbon { 'home':
+    graphitehost => '192.168.1.40',
   }
 
   Logrotate::Rule {
