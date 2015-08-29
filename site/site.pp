@@ -16,10 +16,6 @@ node 'gandalf' {
   class { 'role::dev_workstation': }
 }
 
-node 'voyage.home.ledcom.ch' {
-  class { 'role::firewall': }
-}
-
 node 'airpi.home.ledcom.ch' {
   class { 'role::airpi': }
 }
