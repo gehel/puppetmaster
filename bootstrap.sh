@@ -32,7 +32,7 @@ echo 'install puppet and dependencies'
 wget http://apt.puppetlabs.com/puppetlabs-release-`lsb_release -cs`.deb
 dpkg -i puppetlabs-release-`lsb_release -cs`.deb
 apt-get update
-apt-get install -y unattended-upgrades puppet git rubygems ruby-systemu ruby-log4r libsystemu-ruby liblog4r-ruby
+apt-get install -y unattended-upgrades puppet git ruby ruby-systemu ruby-log4r libsystemu-ruby liblog4r-ruby
 gem install --no-rdoc --no-ri r10k
 gem install --no-rdoc --no-ri hiera-eyaml
 
