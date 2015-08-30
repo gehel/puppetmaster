@@ -14,6 +14,7 @@ class role::dev_workstation inherits role::default {
     'gitk',
     'gparted',
     'graphviz',
+    'handbrake',
     'icedtea-netx',
     'keepass2',
     'maven2',
