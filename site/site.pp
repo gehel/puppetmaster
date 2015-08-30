@@ -46,12 +46,7 @@ node 'gloin.home.ledcom.ch' {
     ver  => $coreos_version,
     arch => 'amd64',
   }
-  pxe::menu::host { 'C0A802A6':
-    kernel => "images/coreos/${coreos_version}/amd64/coreos_production_pxe.vmlinuz",
-    append => "initrd=images/coreos/${coreos_version}/amd64/coreos_production_pxe_image.cpio.gz root=LABEL=ROOT cloud-config-url=http://pastebin.com/raw.php?i=KPNSF9Xf",
-  }
-  # coreos (192.168.1.40)
-  pxe::menu::host { 'C0A80128':
+  pxe::menu::host { 'C0A80170':
     kernel => "images/coreos/${coreos_version}/amd64/coreos_production_pxe.vmlinuz",
     append => "initrd=images/coreos/${coreos_version}/amd64/coreos_production_pxe_image.cpio.gz root=LABEL=ROOT cloud-config-url=http://pastebin.com/raw.php?i=KPNSF9Xf",
   }
