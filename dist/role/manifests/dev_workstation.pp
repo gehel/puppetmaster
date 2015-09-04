@@ -31,6 +31,7 @@ class role::dev_workstation inherits role::default {
     'python-dev',
     'puppet-lint',
     'python-nose',
+    'python-pip',
     'python-setuptools',
     'rpm',
     'sound-juicer',
