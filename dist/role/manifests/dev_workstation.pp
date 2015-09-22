@@ -43,6 +43,7 @@ class role::dev_workstation inherits role::default {
     'virtualbox',
     'virtualenvwrapper',
     'visualvm',
+    'wakeonlan',
     'wireshark',
     'xchat',
     'xclip',
