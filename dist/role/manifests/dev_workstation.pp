@@ -179,6 +179,12 @@ class role::dev_workstation inherits role::default {
     group  => 'gehel',
     mode   => '0775',
   }
+  
+  class { 'wmf_workstation':
+    $user      => 'gehel',
+    $user_home => '/home/gehel',
+  }
+  
 
   # TODO: Docker
   # TODO: DropBox

@@ -46,6 +46,7 @@
 		<project>varnish</project>
 		<project>vcsrepo</project>
 		<project>wget</project>
+		<project>wmf_workstation</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

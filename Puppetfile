@@ -233,6 +233,9 @@ mod 'vcsrepo',
 mod 'wget',
   :git => 'git@github.com:maestrodev/puppet-wget.git'
 
+mod 'wmf_workstation',
+  :git => 'git@github.com:gehel/puppet-wmf_workstation.git'
+
 mod 'xinetd',
   :git => 'git@github.com:puppetlabs/puppetlabs-xinetd.git'
 
