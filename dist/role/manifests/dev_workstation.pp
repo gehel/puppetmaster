@@ -181,8 +181,8 @@ class role::dev_workstation inherits role::default {
   }
   
   class { 'wmf_workstation':
-    $user      => 'gehel',
-    $user_home => '/home/gehel',
+    user      => 'gehel',
+    user_home => '/home/gehel',
   }
   
 
