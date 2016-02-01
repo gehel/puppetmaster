@@ -21,6 +21,7 @@ class role::dev_workstation inherits role::default {
     'meld',
     'minicom',
     'mitmproxy',
+    'nfs-common',
     'nmap',
     'nodejs-legacy',
     'npm',
