@@ -1,6 +1,6 @@
 #!/bin/sh
 
-/usr/local/bin/r10k -v info deploy environment -p
+/usr/local/bin/r10k deploy environment -p -v info
 <% if @puppet_fqdn %>FACTER_fqdn=<%= @puppet_fqdn %> \<% end %>
 puppet apply \
     --modulepath=/etc/puppet/environments/production/modules:/etc/puppet/environments/production/dist \

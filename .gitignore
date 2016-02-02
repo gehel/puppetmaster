@@ -3,3 +3,5 @@ modules
 .org_cloudsmith_geppetto_pptp_target
 .vagrant
 .com_puppetlabs_geppetto_pptp_target
+puppetmaster.iml
+.idea
