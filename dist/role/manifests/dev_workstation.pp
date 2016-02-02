@@ -11,6 +11,7 @@ class role::dev_workstation inherits role::default {
     'concordance',
     'congruity',
     'gimp',
+    'git-review',
     'gitk',
     'gparted',
     'graphviz',
