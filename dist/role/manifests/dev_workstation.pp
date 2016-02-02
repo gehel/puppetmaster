@@ -183,8 +183,9 @@ class role::dev_workstation inherits role::default {
   }
   
   class { 'wmf_workstation':
-    user      => 'gehel',
-    user_home => '/home/gehel',
+    user             => 'gehel',
+    user_home        => '/home/gehel',
+    ssh_priv_key_lab => '~/.ssh/id_rsa_wmf_lab',
   }
   
 
