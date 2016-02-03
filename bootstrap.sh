@@ -36,7 +36,7 @@ apt-get install -y unattended-upgrades puppet git ruby
 gem install --no-rdoc --no-ri r10k
 gem install --no-rdoc --no-ri hiera-eyaml
 
-/usr/local/bin/r10k -v info deploy environment
+/usr/local/bin/r10k deploy environment -p -v info
 
 echo 'puppet run to ensure basic configuration'
 puppet apply \
