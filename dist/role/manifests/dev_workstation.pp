@@ -116,9 +116,7 @@ class role::dev_workstation inherits role::default {
   package { 'linux-headers-generic': }
   class { 'vagrant': }
 
-  class { 'docker':
-    proxy => 'http://localhost:3128',
-  }
+  class { 'docker': }
 
   class { 'cntlm': }
 
