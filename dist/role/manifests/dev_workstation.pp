@@ -12,6 +12,7 @@ class role::dev_workstation inherits role::default {
     'congruity',
     'flashplugin-installer',
     'gimp',
+    'git-buildpackage',
     'git-review',
     'gitk',
     'gparted',
