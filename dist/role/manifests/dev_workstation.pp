@@ -53,8 +53,15 @@ class role::dev_workstation inherits role::default {
     'xclip',
     'xmlstarlet',
     'xvfb',
-    ]:
+  ]:
     ensure => 'present',
+  }
+
+  package { [
+    'fpm',
+  ]:
+    ensure   => 'present',
+    provider => 'gem',
   }
 
   if $::lsbdistrelease == '13.04' {
