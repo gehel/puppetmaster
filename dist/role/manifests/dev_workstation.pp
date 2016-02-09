@@ -6,6 +6,7 @@ class role::dev_workstation inherits role::default {
     'arduino',
     'calibre',
     'chromium-browser',
+    'clusterssh',
     'cmus',
     'concordance',
     'congruity',
