@@ -3,6 +3,7 @@ class role::dev_workstation inherits role::default {
   notice('role: dev_workstation')
 
   package { [
+    'adobe-flashplugin',
     'arduino',
     'calibre',
     'chromium-browser',
@@ -10,7 +11,6 @@ class role::dev_workstation inherits role::default {
     'cmus',
     'concordance',
     'congruity',
-    'flashplugin-installer',
     'gimp',
     'git-buildpackage',
     'git-review',
