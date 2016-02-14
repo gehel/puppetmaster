@@ -39,7 +39,7 @@ node 'gloin.home.ledcom.ch' {
 
   class { 'pxe': }
 
-  $coreos_version = '723.3.0'
+  $coreos_version = '955.0.0'
 
   pxe::images { 'coreos':
     os   => 'coreos',
