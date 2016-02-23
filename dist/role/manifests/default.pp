@@ -22,6 +22,7 @@ class role::default {
     'sysstat',
     'telnet',
     'unrar',
+    'vim',
     ]:
     ensure => present,
   }
