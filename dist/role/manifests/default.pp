@@ -8,6 +8,7 @@ class role::default {
     'dnsutils',
     'dos2unix',
     'emacs',
+    'hping3',
     'htop',
     'iotop',
     'iptraf',
