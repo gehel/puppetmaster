@@ -28,20 +28,15 @@ class role::default {
     ensure => present,
   }
 
-  class { 'apt': }
+  class { '::apt': }
+  class { '::gnupg': }
+  class { '::ntp': }
+  class { '::puppet': }
+  class { '::puppi': }
+  class { '::ssh': }
+  class { '::sudo': }
+  class { '::timezone': }
 
-  class { 'ntp': }
-
-  class { 'ssh': }
-
-  class { 'puppet': }
-
-  class { 'puppi': }
-
-  class { 'timezone': }
-
-  class { 'sudo': }
-  
   class { 'collectd':
     purge        => true,
     recurse      => true,

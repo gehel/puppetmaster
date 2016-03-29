@@ -59,6 +59,9 @@ mod 'firewall',
 mod 'git',
   :git => 'git@github.com:puppetlabs/puppetlabs-git.git'
 
+mod 'gnupg',
+  :git => 'git@github.com:n1tr0g/golja-gnupg.git'
+
 mod 'graphite',
   :git => 'git@github.com:echocat/puppet-graphite.git'
 
