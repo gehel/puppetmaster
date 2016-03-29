@@ -79,6 +79,8 @@ rundeck_ssh_public_key: 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCbY/KAhIlHK6cA1lg4tucl+xI
 rundeck_ssh_public_key_type: rsa
 rundeck_node_username: 'rundeck_node'
 
+ssh::ssh_sendenv: false
+
 timezone: 'Europe/Zurich'
 
 vagrant_install: package
