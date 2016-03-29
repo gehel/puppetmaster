@@ -32,7 +32,7 @@ class role::default {
 
   class { 'ntp': }
 
-  class { 'openssh': }
+  class { 'ssh': }
 
   class { 'puppet': }
 

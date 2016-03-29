@@ -140,9 +140,6 @@ mod 'ntp',
 mod 'openntpd',
   :git => 'git@github.com:example42/puppet-openntpd.git'
 
-mod 'openssh',
-  :git => 'git@github.com:example42/puppet-openssh.git'
-
 mod 'openvpn',
   :git => 'git@github.com:example42/puppet-openvpn.git'
 
@@ -199,6 +196,9 @@ mod 'rvm',
 
 mod 'shorewall',
   :git => 'git@github.com:duritong/puppet-shorewall.git'
+
+mod 'ssh',
+  :git => 'git@github.com:ghoneycutt/puppet-module-ssh.git'
 
 mod 'stdlib',
   :git => 'git@github.com:puppetlabs/puppetlabs-stdlib.git'
