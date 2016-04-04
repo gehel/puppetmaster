@@ -6,6 +6,16 @@ case $::server_role {
 
 node 'durin.home.ledcom.ch' {
   class { 'role::dev_workstation': }
+  file { '/media/music/':
+    ensure => directory,
+  }
+  mount { '/media/music':
+    ensure  => mounted,
+    device  => 'freenas.home.ledcom.ch:/mnt/main/music',
+    type    => 'nfs',
+    options => "defaults",
+    atboot  => true,
+  }
 }
 
 node 'galadriel.home.ledcom.ch' {
