@@ -12,7 +12,7 @@ node 'durin.home.ledcom.ch' {
   mount { '/media/music':
     ensure  => mounted,
     device  => 'freenas.home.ledcom.ch:/mnt/main/music',
-    type    => 'nfs',
+    fstype    => 'nfs',
     options => "defaults",
     atboot  => true,
   }
