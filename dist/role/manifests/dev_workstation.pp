@@ -14,6 +14,7 @@ class role::dev_workstation inherits role::default {
     'git-buildpackage',
     'git-review',
     'gitk',
+    'gpa',
     'gparted',
     'graphviz',
     'handbrake',
