@@ -10,6 +10,7 @@ class role::dev_workstation inherits role::default {
     'cmus',
     'concordance',
     'congruity',
+    'dsh',
     'gimp',
     'git-buildpackage',
     'git-review',
