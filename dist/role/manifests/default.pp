@@ -15,6 +15,7 @@ class role::default {
     'itop',
     'less',
     'lsof',
+    'ngrep',
     'puppet-el',
     'pv',
     'pwgen',
