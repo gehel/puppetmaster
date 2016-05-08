@@ -34,6 +34,7 @@ class role::dev_workstation inherits role::default {
     'openjdk-8-jdk',
     'p7zip-full',
     'phantomjs',
+    'picocom',
     'python-dev',
     'puppet-lint',
     'python-nose',
