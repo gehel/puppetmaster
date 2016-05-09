@@ -46,6 +46,7 @@ class role::dev_workstation inherits role::default {
     'sshfs',
     'synergy',
     'tig',
+    'tmux',
     'unar',
     'virtualbox',
     'virtualenvwrapper',
