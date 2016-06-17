@@ -23,6 +23,7 @@ class role::default {
     'secure-delete',
     'sysstat',
     'telnet',
+    'traceroute',
     'unrar',
     'vim',
     ]:
