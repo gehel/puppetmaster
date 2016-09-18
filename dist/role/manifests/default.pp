@@ -33,7 +33,7 @@ class role::default {
   class { '::apt': }
   class { '::gnupg': }
   class { '::ntp': }
-  class { '::puppet': }
+  #class { '::puppet': }
   class { '::puppi': }
   class { '::ssh': }
   class { '::sudo': }
