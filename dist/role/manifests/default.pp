@@ -36,7 +36,7 @@ class role::default {
   #class { '::puppet': }
   class { '::ssh': }
   #class { '::sudo': }
-  class { '::timezone': }
+  #class { '::timezone': }
 
   class { 'collectd':
     purge        => true,
