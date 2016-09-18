@@ -83,6 +83,9 @@ mod 'sysctl',
 mod 'tftp',
   :git => 'git@github.com:puppetlabs/puppetlabs-tftp.git'
 
+mod 'timezone',
+  :git => 'git@github.com:saz/puppetlabs-timezone.git'
+
 mod 'vcsrepo',
   :git => 'git@github.com:puppetlabs/puppetlabs-vcsrepo.git'
 
