@@ -5,6 +5,7 @@ class role::default {
     'bash-completion',
     'bzip2',
     'curl',
+    'debconf-utils',
     'dnsutils',
     'dos2unix',
     'emacs',
