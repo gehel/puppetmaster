@@ -35,7 +35,7 @@ class role::default {
   class { '::ntp': }
   #class { '::puppet': }
   class { '::ssh': }
-  class { '::sudo': }
+  #class { '::sudo': }
   class { '::timezone': }
 
   class { 'collectd':
