@@ -34,7 +34,6 @@ class role::default {
   class { '::gnupg': }
   class { '::ntp': }
   #class { '::puppet': }
-  class { '::puppi': }
   class { '::ssh': }
   class { '::sudo': }
   class { '::timezone': }
