@@ -12,7 +12,7 @@ mod 'collectd',
 
 mod 'concat',
   :git => 'git@github.com:puppetlabs/puppetlabs-concat.git',
-  :tag => '1.1.2'
+  :tag => '3.0.0'
 
 mod 'dnsmasq',
   :git => 'git@github.com:rlex/puppet-dnsmasq.git'

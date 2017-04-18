@@ -3,14 +3,12 @@ class role::dev_workstation inherits role::default {
   notice('role: dev_workstation')
 
   package { [
-    'adobe-flashplugin',
     'arduino',
     'calibre',
     'chromium-browser',
     'cmus',
-    'concordance',
-    'congruity',
     'dsh',
+    'fish',
     'gimp',
     'git-buildpackage',
     'git-review',
@@ -19,6 +17,7 @@ class role::dev_workstation inherits role::default {
     'gparted',
     'graphviz',
     'handbrake',
+    'hiera-eyaml',
     'icedtea-netx',
     'keepass2',
     'maven2',
@@ -31,7 +30,9 @@ class role::dev_workstation inherits role::default {
     'nodejs-legacy',
     'npm',
     'openjdk-7-jdk',
+    'openjdk-7-sources',
     'openjdk-8-jdk',
+    'openjdk-8-sources',
     'p7zip-full',
     'phantomjs',
     'picocom',
@@ -40,6 +41,7 @@ class role::dev_workstation inherits role::default {
     'python-nose',
     'python-pip',
     'python-setuptools',
+    'r10k',
     'rpm',
     'sound-juicer',
     'sqlitebrowser',
@@ -61,29 +63,16 @@ class role::dev_workstation inherits role::default {
     ensure => 'present',
   }
 
-  package { [
-    'fpm',
-  ]:
-    ensure   => 'present',
-    provider => 'gem',
-  }
+  # package { [
+  #   'fpm',
+  # ]:
+  #   ensure   => 'present',
+  #   provider => 'gem',
+  # }
 
-  if $::lsbdistrelease == '13.04' {
-    package { [
-      'unity-tweak-tool',
-      ]:
-      ensure => 'present',
-    }
-  }
-
-  package { 'hiera-eyaml':
-    ensure   => 'present',
-    provider => 'gem',
-  }
-  
-  class { 'r10k':
-    remote => 'git@github.com:gehel/puppetmaster.git',
-  }
+  # class { 'r10k':
+  #   remote => 'git@github.com:gehel/puppetmaster.git',
+  # }
 
   file { '/usr/local/sbin/puppet-standalone.sh':
     ensure  => 'present',
@@ -91,15 +80,16 @@ class role::dev_workstation inherits role::default {
     owner   => 'root',
     group   => 'root',
     mode    => '0775',
-  } ->
-  cron { 'puppet-standalone':
-    command => '/usr/local/sbin/puppet-standalone.sh',
-    special => 'daily',
   }
+  # ->
+  # cron { 'puppet-standalone':
+  #   command => '/usr/local/sbin/puppet-standalone.sh',
+  #   special => 'daily',
+  # }
 
   #class { 'dropbox': }
 
-  class { 'duplicity': }
+  # class { 'duplicity': }
 
   Vcsrepo {
     ensure   => present,
@@ -107,80 +97,74 @@ class role::dev_workstation inherits role::default {
     user     => 'gehel',
   }
   
-  vcsrepo {
-    '/home/gehel/dev/puppet/puppetmaster':
-      source => 'git@github.com:gehel/puppetmaster.git';
-    '/home/gehel/dev/vagrant-vms':
-      source => 'git@github.com:gehel/vagrant-vms.git';
-    '/home/gehel/dev/utilities/ledcom-parent-pom':
-      source => 'git@github.com:gehel/ledcom-parent-pom.git';
-    '/home/gehel/dev/utilities/jmx-rmi-agent':
-      source => 'git@github.com:gehel/jmx-rmi-agent.git';
-    '/home/gehel/dev/jmxtrans':
-      source => 'git@github.com:jmxtrans/jmxtrans.git';
-    '/home/gehel/dev/jmxtrans2':
-      source => 'git@github.com:jmxtrans/jmxtrans2.git';
-  }
-
-  class { 'svn':
-  }
-
-  package { 'linux-headers-generic': }
-  class { 'vagrant': }
-
-  class { 'docker': }
-
-  class { 'cntlm': }
-
-  Exec {
-    logoutput => 'on_failure', }
-    
-  class { 'maven::maven':
-    version => '3.0.5',
-  }
-
-  exec { 'download-Geppetto':
-    path    => '/usr/bin',
-    command => 'wget -cv https://downloads.puppetlabs.com/geppetto/4.x/geppetto-linux.gtk.x86_64-4.3.1-R201501182354.zip',
-    cwd     => '/tmp',
-    timeout => '900',
-    creates => '/tmp/geppetto-linux.gtk.x86_64-4.3.1-R201501182354.zip',
-    unless  => 'test -d /opt/geppetto',
-  } -> exec { 'untar-Geppetto':
-    path    => '/usr/bin',
-    command => 'unzip /tmp/geppetto-linux.gtk.x86_64-4.3.1-R201501182354.zip',
-    cwd     => '/opt',
-    creates => '/opt/geppetto',
-  }
-
-  exec { 'download-IntelliJ':
-    path    => '/usr/bin',
-    command => 'wget -cv http://download-ln.jetbrains.com/idea/ideaIU-14.1.3.tar.gz',
-    cwd     => '/tmp',
-    timeout => '900',
-    creates => '/tmp/ideaIU-14.1.3.tar.gz',
-    unless  => 'test -d /opt/idea-IU-141.1010.3',
-  } -> exec { 'untar-IntelliJ':
-    path    => '/usr/bin:/bin',
-    command => 'tar xzvf /tmp/ideaIU-14.1.3.tar.gz',
-    cwd     => '/opt',
-    creates => '/opt/idea-IU-141.1010.3',
-  }
+  # vcsrepo {
+  #   '/home/gehel/dev/puppet/puppetmaster':
+  #     source => 'git@github.com:gehel/puppetmaster.git';
+  #   '/home/gehel/dev/vagrant-vms':
+  #     source => 'git@github.com:gehel/vagrant-vms.git';
+  #   '/home/gehel/dev/utilities/ledcom-parent-pom':
+  #     source => 'git@github.com:gehel/ledcom-parent-pom.git';
+  #   '/home/gehel/dev/utilities/jmx-rmi-agent':
+  #     source => 'git@github.com:gehel/jmx-rmi-agent.git';
+  #   '/home/gehel/dev/jmxtrans':
+  #     source => 'git@github.com:jmxtrans/jmxtrans.git';
+  #   '/home/gehel/dev/jmxtrans2':
+  #     source => 'git@github.com:jmxtrans/jmxtrans2.git';
+  # }
+  #
+  # class { 'svn':
+  # }
+  #
+  # package { 'linux-headers-generic': }
+  # class { 'vagrant': }
+  #
+  # class { 'docker': }
+  #
+  # class { 'cntlm': }
+  #
+  # Exec {
+  #   logoutput => 'on_failure', }
+  #
+  # class { 'maven::maven':
+  #   version => '3.0.5',
+  # }
+  #
+  # exec { 'download-Geppetto':
+  #   path    => '/usr/bin',
+  #   command => 'wget -cv https://downloads.puppetlabs.com/geppetto/4.x/geppetto-linux.gtk.x86_64-4.3.1-R201501182354.zip',
+  #   cwd     => '/tmp',
+  #   timeout => '900',
+  #   creates => '/tmp/geppetto-linux.gtk.x86_64-4.3.1-R201501182354.zip',
+  #   unless  => 'test -d /opt/geppetto',
+  # } -> exec { 'untar-Geppetto':
+  #   path    => '/usr/bin',
+  #   command => 'unzip /tmp/geppetto-linux.gtk.x86_64-4.3.1-R201501182354.zip',
+  #   cwd     => '/opt',
+  #   creates => '/opt/geppetto',
+  # }
+  #
+  # exec { 'download-IntelliJ':
+  #   path    => '/usr/bin',
+  #   command => 'wget -cv http://download-ln.jetbrains.com/idea/ideaIU-14.1.3.tar.gz',
+  #   cwd     => '/tmp',
+  #   timeout => '900',
+  #   creates => '/tmp/ideaIU-14.1.3.tar.gz',
+  #   unless  => 'test -d /opt/idea-IU-141.1010.3',
+  # } -> exec { 'untar-IntelliJ':
+  #   path    => '/usr/bin:/bin',
+  #   command => 'tar xzvf /tmp/ideaIU-14.1.3.tar.gz',
+  #   cwd     => '/opt',
+  #   creates => '/opt/idea-IU-141.1010.3',
+  # }
   
   #TODO: add PyCharm installation
 
   # inotify needs to be higher than default for IntelliJ to be happy
-  sysctl::value { 'fs.inotify.max_user_watches':
-    value => '524288',
-  }
+  # sysctl::value { 'fs.inotify.max_user_watches':
+  #   value => '524288',
+  # }
   
   # TODO: Source code pro font
-  
-  cron { 'cleanup-gstreamer':
-    command => '/bin/rm /home/gehel/.goutputstream-*',
-    user => 'gehel',
-    monthday => "*",
-  }
   
   # basic dirs
   file { [
@@ -192,12 +176,12 @@ class role::dev_workstation inherits role::default {
     mode   => '0775',
   }
   
-  class { 'wmf_workstation':
-    user              => 'gehel',
-    user_home         => '/home/gehel',
-    ssh_priv_key_lab  => '~/.ssh/id_rsa_wmf_lab',
-    ssh_priv_key_prod => '~/.ssh/id_rsa_wmf_prod',
-  }
+  # class { 'wmf_workstation':
+  #   user              => 'gehel',
+  #   user_home         => '/home/gehel',
+  #   ssh_priv_key_lab  => '~/.ssh/id_rsa_wmf_lab',
+  #   ssh_priv_key_prod => '~/.ssh/id_rsa_wmf_prod',
+  # }
   
 
   # TODO: Docker
