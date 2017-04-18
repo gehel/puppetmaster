@@ -1,4 +1,4 @@
-class role::dev_workstation inherits role::default {
+class role::dev_workstation {
 
   notice('role: dev_workstation')
 
