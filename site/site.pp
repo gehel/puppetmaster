@@ -1,8 +1,8 @@
-case $::server_role {
-  'puppetmaster' : {
-    class { 'role::puppetmaster': }
-  }
-}
+# case $::server_role {
+#   'puppetmaster' : {
+#     class { 'role::puppetmaster': }
+#   }
+# }
 
 node 'durin.home.ledcom.ch' {
   class { 'role::dev_workstation': }
