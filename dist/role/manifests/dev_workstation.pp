@@ -20,6 +20,7 @@ class role::dev_workstation {
     'hiera-eyaml',
     'icedtea-netx',
     'keepass2',
+    'linux-headers-generic',
     'meld',
     'minicom',
     'mitmproxy',
@@ -38,7 +39,6 @@ class role::dev_workstation {
     'python-nose',
     'python-pip',
     'python-setuptools',
-    'r10k',
     'rpm',
     'sound-juicer',
     'sqlitebrowser',
@@ -66,9 +66,24 @@ class role::dev_workstation {
   #   provider => 'gem',
   # }
 
-  # class { 'r10k':
-  #   remote => 'git@github.com:gehel/puppetmaster.git',
-  # }
+  file { '/usr/share/X11/xorg.conf.d/50-trackman-marble-mouse.conf':
+    content => 'puppet:///modules/role/mouse/trackman-marble-mouse.conf',
+    owner => 'root',
+    group => 'root',
+    mode => '0644',
+  }
+
+  file { '/usr/share/X11/xorg.conf.d/50-rat7-mouse.conf':
+    content => 'puppet:///modules/role/mouse/rat7-mouse.conf',
+    owner => 'root',
+    group => 'root',
+    mode => '0644',
+  }
+
+  class { 'r10k':
+    remote   => 'git@github.com:gehel/puppetmaster.git',
+    provider => 'gem',
+  }
 
   file { '/usr/local/sbin/puppet-standalone.sh':
     ensure  => 'present',
@@ -108,22 +123,9 @@ class role::dev_workstation {
   #     source => 'git@github.com:jmxtrans/jmxtrans2.git';
   # }
   #
-  # class { 'svn':
-  # }
-  #
-  # package { 'linux-headers-generic': }
   # class { 'vagrant': }
   #
   # class { 'docker': }
-  #
-  # class { 'cntlm': }
-  #
-  # Exec {
-  #   logoutput => 'on_failure', }
-  #
-  # class { 'maven::maven':
-  #   version => '3.0.5',
-  # }
   #
   # exec { 'download-Geppetto':
   #   path    => '/usr/bin',
@@ -182,4 +184,12 @@ class role::dev_workstation {
 
   # TODO: Docker
   # TODO: DropBox
+
+
+  class { '::apt': }
+  class { '::gnupg': }
+  class { '::ntp': }
+  class { '::ssh': }
+  class { '::timezone': }
+
 }

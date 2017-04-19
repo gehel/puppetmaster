@@ -9,13 +9,13 @@ node 'durin.home.ledcom.ch' {
   file { '/media/music/':
     ensure => directory,
   }
-  mount { '/media/music':
-    ensure  => mounted,
-    device  => 'freenas.home.ledcom.ch:/mnt/main/music',
-    fstype    => 'nfs',
-    options => "defaults",
-    atboot  => true,
-  }
+  # mount { '/media/music':
+  #   ensure  => mounted,
+  #   device  => 'freenas.home.ledcom.ch:/mnt/main/music',
+  #   fstype    => 'nfs',
+  #   options => "defaults",
+  #   atboot  => true,
+  # }
 }
 
 node 'galadriel.home.ledcom.ch' {

@@ -29,11 +29,17 @@ mod 'fail2ban',
 mod 'filemapper',
   :git => 'git@github.com:adrienthebo/puppet-filemapper.git'
 
+mod 'gcc',
+  :git => 'git@github.com:puppetlabs/puppetlabs-gcc.git'
+
+mod 'gentoo-portage',
+  :git => 'git@github.com:gentoo/puppet-portage.git'
+
 mod 'git',
   :git => 'git@github.com:puppetlabs/puppetlabs-git.git'
 
 mod 'gnupg',
-  :git => 'git@github.com:n1tr0g/golja-gnupg.git'
+  :git => 'git@github.com:dgolja/golja-gnupg.git'
 
 mod 'graphite',
   :git => 'git@github.com:echocat/puppet-graphite.git'
@@ -41,11 +47,17 @@ mod 'graphite',
 mod 'hostapd',
   :git => 'git@github.com:mcanevet/puppet-hostapd.git'
 
+mod 'inifile',
+  :git => 'git@github.com:puppetlabs/puppetlabs-inifile.git'
+
 mod 'kmod',
   :git => 'git@github.com:camptocamp/puppet-kmod.git'
 
 mod 'logrotate',
   :git => 'git@github.com:rodjek/puppet-logrotate.git'
+
+mod 'make',
+  :git => 'git@github.com:voxpupuli/puppet-make.git'
 
 mod 'network',
   :git => 'git@github.com:puppet-community/puppet-network.git'
@@ -63,10 +75,12 @@ mod 'python',
   :git => 'git@github.com:stankevich/puppet-python.git'
 
 mod 'r10k',
-  :git => 'git@github.com:acidprime/r10k.git'
+  :git => 'git@github.com:voxpupuli/puppet-r10k.git',
+  :tag => 'v5.0.2'
 
 mod 'ruby',
-  :git => 'git@github.com:puppetlabs/puppetlabs-ruby.git'
+  :git => 'git@github.com:puppetlabs/puppetlabs-ruby.git',
+  :tag => '0.6.0'
 
 mod 'shorewall',
   :git => 'git@github.com:duritong/puppet-shorewall.git'
@@ -76,6 +90,9 @@ mod 'ssh',
 
 mod 'stdlib',
   :git => 'git@github.com:puppetlabs/puppetlabs-stdlib.git'
+
+mod 'stm-debconf',
+  :git => 'git@github.com:smoeding/puppet-debconf.git'
 
 mod 'sysctl',
   :git => 'git@github.com:puppetlabs/puppetlabs-sysctl.git'
