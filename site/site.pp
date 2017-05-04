@@ -18,6 +18,13 @@ node 'durin.home.ledcom.ch' {
   # }
 }
 
+node 'carbon.home.ledcom.ch' {
+  class { 'role::dev_workstation': }
+  file { '/media/music/':
+    ensure => directory,
+  }
+}
+
 node 'galadriel.home.ledcom.ch' {
   class { 'role::dev_workstation': }
 }
